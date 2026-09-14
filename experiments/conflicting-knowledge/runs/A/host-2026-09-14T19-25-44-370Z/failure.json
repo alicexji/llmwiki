@@ -1,0 +1,5 @@
+{
+  "error": "Error: Ingestion did not produce verified model analysis",
+  "stack": "Error: Ingestion did not produce verified model analysis\n\tat c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\host\\out\\host.cjs:54324:153\n\tat async pf._executeContributedCommand (file:///c:/Users/alice/AppData/Local/Programs/Microsoft%20VS%20Code/645f29cc31/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:542:48874)\n\tat async activate (c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\host\\out\\host.cjs:54374:22)\n\tat async Ub._activate (file:///c:/Users/alice/AppData/Local/Programs/Microsoft%20VS%20Code/645f29cc31/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:542:16021)\n\tat async Ub._waitForDepsThenActivate (file:///c:/Users/alice/AppData/Local/Programs/Microsoft%20VS%20Code/645f29cc31/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:542:15963)\n\tat async Ub._initialize (file:///c:/Users/alice/AppData/Local/Programs/Microsoft%20VS%20Code/645f29cc31/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:542:15330)",
+  "date": "2026-09-14T19:26:04.646Z"
+}

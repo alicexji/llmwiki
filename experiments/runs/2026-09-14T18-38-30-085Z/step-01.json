@@ -1,0 +1,141 @@
+{
+  "step": 1,
+  "source": "01-atlas.md",
+  "elapsed_ms": 16.365299999999934,
+  "result": {
+    "ingest": {
+      "command": "ingest",
+      "api_version": "1",
+      "status": "success",
+      "pages_created": [
+        "sources/01-atlas-summary.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md"
+      ],
+      "dry_run": false
+    },
+    "source_word_count": 24,
+    "source_content_type": "markdown",
+    "related_pages": [],
+    "suggested_actions": [
+      "Review the generated summary page for accuracy",
+      "Create entity pages for mentioned people, organizations, or concepts",
+      "Consider creating foundational concept pages to build wiki structure",
+      "Update the wiki index if additional metadata is needed"
+    ]
+  },
+  "changes": {
+    "added": [
+      "raw/01-atlas.md",
+      "wiki/sources/01-atlas-summary.md"
+    ],
+    "modified": [
+      "wiki/index.md",
+      "wiki/log.md"
+    ],
+    "deleted": []
+  },
+  "page_types": {
+    "untyped": 2,
+    "source": 1
+  },
+  "markdown_links": 1,
+  "raw_unchanged": {
+    "01-atlas.md": true
+  },
+  "queries": [
+    {
+      "command": "query",
+      "api_version": "1",
+      "query": "Atlas",
+      "matches": 1,
+      "results": [
+        {
+          "title": "01-atlas.md",
+          "path": "sources/01-atlas-summary.md",
+          "score": 9,
+          "excerpt": "# 01-atlas.md **Source:** raw/01-atlas.md **Type:** .md **Size:** 160 bytes **Ingested:** 2026-09-14 ## Content Preview # Atlas service Atlas stores audit logs for customer access events. The Orion te…"
+        }
+      ]
+    },
+    {
+      "command": "query",
+      "api_version": "1",
+      "query": "retention",
+      "matches": 0,
+      "results": []
+    },
+    {
+      "command": "query",
+      "api_version": "1",
+      "query": "Orion",
+      "matches": 0,
+      "results": []
+    },
+    {
+      "command": "query",
+      "api_version": "1",
+      "query": "How long are Atlas audit logs retained as of 2025-05-01?",
+      "matches": 1,
+      "results": [
+        {
+          "title": "01-atlas.md",
+          "path": "sources/01-atlas-summary.md",
+          "score": 21,
+          "excerpt": "# 01-atlas.md **Source:** raw/01-atlas.md **Type:** .md **Size:** 160 bytes **Ingested:** 2026-09-14 ## Content Preview # Atlas service Atlas stores audit logs for customer access events. The Orion te…"
+        }
+      ]
+    },
+    {
+      "command": "query",
+      "api_version": "1",
+      "query": "How long are Atlas audit logs retained as of 2025-08-01?",
+      "matches": 1,
+      "results": [
+        {
+          "title": "01-atlas.md",
+          "path": "sources/01-atlas-summary.md",
+          "score": 21,
+          "excerpt": "# 01-atlas.md **Source:** raw/01-atlas.md **Type:** .md **Size:** 160 bytes **Ingested:** 2026-09-14 ## Content Preview # Atlas service Atlas stores audit logs for customer access events. The Orion te…"
+        }
+      ]
+    },
+    {
+      "command": "query",
+      "api_version": "1",
+      "query": "Which service depends on Atlas?",
+      "matches": 0,
+      "results": []
+    }
+  ],
+  "index": [
+    {
+      "path": "sources/01-atlas-summary.md",
+      "title": "01-atlas.md",
+      "summary": "Source file (.md)",
+      "category": "Sources",
+      "tags": []
+    }
+  ],
+  "status": {
+    "command": "status",
+    "api_version": "1",
+    "source_count": 1,
+    "wiki_page_count": 1,
+    "last_ingest_date": "2026-09-14",
+    "last_lint_date": null,
+    "orphan_page_count": 0,
+    "index_coverage_pct": 100
+  },
+  "lint": {
+    "command": "lint",
+    "api_version": "1",
+    "findings": [],
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "categorySummary": {}
+  }
+}

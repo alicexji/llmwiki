@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "corpus_id": "northstar-conflicts-v1",
+  "synthetic": true,
+  "scope": "Northstar Standard Home Loan; Northland; Northland dollars; owner-occupied purchase; standard individual borrowers",
+  "metadata_treatment": "Condition A receives source prose only. Condition B may restate only the incoming document metadata below. No gold labels or case definitions enter prompts.",
+  "documents": [
+    {"id":"A","file":"corpus/A-approved-policy-2025.md","sha256":"0b38022eab86c4f0c243725146a08f6b74353525ef24646d89f62a7ab26523a2","metadata":{"source_id":"A","source_type":"policy","authority":"Lending Policy Committee","publication_date":"2024-12-15","effective_date":"2025-01-01","supersedes":null,"status":"approved"}},
+    {"id":"G","file":"corpus/G-approved-bulletin-2025.md","sha256":"3a656b7c3f39f783baa9bf1efef11ec13b015e332d01df07a109e9dbd2063232","metadata":{"source_id":"G","source_type":"bulletin","authority":"Lending Policy Committee","publication_date":"2025-06-01","effective_date":"2025-06-01","supersedes":null,"status":"approved"}},
+    {"id":"B","file":"corpus/B-informal-team-notes-2026.md","sha256":"350c6b0ce4a61a3d02ed4894f7603107982591e127588238f9b2650163f8adfa","metadata":{"source_id":"B","source_type":"team-notes","authority":"lending operations team","publication_date":"2026-02-01","effective_date":null,"supersedes":null,"status":"informal"}},
+    {"id":"C","file":"corpus/C-approved-replacement-2026.md","sha256":"2790cc742331303f6bf2a229b8fc943c141da91fe4a32c3442e2fa8b6f2d11d3","metadata":{"source_id":"C","source_type":"policy","authority":"Lending Policy Committee","publication_date":"2026-02-15","effective_date":"2026-03-01","supersedes":{"source_id":"A","effective_date":"2026-03-01","scope":"whole-policy"},"status":"approved"}},
+    {"id":"D","file":"corpus/D-approved-directive-2025.md","sha256":"b61db965db96e4df8c4dec900c8080d79a88bbf0df4d2afa6f50f9967d5c1e96","metadata":{"source_id":"D","source_type":"directive","authority":"Lending Policy Committee","publication_date":"2024-12-15","effective_date":"2025-01-01","supersedes":null,"status":"approved"}},
+    {"id":"E","file":"corpus/E-approved-score-amendment-2026.md","sha256":"ebd5a0cb21a07d6b68bcf47cd95af606b6984a842f3caf636c5dd155ff518ea5","metadata":{"source_id":"E","source_type":"amendment","authority":"Lending Policy Committee","publication_date":"2026-01-15","effective_date":"2026-02-01","supersedes":{"source_id":"A","effective_date":"2026-02-01","scope":"minimum-credit-score-only"},"status":"approved"}},
+    {"id":"F","file":"corpus/F-draft-discussion-2026.md","sha256":"18ec333f7b6167da5a4bfef5c483d134f0d035a1a5de7bfe0ed96221861bbfe8","metadata":{"source_id":"F","source_type":"discussion","authority":"lending operations team","publication_date":"2026-02-01","effective_date":null,"supersedes":null,"status":"draft"}}
+  ],
+  "cases": [
+    {"id":"agreement","order":["A","G"]},
+    {"id":"supersession","order":["A","C"]},
+    {"id":"lower-authority","order":["A","B"]},
+    {"id":"equal-authority","order":["A","D"]},
+    {"id":"partial-update","order":["A","E"]},
+    {"id":"ambiguity","order":["A","F"]},
+    {"id":"combined","order":["A","B","C"]}
+  ],
+  "as_of_dates":["2026-02-20","2026-03-15"],
+  "queries":[
+    "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty.",
+    "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-03-15? Cite the sources and state any uncertainty.",
+    "For Northstar Standard Home Loan, which claims agree, disagree, are tentative, or supersede earlier claims? Identify the claims and their sources."
+  ]
+}

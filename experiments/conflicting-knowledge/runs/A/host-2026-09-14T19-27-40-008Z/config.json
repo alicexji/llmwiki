@@ -1,0 +1,12 @@
+{
+  "condition": "A",
+  "mode": "original-functions-observed",
+  "upstream": "b44df6ae95138d0edcbcc79b5b1d099c78bce5e0",
+  "manifest_sha256": "669687c3ecbd361cb3cb180dd796cc42f04edd0853dd8b1766ebef33bc2af67b",
+  "host_sha256": "d67428326704f2c3611dee7ab5f427750099fce5f523b419a45d2d3fbfbad62f",
+  "vscode": "1.137.0",
+  "repeats": 3,
+  "requested_family": "claude-opus-4.6",
+  "options": "unchanged",
+  "seed": "unavailable"
+}

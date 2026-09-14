@@ -1,0 +1,1 @@
+{"status":"instrumentation-invalid","reason":"Observer spread the response object and then accessed response.text again. Multiple getter accesses can create competing stream consumers. Malformed output must not be attributed to the model or wiki.","semantic_evaluation":"excluded","calls_attempted":2}

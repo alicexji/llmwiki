@@ -1,0 +1,57 @@
+{
+  "calls": [
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a wiki knowledge-base builder. You analyse source documents and extract structured knowledge.\n\nGiven a source document and the existing wiki index, produce a JSON analysis with:\n1. \"summary\": A rich markdown summary of the source (2-4 paragraphs). Include key findings, arguments, and data points. This replaces the mechanical preview.\n2. \"entities\": Named things (people, organizations, products, places) worth their own wiki page. Each has \"name\", \"content\" (markdown body for the page), and \"tags\" (array of strings).\n3. \"concepts\": Ideas, techniques, patterns, or topics worth their own wiki page. Each has \"name\", \"content\" (markdown body), and \"tags\".\n4. \"crosslinks\": Links between pages. Each has \"from\" (relative path like \"entities/foo.md\" or \"sources/bar-summary.md\") and \"to\" (array of relative paths). Only link to pages that will exist after this analysis (existing pages from the index OR new entity/concept pages you are creating). Entity pages are at \"entities/{slugified-name}.md\", concept pages at \"concepts/{slugified-name}.md\". Slugify = lowercase, replace spaces/special chars with hyphens, remove consecutive hyphens.\n\nRules:\n- Only create entities/concepts that are substantively discussed in the source, not just mentioned in passing.\n- Keep content concise but informative (1-3 paragraphs per page).\n- Use markdown formatting: headers, bold, lists.\n- Tags should be lowercase, hyphenated keywords.\n- If the source has minimal content, return fewer or no entities/concepts.\n- Respond with ONLY valid JSON. No markdown fences, no explanation."
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "## Existing Wiki Pages\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n\n## Source Document\n# Northstar Standard Home Loan: approved policy 2025\n\nDocument ID: A. This policy was approved by the Lending Policy Committee and published on 2024-12-15. Its status is approved and its effective date is 2025-01-01. It does not supersede another document.\n\nThis policy applies to Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in the fictional jurisdiction of Northland, denominated in Northland dollars. All requirements below apply to that same product and borrower class.\n\nThe maximum loan-to-value ratio (LTV) is 80%. The maximum loan term is 30 years. The minimum credit score is 680.\n\nThe Lending Policy Committee is the approving authority for this product. Informal team notes and draft discussions cannot change an approved policy. An explicit replacement takes effect on its stated effective date, not its publication date. An amendment changes only the requirements it names; other requirements remain in force. If equally authoritative documents with the same dates state incompatible requirements and neither establishes precedence, the requirement remains unresolved pending committee clarification. Staff must not choose a value or invent an exception to resolve that situation.\n"
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "\" documentved Document ID: A) forNorthstar Standard owner-occupied purchual borrowers in the f of ** denominated in Northland d policy was approved by the **ee** on 2024-12 with an effective date of 2 and does not supersede anyn\\nKey lameters are specloan-to-value rat 80%, a maximum, and a minimum credit requ apply u product and borrower class.\\ishes governance rules forpretation: only Committee can approve changes; drafts cannot overrideved policy; repl take effect on their stated effather than publication date; amend specific name;flicting equoritative documents exist without precedence, staff mustave the mat guceptions.\",\"{\"name\":\"Northstan\",\"content\":\"Aowner-occupied purcheting in Northland dollars.\\n025 Approved Policy Maximum LTV:ximum loan term: 30um credit score: 680\\oy A, approved  effective 2025-01-an-product\",\"homestar\",\"policy\"Lending Policy Committeeving authority** for Loan policies. Respon amarifying l documents.\\n\\nAp on effective 2025-01-es or override itsved decisions, and un equ itsarification rather than staff impro[\"committee\",\"governending-]},{\"name\":\"fictional jurisdi which the Northstar Stand operates, using currency.\",\"tags\":[\"ictional\",\"currency\"]}\"name\":\"Loan- (LTV)\",\"content\":ending metratio ofount to the value of the purNorthstar Standard 2025 approved policy is **80%**.\",\"tltv\",\"lending-y\"]},{\"name\": Prec\"Governance rules dending policy documents areved, amended, and supersen- Only the approving auth.g., Lending Policved policy.\\n- cannot override approved policy take effect on their not publication date.\\n-ific requirements they\\n- If equflict with no established precedenceter remains **unresolvedarification — staff must not gu.\",\"tags\":[\"govern\",\"comp]}],\"crosslin\"from\":\"sources/a025-summary.md\",\"to-standard-home-loan-policy-committee.md\",\"concepts/loan-ltv.md\",\"concepand-precedence-rules\":\"entities/northstar.md\",\"to\":[\"entcommittee.md\",\"entities//loan-to-value-md\"]},{\"from\":y-committee.md\",\"to-approval-and-precedities/northstar-standard]},{\"from\":\"concy-approval-and-precto\":[\"entities/lmd\"]}",
+      "started": "2026-09-14T19:25:52.967Z",
+      "finished": "2026-09-14T19:26:04.635Z"
+    }
+  ],
+  "logs": [
+    "[model] Configured family \"claude-opus-4.6\" is not available — falling back to any Copilot model",
+    "[model] Using fallback model: claude-sonnet-5",
+    "[llmIngest] Using model: claude-sonnet-5",
+    "[llmIngest] LLM response length: 2059 chars",
+    "[llmIngest] Failed to parse LLM JSON: SyntaxError: Bad escaped character in JSON at position 347 (line 1 column 348)",
+    "[llmIngest] Raw response: \" documentved Document ID: A) forNorthstar Standard owner-occupied purchual borrowers in the f of ** denominated in Northland d policy was approved by the **ee** on 2024-12 with an effective date of 2 and does not supersede anyn\\nKey lameters are specloan-to-value rat 80%, a maximum, and a minimum credit requ apply u product and borrower class.\\ishes governance rules forpretation: only Committee can approve changes; drafts cannot overrideved policy; repl take effect on their stated effather than",
+    "[llmIngest] LLM analysis returned nothing — skipping enrichment"
+  ],
+  "queries": [],
+  "step": 1,
+  "source": "A",
+  "ingest": {
+    "pagesCreated": [
+      "sources/a-approved-policy-2025-summary.md"
+    ],
+    "pagesUpdated": [
+      "index.md",
+      "log.md"
+    ]
+  }
+}

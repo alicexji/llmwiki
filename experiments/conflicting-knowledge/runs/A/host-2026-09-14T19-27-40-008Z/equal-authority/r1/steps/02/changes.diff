@@ -1,0 +1,70 @@
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\02\\state/raw/D-approved-directive-2025.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\02\\state/raw/D-approved-directive-2025.md"
+new file mode 100644
+index 0000000..7d925a2
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\02\\state/raw/D-approved-directive-2025.md"
+@@ -0,0 +1,9 @@
++# Northstar Standard Home Loan: approved LTV directive
++
++Document ID: D. This directive was approved by the Lending Policy Committee and published on 2024-12-15. Its status is approved. It takes effect on 2025-01-01. It does not state that it supersedes another document or that it has precedence over another committee-approved policy.
++
++The directive applies to Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. It covers the same product, jurisdiction and borrower class as policy A. It is not limited to an exceptional group of applications.
++
++The maximum loan-to-value ratio (LTV) is 83%. This is an approved requirement stated by the committee in this directive. The directive does not state a maximum loan term or a minimum credit score.
++
++The approving body is the same Lending Policy Committee that approved policy A. No higher authority, later approval date, alternate effective date or special scope is identified here. This directive does not provide a rule for selecting between incompatible requirements stated in documents of equal authority and date.
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\01\\state/wiki/index.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\02\\state/wiki/index.md"
+index 81b4496..42320ab 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\01\\state/wiki/index.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\02\\state/wiki/index.md"
+@@ -3,6 +3,7 @@
+ ## Sources
+ 
+ - [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) — Source file (.md)
++- [D-approved-directive-2025.md](sources/d-approved-directive-2025-summary.md) — Source file (.md)
+ 
+ ## Entities
+ 
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\01\\state/wiki/log.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\02\\state/wiki/log.md"
+index 4787bee..3321115 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\01\\state/wiki/log.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\02\\state/wiki/log.md"
+@@ -10,3 +10,11 @@ Ingested source "A-approved-policy-2025.md" → sources/a-approved-policy-2025-s
+ 
+ LLM created 2 entities, 2 concepts, 5 crosslinks.
+ 
++## [2026-09-14] ingested | D-approved-directive-2025.md
++
++Ingested source "D-approved-directive-2025.md" → sources/d-approved-directive-2025-summary.md
++
++## [2026-09-14] enriched | sources/d-approved-directive-2025-summary.md
++
++LLM created 0 entities, 0 concepts, 1 crosslinks.
++
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\02\\state/wiki/sources/d-approved-directive-2025-summary.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\02\\state/wiki/sources/d-approved-directive-2025-summary.md"
+new file mode 100644
+index 0000000..d459904
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\steps\\02\\state/wiki/sources/d-approved-directive-2025-summary.md"
+@@ -0,0 +1,21 @@
++---
++type: source
++title: D-approved-directive-2025.md
++source_path: raw/D-approved-directive-2025.md
++ingested: '2026-09-14'
++created: '2026-09-14'
++tags: []
++---
++This document (Document ID: D) is an approved directive issued by the Lending Policy Committee, published 2024-12-15 and effective 2025-01-01, concerning the Northstar Standard Home Loan product. It sets a maximum loan-to-value ratio (LTV) of 83% for owner-occupied purchase loans made to standard individual borrowers in Northland, denominated in Northland dollars — the same product, jurisdiction, and borrower class scope as policy A.
++
++Notably, the directive does not state a maximum loan term or minimum credit score, and it does not claim to supersede or take precedence over any other committee-approved policy, including policy A. It was approved by the same committee as policy A, with no higher authority, later approval date, or special scope identified. This creates a potential ambiguity: since both documents cover identical scope and are approved by the same body, but the directive does not provide a tie-breaking rule for conflicting requirements, any discrepancy between this directive and policy A's LTV requirement remains unresolved by explicit precedence rules.
++
++This lack of an explicit precedence mechanism highlights the importance of the general policy precedence and amendment rules used elsewhere in the wiki to adjudicate between equally-authoritative, equally-dated documents that conflict on substantive terms like LTV.
++
++## See also
++
++- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)
++- [Lending Policy Committee](../entities/lending-policy-committee.md)
++- [Loan-to-Value Ratio \(LTV\)](../concepts/loan-to-value-ratio-ltv.md)
++- [Policy Precedence and Amendment Rules](../concepts/policy-precedence-and-amendment-rules.md)
++- [A-approved-policy-2025.md](a-approved-policy-2025-summary.md)

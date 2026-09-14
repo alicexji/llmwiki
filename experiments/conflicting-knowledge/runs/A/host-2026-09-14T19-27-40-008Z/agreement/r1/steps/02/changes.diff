@@ -1,0 +1,71 @@
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\02\\state/raw/G-approved-bulletin-2025.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\02\\state/raw/G-approved-bulletin-2025.md"
+new file mode 100644
+index 0000000..ab2c7d5
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\02\\state/raw/G-approved-bulletin-2025.md"
+@@ -0,0 +1,9 @@
++# Northstar Standard Home Loan: approved policy bulletin
++
++Document ID: G. This bulletin was approved by the Lending Policy Committee. Its status is approved. It was published on 2025-06-01 and is effective from 2025-06-01. It does not supersede another document.
++
++This bulletin concerns Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. It addresses the same product, jurisdiction and borrower class as policy A.
++
++The committee reaffirms the requirements in policy A: maximum loan-to-value ratio (LTV) is 80%, maximum loan term is 30 years, and minimum credit score is 680. This bulletin confirms those requirements rather than replacing policy A or establishing a different set of limits. There is no change to the scope of the policy.
++
++Staff preparing product information may refer to this bulletin and policy A together as approved evidence of these requirements. Publication of this bulletin does not signal a new exception or a change in approval authority. Its purpose is to restate the applicable figures consistently for teams using the policy.
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\01\\state/wiki/index.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\02\\state/wiki/index.md"
+index caf69bf..a057a5d 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\01\\state/wiki/index.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\02\\state/wiki/index.md"
+@@ -3,6 +3,7 @@
+ ## Sources
+ 
+ - [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) — Source file (.md)
++- [G-approved-bulletin-2025.md](sources/g-approved-bulletin-2025-summary.md) — Source file (.md)
+ 
+ ## Entities
+ 
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\01\\state/wiki/log.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\02\\state/wiki/log.md"
+index 8652f22..51f9e7b 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\01\\state/wiki/log.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\02\\state/wiki/log.md"
+@@ -10,3 +10,11 @@ Ingested source "A-approved-policy-2025.md" → sources/a-approved-policy-2025-s
+ 
+ LLM created 3 entities, 2 concepts, 4 crosslinks.
+ 
++## [2026-09-14] ingested | G-approved-bulletin-2025.md
++
++Ingested source "G-approved-bulletin-2025.md" → sources/g-approved-bulletin-2025-summary.md
++
++## [2026-09-14] enriched | sources/g-approved-bulletin-2025-summary.md
++
++LLM created 0 entities, 0 concepts, 1 crosslinks.
++
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\02\\state/wiki/sources/g-approved-bulletin-2025-summary.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\02\\state/wiki/sources/g-approved-bulletin-2025-summary.md"
+new file mode 100644
+index 0000000..5710363
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\steps\\02\\state/wiki/sources/g-approved-bulletin-2025-summary.md"
+@@ -0,0 +1,22 @@
++---
++type: source
++title: G-approved-bulletin-2025.md
++source_path: raw/G-approved-bulletin-2025.md
++ingested: '2026-09-14'
++created: '2026-09-14'
++tags: []
++---
++This document is bulletin G, an **approved** communication from the Lending Policy Committee reaffirming the terms of policy A for the Northstar Standard Home Loan. Published and effective 2025-06-01, it does not supersede any prior document and introduces no new requirements—its sole purpose is to restate and confirm existing limits for owner-occupied purchase loans made to standard individual borrowers in Northland, denominated in Northland dollars.
++
++The bulletin reaffirms three key figures from policy A: a maximum loan-to-value ratio (LTV) of 80%, a maximum loan term of 30 years, and a minimum credit score of 680. It explicitly states these are confirmations, not replacements or new exceptions, and that approval authority remains unchanged.
++
++Staff are instructed that bulletin G and policy A may be cited together as consistent, approved evidence of these requirements, reinforcing document precedence and consistency practices across teams referencing the policy.
++
++## See also
++
++- [A-approved-policy-2025.md](a-approved-policy-2025-summary.md)
++- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)
++- [Lending Policy Committee](../entities/lending-policy-committee.md)
++- [Northland](../entities/northland.md)
++- [Policy Document Precedence Rules](../concepts/policy-document-precedence-rules.md)
++- [Loan-to-Value Ratio \(LTV\)](../concepts/loan-to-value-ratio-ltv.md)

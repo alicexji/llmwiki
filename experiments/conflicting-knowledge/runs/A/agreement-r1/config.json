@@ -1,0 +1,21 @@
+{
+  "condition": "A",
+  "case_id": "agreement",
+  "run_id": "agreement-r1",
+  "status": "prepared-not-executed",
+  "mode": "manual-unchanged-extension",
+  "started": "2026-09-14T18:56:23.799Z",
+  "upstream_commit": "b44df6ae95138d0edcbcc79b5b1d099c78bce5e0",
+  "tracked_diff": "",
+  "git_status": "?? debug.log\n?? experiments/\n",
+  "node": "v22.21.0",
+  "manifest_sha256": "669687c3ecbd361cb3cb180dd796cc42f04edd0853dd8b1766ebef33bc2af67b",
+  "helper_sha256": "4dcd06f11bb5cbd48846bb78c4432344e086794a9dfa81f36bc18d144618153f",
+  "lockfile_sha256": "1a1faae9e1b1af0a0c94a228a6e649d8e308f06ab233a53a2e78aa83b1ff117a",
+  "order": [
+    "A",
+    "G"
+  ],
+  "actual_model": "not-measured",
+  "raw_model_response": "unavailable-in-upstream-output-log"
+}

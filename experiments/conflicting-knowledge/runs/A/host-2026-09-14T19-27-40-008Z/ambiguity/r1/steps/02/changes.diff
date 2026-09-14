@@ -1,0 +1,124 @@
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/raw/F-draft-discussion-2026.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/raw/F-draft-discussion-2026.md"
+new file mode 100644
+index 0000000..b9b005c
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/raw/F-draft-discussion-2026.md"
+@@ -0,0 +1,9 @@
++# Northstar Standard Home Loan: draft LTV discussion
++
++Document ID: F. This draft discussion was published by the lending operations team on 2026-02-01. Its status is draft. It has no effective date and does not supersede another document. It is not approved by the Lending Policy Committee and is not an approved policy change.
++
++The discussion is about Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. The team is discussing possibilities for that product rather than documenting a decision for a different established product.
++
++We may be able to go up to 85% LTV for some applications; scope and approval are still to be confirmed. The draft does not identify which applications would qualify. It does not establish that the proposed figure is available to any borrower today.
++
++This document records a tentative discussion. It does not assert a definite replacement for the approved maximum LTV, nor does it define an approved exception. It states no loan term or credit score requirement. Any future policy decision would need its own approval and effective date.
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/concepts/draft-ltv-proposal-2026.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/concepts/draft-ltv-proposal-2026.md"
+new file mode 100644
+index 0000000..ec83f7e
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/concepts/draft-ltv-proposal-2026.md"
+@@ -0,0 +1,24 @@
++---
++type: concept
++title: Draft LTV Proposal (2026)
++tags:
++  - ltv
++  - draft-policy
++  - northstar-standard-home-loan
++  - proposal
++  - lending-operations
++created: '2026-09-14T19:34:15.239Z'
++sources:
++  - sources/f-draft-discussion-2026-summary.md
++---
++A tentative, unapproved discussion raised by the lending operations team on 2026-02-01 proposing that **Northstar Standard Home Loan** owner-occupied purchase loans in **Northland** might allow up to **85% LTV** for some applications.
++
++**Status:** Draft only — not approved by the **Lending Policy Committee**, no effective date, does not supersede existing policy, and does not define an approved exception. Scope of qualifying applications is unconfirmed, and no loan term or credit score requirements are specified. This proposal does not currently change borrower eligibility under the approved 2025 loan eligibility requirements.
++
++## See also
++
++- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)
++- [Lending Policy Committee](../entities/lending-policy-committee.md)
++- [Northland](../entities/northland.md)
++- [Loan Eligibility Requirements \(2025\)](loan-eligibility-requirements-2025.md)
++- [Policy Precedence and Amendment Rules](policy-precedence-and-amendment-rules.md)
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/lending-policy-committee.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/entities/lending-policy-committee.md"
+index b02735d..d806809 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/lending-policy-committee.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/entities/lending-policy-committee.md"
+@@ -17,3 +17,4 @@ Governs policy changes: only this committee's approved documents (not informal n
+ 
+ - [Policy Precedence and Amendment Rules](../concepts/policy-precedence-and-amendment-rules.md)
+ - [Northstar Standard Home Loan](northstar-standard-home-loan.md)
++- [Draft LTV Proposal \(2026\)](../concepts/draft-ltv-proposal-2026.md)
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/northstar-standard-home-loan.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/entities/northstar-standard-home-loan.md"
+index a42d76e..5c044f5 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/northstar-standard-home-loan.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/entities/northstar-standard-home-loan.md"
+@@ -22,3 +22,4 @@ A loan product covered by the 2025 approved policy (Document ID: A). Applies to
+ - [Lending Policy Committee](lending-policy-committee.md)
+ - [Northland](northland.md)
+ - [Loan Eligibility Requirements \(2025\)](../concepts/loan-eligibility-requirements-2025.md)
++- [Draft LTV Proposal \(2026\)](../concepts/draft-ltv-proposal-2026.md)
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/index.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/index.md"
+index 2ce9dad..04b6119 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/index.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/index.md"
+@@ -3,6 +3,7 @@
+ ## Sources
+ 
+ - [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) — Source file (.md)
++- [F-draft-discussion-2026.md](sources/f-draft-discussion-2026-summary.md) — Source file (.md)
+ 
+ ## Entities
+ 
+@@ -14,3 +15,4 @@
+ 
+ - [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md) — #policy-governance #amendments #precedence #conflict-resolution
+ - [Loan Eligibility Requirements \(2025\)](concepts/loan-eligibility-requirements-2025.md) — #eligibility #ltv #credit-score #loan-term
++- [Draft LTV Proposal \(2026\)](concepts/draft-ltv-proposal-2026.md) — #ltv #draft-policy #northstar-standard-home-loan #proposal #lending-operations
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/log.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/log.md"
+index 56ecd5c..80b1fbd 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/log.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/log.md"
+@@ -10,3 +10,11 @@ Ingested source "A-approved-policy-2025.md" → sources/a-approved-policy-2025-s
+ 
+ LLM created 3 entities, 2 concepts, 5 crosslinks.
+ 
++## [2026-09-14] ingested | F-draft-discussion-2026.md
++
++Ingested source "F-draft-discussion-2026.md" → sources/f-draft-discussion-2026-summary.md
++
++## [2026-09-14] enriched | sources/f-draft-discussion-2026-summary.md
++
++LLM created 0 entities, 1 concepts, 4 crosslinks.
++
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/sources/f-draft-discussion-2026-summary.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/sources/f-draft-discussion-2026-summary.md"
+new file mode 100644
+index 0000000..c752ea9
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\02\\state/wiki/sources/f-draft-discussion-2026-summary.md"
+@@ -0,0 +1,22 @@
++---
++type: source
++title: F-draft-discussion-2026.md
++source_path: raw/F-draft-discussion-2026.md
++ingested: '2026-09-14'
++created: '2026-09-14'
++tags: []
++---
++This is a draft discussion document (Document ID: F), published 2026-02-01 by the lending operations team, regarding a possible change to the Loan-to-Value (LTV) ratio for **Northstar Standard Home Loan** owner-occupied purchase loans for standard individual borrowers in **Northland**. The document explicitly has draft status: it is not approved by the **Lending Policy Committee**, has no effective date, and does not supersede any other document.
++
++The core content floats a possibility of allowing up to 85% LTV for some applications, but the scope, eligibility criteria, and approval process remain unconfirmed. Critically, the document does not identify which applications would qualify, nor does it assert this rate is currently available to any borrower. No loan term or credit score requirements are specified.
++
++The document is notable primarily for what it does *not* do: it does not establish a new approved policy, does not define an approved exception to existing LTV limits, and does not replace the currently approved maximum LTV. Any future policy change based on this discussion would require separate formal approval and an effective date, per standard policy governance rules.
++
++## See also
++
++- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)
++- [Lending Policy Committee](../entities/lending-policy-committee.md)
++- [Northland](../entities/northland.md)
++- [Draft LTV Proposal \(2026\)](../concepts/draft-ltv-proposal-2026.md)
++- [Policy Precedence and Amendment Rules](../concepts/policy-precedence-and-amendment-rules.md)
++- [Loan Eligibility Requirements \(2025\)](../concepts/loan-eligibility-requirements-2025.md)

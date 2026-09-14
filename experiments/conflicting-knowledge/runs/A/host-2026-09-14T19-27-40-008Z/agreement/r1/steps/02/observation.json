@@ -1,0 +1,198 @@
+{
+  "calls": [
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a wiki knowledge-base builder. You analyse source documents and extract structured knowledge.\n\nGiven a source document and the existing wiki index, produce a JSON analysis with:\n1. \"summary\": A rich markdown summary of the source (2-4 paragraphs). Include key findings, arguments, and data points. This replaces the mechanical preview.\n2. \"entities\": Named things (people, organizations, products, places) worth their own wiki page. Each has \"name\", \"content\" (markdown body for the page), and \"tags\" (array of strings).\n3. \"concepts\": Ideas, techniques, patterns, or topics worth their own wiki page. Each has \"name\", \"content\" (markdown body), and \"tags\".\n4. \"crosslinks\": Links between pages. Each has \"from\" (relative path like \"entities/foo.md\" or \"sources/bar-summary.md\") and \"to\" (array of relative paths). Only link to pages that will exist after this analysis (existing pages from the index OR new entity/concept pages you are creating). Entity pages are at \"entities/{slugified-name}.md\", concept pages at \"concepts/{slugified-name}.md\". Slugify = lowercase, replace spaces/special chars with hyphens, remove consecutive hyphens.\n\nRules:\n- Only create entities/concepts that are substantively discussed in the source, not just mentioned in passing.\n- Keep content concise but informative (1-3 paragraphs per page).\n- Use markdown formatting: headers, bold, lists.\n- Tags should be lowercase, hyphenated keywords.\n- If the source has minimal content, return fewer or no entities/concepts.\n- Respond with ONLY valid JSON. No markdown fences, no explanation."
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "## Existing Wiki Pages\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [G-approved-bulletin-2025.md](sources/g-approved-bulletin-2025-summary.md) (Sources): Source file (.md)\n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northland](entities/northland.md) (Entities): \n- [Policy Document Precedence Rules](concepts/policy-document-precedence-rules.md) (Concepts): \n- [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) (Concepts): \n\n## Source Document\n# Northstar Standard Home Loan: approved policy bulletin\n\nDocument ID: G. This bulletin was approved by the Lending Policy Committee. Its status is approved. It was published on 2025-06-01 and is effective from 2025-06-01. It does not supersede another document.\n\nThis bulletin concerns Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. It addresses the same product, jurisdiction and borrower class as policy A.\n\nThe committee reaffirms the requirements in policy A: maximum loan-to-value ratio (LTV) is 80%, maximum loan term is 30 years, and minimum credit score is 680. This bulletin confirms those requirements rather than replacing policy A or establishing a different set of limits. There is no change to the scope of the policy.\n\nStaff preparing product information may refer to this bulletin and policy A together as approved evidence of these requirements. Publication of this bulletin does not signal a new exception or a change in approval authority. Its purpose is to restate the applicable figures consistently for teams using the policy.\n"
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "{\"summary\":\"This document is bulletin G, an **approved** communication from the Lending Policy Committee reaffirming the terms of policy A for the Northstar Standard Home Loan. Published and effective 2025-06-01, it does not supersede any prior document and introduces no new requirements—its sole purpose is to restate and confirm existing limits for owner-occupied purchase loans made to standard individual borrowers in Northland, denominated in Northland dollars.\\n\\nThe bulletin reaffirms three key figures from policy A: a maximum loan-to-value ratio (LTV) of 80%, a maximum loan term of 30 years, and a minimum credit score of 680. It explicitly states these are confirmations, not replacements or new exceptions, and that approval authority remains unchanged.\\n\\nStaff are instructed that bulletin G and policy A may be cited together as consistent, approved evidence of these requirements, reinforcing document precedence and consistency practices across teams referencing the policy.\",\"entities\":[],\"concepts\":[],\"crosslinks\":[{\"from\":\"sources/g-approved-bulletin-2025-summary.md\",\"to\":[\"sources/a-approved-policy-2025-summary.md\",\"entities/northstar-standard-home-loan.md\",\"entities/lending-policy-committee.md\",\"entities/northland.md\",\"concepts/policy-document-precedence-rules.md\",\"concepts/loan-to-value-ratio-ltv.md\"]}]}",
+      "started": "2026-09-14T19:28:19.985Z",
+      "finished": "2026-09-14T19:28:24.692Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [G-approved-bulletin-2025.md](sources/g-approved-bulletin-2025-summary.md) (Sources): Source file (.md)\n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northland](entities/northland.md) (Entities): \n- [Policy Document Precedence Rules](concepts/policy-document-precedence-rules.md) (Concepts): \n- [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) (Concepts): \n\n## Relevant Pages\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nA loan product for **owner-occupied purchase loans** targeting standard individual borrowers in Northland, denominated in Northland dollars.\n\n**2025 Approved Policy Terms:**\n- Maximum LTV: 80%\n- Maximum loan term: 30 years\n- Minimum credit score: 680\n\nGoverned by policy Document ID A, approved 2024-12-15, effective 2025-01-01.\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Northland](northland.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n\n---\n\n### Northland (entities/northland.md)\nA **fictional jurisdiction** in which the Northstar Standard Home Loan product operates, using Northland dollars as its currency."
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "## Northstar Standard Home Loan — Terms as of 2026-02-20\n\nBased on the retrieved content, the most recent **confirmed** terms come from **Policy Document A** (approved 2024-12-15, effective 2025-01-01), as documented on the [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) page:\n\n- **Maximum LTV:** 80%\n- **Maximum loan term:** 30 years\n- **Minimum credit score:** 680\n\n### ⚠️ Uncertainty\n\nThe wiki index also lists **G-approved-bulletin-2025.md**, which is likely a *bulletin* that could supersede or amend Document A's terms — but its actual content wasn't included in the pages retrieved for this query. Since:\n\n1. The question asks about a date (2026-02-20) later than Document A's stated effective date, and\n2. [Policy Document Precedence Rules](concepts/policy-document-precedence-rules.md) exists specifically to govern which document \"wins\" in case of conflicts,\n\n...I can't confirm whether the 2025 bulletin changes any of these terms without seeing its actual content and the precedence rules in detail.\n\n**Recommendation:** Pull the full text of `G-approved-bulletin-2025.md` and `Policy-Document-Precedence-Rules.md` to verify whether the bulletin modifies LTV, term, or credit score requirements, and whether it supersedes Document A as of the 2026 date in question.\n\n---\nIf you retrieve those and want a definitive answer, this would make a good candidate to /save as an updated \"Northstar Standard Home Loan — 2026 Terms\" page, cross-linked to both source documents.",
+      "started": "2026-09-14T19:28:25.003Z",
+      "finished": "2026-09-14T19:28:32.704Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [G-approved-bulletin-2025.md](sources/g-approved-bulletin-2025-summary.md) (Sources): Source file (.md)\n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northland](entities/northland.md) (Entities): \n- [Policy Document Precedence Rules](concepts/policy-document-precedence-rules.md) (Concepts): \n- [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) (Concepts): \n\n## Relevant Pages\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nA loan product for **owner-occupied purchase loans** targeting standard individual borrowers in Northland, denominated in Northland dollars.\n\n**2025 Approved Policy Terms:**\n- Maximum LTV: 80%\n- Maximum loan term: 30 years\n- Minimum credit score: 680\n\nGoverned by policy Document ID A, approved 2024-12-15, effective 2025-01-01.\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Northland](northland.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n\n---\n\n### Northland (entities/northland.md)\nA **fictional jurisdiction** in which the Northstar Standard Home Loan product operates, using Northland dollars as its currency."
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-03-15? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "## Northstar Standard Home Loan — Terms as of 2026-03-15\n\nBased on the wiki content retrieved, here is what's confirmed and what's uncertain:\n\n**Confirmed (2025 Approved Policy, Document ID A):**\n- Maximum LTV: **80%**\n- Maximum loan term: **30 years**\n- Minimum credit score: **680**\n\nSource: [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md), governed by policy Document ID A, approved 2024-12-15, effective 2025-01-01.\n\n**⚠️ Uncertainty for the 2026-03-15 date:**\nThe index lists a second source, **G-approved-bulletin-2025.md**, which is not shown in the retrieved page content above. Given the naming pattern (a \"bulletin\" vs. the \"policy\"), this document may contain updates or amendments to the terms that supersede or modify Document A — possibly relevant to determining what's in effect by March 2026. Since its content wasn't retrieved, I can't confirm whether it changes any of the LTV/term/credit score figures or introduces an effective date closer to 2026.\n\nAdditionally, the [Policy Document Precedence Rules](concepts/policy-document-precedence-rules.md) page likely governs how to resolve conflicts if the bulletin *does* alter these terms — but its content also wasn't included in this retrieval.\n\n**Recommendation:** To answer definitively for 2026-03-15, please pull in the full content of:\n1. `G-approved-bulletin-2025.md` (may contain revised terms)\n2. `Policy Document Precedence Rules` (to determine which document governs if they conflict)\n\nWithout those, the safest answer is: **the last confirmed terms are LTV 80%, term 30 years, credit score 680 (per Document A, effective 2025-01-01)**, but a 2025 bulletin exists that might supersede these — status as of 2026-03-15 is unconfirmed from current wiki content.",
+      "started": "2026-09-14T19:28:32.739Z",
+      "finished": "2026-09-14T19:28:41.255Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [G-approved-bulletin-2025.md](sources/g-approved-bulletin-2025-summary.md) (Sources): Source file (.md)\n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northland](entities/northland.md) (Entities): \n- [Policy Document Precedence Rules](concepts/policy-document-precedence-rules.md) (Concepts): \n- [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) (Concepts): \n\n## Relevant Pages\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nA loan product for **owner-occupied purchase loans** targeting standard individual borrowers in Northland, denominated in Northland dollars.\n\n**2025 Approved Policy Terms:**\n- Maximum LTV: 80%\n- Maximum loan term: 30 years\n- Minimum credit score: 680\n\nGoverned by policy Document ID A, approved 2024-12-15, effective 2025-01-01.\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Northland](northland.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n\n---\n\n### Northland (entities/northland.md)\nA **fictional jurisdiction** in which the Northstar Standard Home Loan product operates, using Northland dollars as its currency."
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, which claims agree, disagree, are tentative, or supersede earlier claims? Identify the claims and their sources."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "# Claims Analysis: Northstar Standard Home Loan\n\nBased on the wiki content available, here's what I can identify:\n\n## Established Claims (from Document A - Policy)\nThe **Northstar Standard Home Loan** page cites **Document ID A** (approved-policy-2025), approved 2024-12-15, effective 2025-01-01, with these terms:\n- Maximum LTV: 80%\n- Maximum loan term: 30 years\n- Minimum credit score: 680\n\n## Potential Conflicting/Superseding Source\nThe index lists **G-approved-bulletin-2025.md** as a separate source document, but its content wasn't included in the retrieved pages above — so I can't confirm whether it agrees with, contradicts, or supersedes Document A's terms for this product.\n\nGiven the wiki has a dedicated **[Policy Document Precedence Rules](concepts/policy-document-precedence-rules.md)** page, this suggests the wiki anticipates *conflicts between documents* (like A vs. G) and has rules for resolving them — but that page's content also wasn't retrieved here.\n\n## What's Missing\nTo fully answer whether claims agree/disagree/are tentative/supersede, I'd need:\n1. The actual content of **G-approved-bulletin-2025.md** — does it mention Northstar Standard Home Loan or its LTV/term/credit score figures?\n2. The content of **Policy Document Precedence Rules** — to determine which document (A or G) takes precedence if they conflict.\n\n**Suggestion:** Could you pull up the full content of those two pages? Once we know whether Document G mentions or revises Northstar's terms, I can give a definitive agree/disagree/supersede verdict — and this would make a solid candidate for a `/save`-able synthesis page (e.g., \"Northstar Standard Home Loan: Policy Conflict Resolution\").",
+      "started": "2026-09-14T19:28:41.358Z",
+      "finished": "2026-09-14T19:28:49.556Z"
+    }
+  ],
+  "logs": [
+    "[model] Configured family \"claude-opus-4.6\" is not available — falling back to any Copilot model",
+    "[model] Using fallback model: claude-sonnet-5",
+    "[llmIngest] Using model: claude-sonnet-5",
+    "[llmIngest] LLM response length: 1335 chars",
+    "[llmIngest] Parsed: summary=yes, entities=0, concepts=0, crosslinks=1",
+    "[llmIngest] Rewrote summary: sources/g-approved-bulletin-2025-summary.md",
+    "[llmIngest] Crosslinked sources/g-approved-bulletin-2025-summary.md → sources/a-approved-policy-2025-summary.md, entities/northstar-standard-home-loan.md, entities/lending-policy-committee.md, entities/northland.md, concepts/policy-document-precedence-rules.md, concepts/loan-to-value-ratio-ltv.md"
+  ],
+  "queries": [
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty.",
+      "text": "## Northstar Standard Home Loan — Terms as of 2026-02-20\n\nBased on the retrieved content, the most recent **confirmed** terms come from **Policy Document A** (approved 2024-12-15, effective 2025-01-01), as documented on the [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) page:\n\n- **Maximum LTV:** 80%\n- **Maximum loan term:** 30 years\n- **Minimum credit score:** 680\n\n### ⚠️ Uncertainty\n\nThe wiki index also lists **G-approved-bulletin-2025.md**, which is likely a *bulletin* that could supersede or amend Document A's terms — but its actual content wasn't included in the pages retrieved for this query. Since:\n\n1. The question asks about a date (2026-02-20) later than Document A's stated effective date, and\n2. [Policy Document Precedence Rules](concepts/policy-document-precedence-rules.md) exists specifically to govern which document \"wins\" in case of conflicts,\n\n...I can't confirm whether the 2025 bulletin changes any of these terms without seeing its actual content and the precedence rules in detail.\n\n**Recommendation:** Pull the full text of `G-approved-bulletin-2025.md` and `Policy-Document-Precedence-Rules.md` to verify whether the bulletin modifies LTV, term, or credit score requirements, and whether it supersedes Document A as of the 2026 date in question.\n\n---\nIf you retrieve those and want a definitive answer, this would make a good candidate to /save as an updated \"Northstar Standard Home Loan — 2026 Terms\" page, cross-linked to both source documents.\n\n---\n**Sources:**\n  ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\workspace\\.wiki\\wiki\\entities\\northland.md",
+          "title": "Northland"
+        }
+      ]
+    },
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-03-15? Cite the sources and state any uncertainty.",
+      "text": "## Northstar Standard Home Loan — Terms as of 2026-03-15\n\nBased on the wiki content retrieved, here is what's confirmed and what's uncertain:\n\n**Confirmed (2025 Approved Policy, Document ID A):**\n- Maximum LTV: **80%**\n- Maximum loan term: **30 years**\n- Minimum credit score: **680**\n\nSource: [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md), governed by policy Document ID A, approved 2024-12-15, effective 2025-01-01.\n\n**⚠️ Uncertainty for the 2026-03-15 date:**\nThe index lists a second source, **G-approved-bulletin-2025.md**, which is not shown in the retrieved page content above. Given the naming pattern (a \"bulletin\" vs. the \"policy\"), this document may contain updates or amendments to the terms that supersede or modify Document A — possibly relevant to determining what's in effect by March 2026. Since its content wasn't retrieved, I can't confirm whether it changes any of the LTV/term/credit score figures or introduces an effective date closer to 2026.\n\nAdditionally, the [Policy Document Precedence Rules](concepts/policy-document-precedence-rules.md) page likely governs how to resolve conflicts if the bulletin *does* alter these terms — but its content also wasn't included in this retrieval.\n\n**Recommendation:** To answer definitively for 2026-03-15, please pull in the full content of:\n1. `G-approved-bulletin-2025.md` (may contain revised terms)\n2. `Policy Document Precedence Rules` (to determine which document governs if they conflict)\n\nWithout those, the safest answer is: **the last confirmed terms are LTV 80%, term 30 years, credit score 680 (per Document A, effective 2025-01-01)**, but a 2025 bulletin exists that might supersede these — status as of 2026-03-15 is unconfirmed from current wiki content.\n\n---\n**Sources:**\n  ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\workspace\\.wiki\\wiki\\entities\\northland.md",
+          "title": "Northland"
+        }
+      ]
+    },
+    {
+      "question": "For Northstar Standard Home Loan, which claims agree, disagree, are tentative, or supersede earlier claims? Identify the claims and their sources.",
+      "text": "# Claims Analysis: Northstar Standard Home Loan\n\nBased on the wiki content available, here's what I can identify:\n\n## Established Claims (from Document A - Policy)\nThe **Northstar Standard Home Loan** page cites **Document ID A** (approved-policy-2025), approved 2024-12-15, effective 2025-01-01, with these terms:\n- Maximum LTV: 80%\n- Maximum loan term: 30 years\n- Minimum credit score: 680\n\n## Potential Conflicting/Superseding Source\nThe index lists **G-approved-bulletin-2025.md** as a separate source document, but its content wasn't included in the retrieved pages above — so I can't confirm whether it agrees with, contradicts, or supersedes Document A's terms for this product.\n\nGiven the wiki has a dedicated **[Policy Document Precedence Rules](concepts/policy-document-precedence-rules.md)** page, this suggests the wiki anticipates *conflicts between documents* (like A vs. G) and has rules for resolving them — but that page's content also wasn't retrieved here.\n\n## What's Missing\nTo fully answer whether claims agree/disagree/are tentative/supersede, I'd need:\n1. The actual content of **G-approved-bulletin-2025.md** — does it mention Northstar Standard Home Loan or its LTV/term/credit score figures?\n2. The content of **Policy Document Precedence Rules** — to determine which document (A or G) takes precedence if they conflict.\n\n**Suggestion:** Could you pull up the full content of those two pages? Once we know whether Document G mentions or revises Northstar's terms, I can give a definitive agree/disagree/supersede verdict — and this would make a solid candidate for a `/save`-able synthesis page (e.g., \"Northstar Standard Home Loan: Policy Conflict Resolution\").\n\n---\n**Sources:**\n  ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\agreement\\r1\\workspace\\.wiki\\wiki\\entities\\northland.md",
+          "title": "Northland"
+        }
+      ]
+    }
+  ],
+  "step": 2,
+  "source": "G",
+  "ingest": {
+    "pagesCreated": [
+      "sources/g-approved-bulletin-2025-summary.md"
+    ],
+    "pagesUpdated": [
+      "index.md",
+      "log.md",
+      "sources/g-approved-bulletin-2025-summary.md",
+      "sources/g-approved-bulletin-2025-summary.md"
+    ]
+  }
+}

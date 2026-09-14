@@ -1,0 +1,113 @@
+{
+  "mode": "core-mechanical-with-context",
+  "llm_executed": false,
+  "started": "2026-09-14T18:38:30.094Z",
+  "upstream_commit": "b44df6ae95138d0edcbcc79b5b1d099c78bce5e0",
+  "branch": "enterprise-prototype",
+  "git_status": "?? experiments/\n",
+  "tracked_diff": "",
+  "node": "v22.21.0",
+  "platform": "win32",
+  "lockfile_sha256": "1a1faae9e1b1af0a0c94a228a6e649d8e308f06ab233a53a2e78aa83b1ff117a",
+  "harness_sha256": "7e0f9c7dd3b43232f3e0454ba28bfc0ffb3b4d46f842bbcc0c4711a9d36328d6",
+  "manifest_sha256": "6060b34d27e79febe584e9a127175555e73358a3fada5bf059b273a77ab74789",
+  "source_sha256": {
+    "01-atlas.md": "12712d7bbdeb04d28436c8824c15157b6fbb10bab6b7e043742db872e290414c",
+    "02-retention-policy.md": "ddb32402d883eff1a3b23b4441b1f96f514423091cdb807869593cb531a6b0f2",
+    "03-team-note.md": "74c4289053cd371dee3abb7bc952de6b0c4d91f2fbb096416da5f8c15d6fe417",
+    "04-atlas-copy.md": "12712d7bbdeb04d28436c8824c15157b6fbb10bab6b7e043742db872e290414c",
+    "05-retention-update.md": "deb15f9b952d53a5da322519077cd731b7f5640e53a97929cf82b3cef949f0dc",
+    "06-old-runbook.md": "ed4c09b21e9d8143b921fb9a69da1d6b1de47f9e23d4def2470b5b4f08072b85",
+    "07-beacon.md": "d64cdfa2cc4552caba8558b2cb7a59410500277fd362f223ee030c8e6a4f544c",
+    "08-exception.md": "f1e4ae8a37c29bc85e72d40042ef66fa45f387ea7495c790f0488152f626680a"
+  },
+  "manifest": {
+    "id": "pilot-v1",
+    "synthetic": true,
+    "metadata_visibility": "evaluator-only",
+    "documents": [
+      {
+        "file": "01-atlas.md",
+        "type": "service-catalog",
+        "authority": "approved",
+        "published": "2025-01-01",
+        "effective": "2025-01-01",
+        "superseded_by": null
+      },
+      {
+        "file": "02-retention-policy.md",
+        "type": "policy",
+        "authority": "approved",
+        "published": "2025-01-02",
+        "effective": "2025-01-02",
+        "superseded_by": "05-retention-update.md"
+      },
+      {
+        "file": "03-team-note.md",
+        "type": "chat-note",
+        "authority": "informal",
+        "published": "2025-03-01",
+        "effective": null,
+        "superseded_by": null
+      },
+      {
+        "file": "04-atlas-copy.md",
+        "type": "service-catalog",
+        "authority": "approved",
+        "published": "2025-01-01",
+        "effective": "2025-01-01",
+        "superseded_by": null,
+        "duplicate_of": "01-atlas.md"
+      },
+      {
+        "file": "05-retention-update.md",
+        "type": "policy",
+        "authority": "approved",
+        "published": "2025-04-01",
+        "effective": "2025-07-01",
+        "superseded_by": null
+      },
+      {
+        "file": "06-old-runbook.md",
+        "type": "runbook",
+        "authority": "operational",
+        "published": "2024-06-01",
+        "effective": "2024-06-01",
+        "superseded_by": "02-retention-policy.md"
+      },
+      {
+        "file": "07-beacon.md",
+        "type": "service-catalog",
+        "authority": "approved",
+        "published": "2025-04-02",
+        "effective": "2025-04-02",
+        "superseded_by": null
+      },
+      {
+        "file": "08-exception.md",
+        "type": "policy-exception",
+        "authority": "approved",
+        "published": "2025-04-03",
+        "effective": "2025-04-03",
+        "superseded_by": null
+      }
+    ],
+    "queries": [
+      "Atlas",
+      "retention",
+      "Orion",
+      "How long are Atlas audit logs retained as of 2025-05-01?",
+      "How long are Atlas audit logs retained as of 2025-08-01?",
+      "Which service depends on Atlas?"
+    ],
+    "evaluation_notes": {
+      "2025-05-01": "Approved standard Atlas audit retention is 90 days; the informal 30-day note does not override policy.",
+      "2025-08-01": "Approved standard Atlas audit retention is 180 days.",
+      "exception": "Active legal holds suspend deletion for affected records only.",
+      "ownership": "Orion owns Atlas; Beacon depends on Atlas."
+    }
+  },
+  "force": false,
+  "dry_run": false,
+  "initial_state": "empty"
+}

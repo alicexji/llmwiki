@@ -1,0 +1,17 @@
+{
+  "command": "init",
+  "api_version": "1",
+  "status": "created",
+  "created_dirs": [
+    "raw",
+    "wiki",
+    "wiki/entities",
+    "wiki/concepts",
+    "wiki/sources"
+  ],
+  "created_files": [
+    "wiki/index.md",
+    "wiki/log.md",
+    "AGENTS.md"
+  ]
+}

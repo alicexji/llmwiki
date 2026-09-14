@@ -1,0 +1,1 @@
+{"status":"instrumentation-invalid","reason":"Proxy over frozen VS Code model violated read-only property invariants before a model request.","semantic_evaluation":"excluded","calls_attempted":0}

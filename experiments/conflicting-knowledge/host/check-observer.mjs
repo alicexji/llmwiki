@@ -1,0 +1,17 @@
+import { build } from '../../../packages/vscode/node_modules/esbuild/lib/main.js';
+import assert from 'node:assert/strict';
+import { fileURLToPath } from 'node:url';
+const result = await build({entryPoints:[fileURLToPath(new URL('observer.ts',import.meta.url))],bundle:true,platform:'node',format:'cjs',write:false,plugins:[{name:'test-only-vscode',setup(b){b.onResolve({filter:/^real-vscode$/},()=>({path:'stub',namespace:'stub'}));b.onLoad({filter:/.*/,namespace:'stub'},()=>({contents:'export const lm = {};',loader:'js'}));}}]});
+const module={exports:{}};
+new Function('module','exports',result.outputFiles[0].text)(module,module.exports);
+const {wrapModel,setRecord}=module.exports;
+const messages=[{role:1,content:[{value:'unchanged input'}]}],options={},token={};
+let calls=0, textReads=0;
+const record={calls:[]};setRecord(record);
+const model={id:'fixture',async sendRequest(m,o,t){calls++;assert.equal(m,messages);assert.equal(o,options);assert.equal(t,token);return {get text(){textReads++;return (async function*(){yield '{"summary":';yield '"fixture"}';})();}};}};
+const response=await wrapModel(Object.freeze(model)).sendRequest(messages,options,token);
+let text='';for await(const fragment of response.text)text+=fragment;
+assert.equal(calls,1);assert.equal(textReads,1);assert.equal(text,'{"summary":"fixture"}');assert.equal(record.calls[0].response,text);
+const failure=new Error('fixture failure');
+await assert.rejects(wrapModel({id:'fixture',async sendRequest(){throw failure;}}).sendRequest(messages,options,token),e=>e===failure);
+console.log('Observer fidelity: request/options/token identities unchanged; streamed text unchanged; one forwarded call; error propagated. Fixture only, not live evidence.');

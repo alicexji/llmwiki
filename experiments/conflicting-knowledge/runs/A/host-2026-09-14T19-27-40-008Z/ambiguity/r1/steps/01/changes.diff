@@ -1,0 +1,209 @@
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/raw/A-approved-policy-2025.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/raw/A-approved-policy-2025.md"
+new file mode 100644
+index 0000000..914b0eb
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/raw/A-approved-policy-2025.md"
+@@ -0,0 +1,9 @@
++# Northstar Standard Home Loan: approved policy 2025
++
++Document ID: A. This policy was approved by the Lending Policy Committee and published on 2024-12-15. Its status is approved and its effective date is 2025-01-01. It does not supersede another document.
++
++This policy applies to Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in the fictional jurisdiction of Northland, denominated in Northland dollars. All requirements below apply to that same product and borrower class.
++
++The maximum loan-to-value ratio (LTV) is 80%. The maximum loan term is 30 years. The minimum credit score is 680.
++
++The Lending Policy Committee is the approving authority for this product. Informal team notes and draft discussions cannot change an approved policy. An explicit replacement takes effect on its stated effective date, not its publication date. An amendment changes only the requirements it names; other requirements remain in force. If equally authoritative documents with the same dates state incompatible requirements and neither establishes precedence, the requirement remains unresolved pending committee clarification. Staff must not choose a value or invent an exception to resolve that situation.
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/concepts/loan-eligibility-requirements-2025.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/concepts/loan-eligibility-requirements-2025.md"
+new file mode 100644
+index 0000000..e2a1ac2
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/concepts/loan-eligibility-requirements-2025.md"
+@@ -0,0 +1,23 @@
++---
++type: concept
++title: Loan Eligibility Requirements (2025)
++tags:
++  - eligibility
++  - ltv
++  - credit-score
++  - loan-term
++created: '2026-09-14T19:33:41.566Z'
++sources:
++  - sources/a-approved-policy-2025-summary.md
++---
++Core numeric eligibility criteria set by the 2025 approved policy for Northstar Standard Home Loan:
++
++- **Maximum LTV:** 80%
++- **Maximum loan term:** 30 years
++- **Minimum credit score:** 680
++
++These apply specifically to owner-occupied purchase loans for standard individual borrowers in Northland.
++
++## See also
++
++- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/concepts/policy-precedence-and-amendment-rules.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/concepts/policy-precedence-and-amendment-rules.md"
+new file mode 100644
+index 0000000..01e3f41
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/concepts/policy-precedence-and-amendment-rules.md"
+@@ -0,0 +1,22 @@
++---
++type: concept
++title: Policy Precedence and Amendment Rules
++tags:
++  - policy-governance
++  - amendments
++  - precedence
++  - conflict-resolution
++created: '2026-09-14T19:33:41.550Z'
++sources:
++  - sources/a-approved-policy-2025-summary.md
++---
++Governance rules describing how lending policy documents interact:
++
++- **Replacement documents** take effect on their stated *effective date*, not their publication date.
++- **Amendments** change only the specific requirements they name; all other requirements remain in force.
++- If two **equally authoritative documents** with the same dates conflict and neither establishes precedence, the requirement is **unresolved** pending committee clarification.
++- Staff must **not** invent exceptions or choose values to resolve such conflicts themselves.
++
++## See also
++
++- [Lending Policy Committee](../entities/lending-policy-committee.md)
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/lending-policy-committee.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/lending-policy-committee.md"
+new file mode 100644
+index 0000000..b02735d
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/lending-policy-committee.md"
+@@ -0,0 +1,19 @@
++---
++type: entity
++title: Lending Policy Committee
++tags:
++  - committee
++  - governance
++  - approving-authority
++created: '2026-09-14T19:33:41.511Z'
++sources:
++  - sources/a-approved-policy-2025-summary.md
++---
++The **approving authority** for Northstar Standard Home Loan policy. Approved Document ID: A on 2024-12-15, effective 2025-01-01.
++
++Governs policy changes: only this committee's approved documents (not informal notes or drafts) can alter policy. Responsible for resolving conflicts between equally authoritative documents; unresolved conflicts remain pending until committee clarification.
++
++## See also
++
++- [Policy Precedence and Amendment Rules](../concepts/policy-precedence-and-amendment-rules.md)
++- [Northstar Standard Home Loan](northstar-standard-home-loan.md)
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/northland.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/northland.md"
+new file mode 100644
+index 0000000..ed34e3e
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/northland.md"
+@@ -0,0 +1,11 @@
++---
++type: entity
++title: Northland
++tags:
++  - jurisdiction
++  - fictional-location
++created: '2026-09-14T19:33:41.527Z'
++sources:
++  - sources/a-approved-policy-2025-summary.md
++---
++A fictional jurisdiction where the Northstar Standard Home Loan product applies. Loans are denominated in **Northland dollars**.
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/northstar-standard-home-loan.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/northstar-standard-home-loan.md"
+new file mode 100644
+index 0000000..a42d76e
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/entities/northstar-standard-home-loan.md"
+@@ -0,0 +1,24 @@
++---
++type: entity
++title: Northstar Standard Home Loan
++tags:
++  - loan-product
++  - policy
++  - northstar
++  - home-loan
++created: '2026-09-14T19:33:41.487Z'
++sources:
++  - sources/a-approved-policy-2025-summary.md
++---
++A loan product covered by the 2025 approved policy (Document ID: A). Applies to **owner-occupied purchase loans** for standard individual borrowers in **Northland**, denominated in Northland dollars.
++
++**Key policy terms (effective 2025-01-01):**
++- Maximum LTV: 80%
++- Maximum loan term: 30 years
++- Minimum credit score: 680
++
++## See also
++
++- [Lending Policy Committee](lending-policy-committee.md)
++- [Northland](northland.md)
++- [Loan Eligibility Requirements \(2025\)](../concepts/loan-eligibility-requirements-2025.md)
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\00\\state/wiki/index.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/index.md"
+index 44f18d5..2ce9dad 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\00\\state/wiki/index.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/index.md"
+@@ -1,7 +1,16 @@
+ # Wiki Index
+ 
++## Sources
++
++- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) — Source file (.md)
++
+ ## Entities
+ 
++- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) — #loan-product #policy #northstar #home-loan
++- [Lending Policy Committee](entities/lending-policy-committee.md) — #committee #governance #approving-authority
++- [Northland](entities/northland.md) — #jurisdiction #fictional-location
++
+ ## Concepts
+ 
+-## Sources
++- [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md) — #policy-governance #amendments #precedence #conflict-resolution
++- [Loan Eligibility Requirements \(2025\)](concepts/loan-eligibility-requirements-2025.md) — #eligibility #ltv #credit-score #loan-term
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\00\\state/wiki/log.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/log.md"
+index 87069b9..56ecd5c 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\00\\state/wiki/log.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/log.md"
+@@ -2,3 +2,11 @@
+ 
+ Wiki knowledge base initialized.
+ 
++## [2026-09-14] ingested | A-approved-policy-2025.md
++
++Ingested source "A-approved-policy-2025.md" → sources/a-approved-policy-2025-summary.md
++
++## [2026-09-14] enriched | sources/a-approved-policy-2025-summary.md
++
++LLM created 3 entities, 2 concepts, 5 crosslinks.
++
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/sources/a-approved-policy-2025-summary.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/sources/a-approved-policy-2025-summary.md"
+new file mode 100644
+index 0000000..0550be0
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\ambiguity\\r1\\steps\\01\\state/wiki/sources/a-approved-policy-2025-summary.md"
+@@ -0,0 +1,21 @@
++---
++type: source
++title: A-approved-policy-2025.md
++source_path: raw/A-approved-policy-2025.md
++ingested: '2026-09-14'
++created: '2026-09-14'
++tags: []
++---
++This document defines the **approved 2025 lending policy** (Document ID: A) for the **Northstar Standard Home Loan** product, targeting owner-occupied purchase loans for standard individual borrowers in the fictional jurisdiction of **Northland**, denominated in Northland dollars. It was approved by the **Lending Policy Committee** on 2024-12-15 and takes effect 2025-01-01, superseding no prior document.
++
++Key numeric requirements include a maximum **loan-to-value ratio (LTV) of 80%**, a maximum **loan term of 30 years**, and a minimum **credit score of 680**. These apply uniformly to the specified product and borrower class.
++
++The policy also establishes governance rules: only the Lending Policy Committee can approve or change policy; informal notes/drafts have no authority; replacements take effect on their stated effective date (not publication date); amendments affect only the named requirements, leaving others intact; and in cases of conflicting equally authoritative requirements with no established precedence, the matter remains unresolved and staff must not improvise a resolution.
++
++## See also
++
++- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)
++- [Lending Policy Committee](../entities/lending-policy-committee.md)
++- [Northland](../entities/northland.md)
++- [Policy Precedence and Amendment Rules](../concepts/policy-precedence-and-amendment-rules.md)
++- [Loan Eligibility Requirements \(2025\)](../concepts/loan-eligibility-requirements-2025.md)

@@ -1,0 +1,45 @@
+{
+  "result": {
+    "ingest": {
+      "command": "ingest",
+      "api_version": "1",
+      "status": "skipped",
+      "pages_created": [],
+      "pages_updated": [],
+      "dry_run": false,
+      "message": "Source already ingested. Use --force to re-ingest."
+    },
+    "source_word_count": 24,
+    "source_content_type": "markdown",
+    "related_pages": [
+      {
+        "path": "sources/01-atlas-summary.md",
+        "title": "01-atlas.md",
+        "score": 25,
+        "excerpt": "# 01-atlas.md **Source:** raw/01-atlas.md **Type:** .md **Size:** 160 bytes **Ingested:** 2026-09-14 ## Content Preview # Atlas service Atlas stores audit logs for customer access events. The Orion te…"
+      },
+      {
+        "path": "sources/04-atlas-copy-summary.md",
+        "title": "04-atlas-copy.md",
+        "score": 25,
+        "excerpt": "# 04-atlas-copy.md **Source:** raw/04-atlas-copy.md **Type:** .md **Size:** 160 bytes **Ingested:** 2026-09-14 ## Content Preview # Atlas service Atlas stores audit logs for customer access events. Th…"
+      },
+      {
+        "path": "sources/07-beacon-summary.md",
+        "title": "07-beacon.md",
+        "score": 19,
+        "excerpt": "# 07-beacon.md **Source:** raw/07-beacon.md **Type:** .md **Size:** 183 bytes **Ingested:** 2026-09-14 ## Content Preview # Beacon investigations Beacon depends on Atlas for audit events. Orion owns A…"
+      },
+      {
+        "path": "sources/03-team-note-summary.md",
+        "title": "03-team-note.md",
+        "score": 10,
+        "excerpt": "# 03-team-note.md **Source:** raw/03-team-note.md **Type:** .md **Size:** 156 bytes **Ingested:** 2026-09-14 ## Content Preview # Informal team note, 2025-03-01 I think Atlas audit logs are retained f…"
+      }
+    ],
+    "suggested_actions": [
+      "Use force=true to re-ingest this source"
+    ]
+  },
+  "files_unchanged": true
+}

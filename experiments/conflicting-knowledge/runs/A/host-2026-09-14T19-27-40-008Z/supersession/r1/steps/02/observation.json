@@ -1,0 +1,198 @@
+{
+  "calls": [
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a wiki knowledge-base builder. You analyse source documents and extract structured knowledge.\n\nGiven a source document and the existing wiki index, produce a JSON analysis with:\n1. \"summary\": A rich markdown summary of the source (2-4 paragraphs). Include key findings, arguments, and data points. This replaces the mechanical preview.\n2. \"entities\": Named things (people, organizations, products, places) worth their own wiki page. Each has \"name\", \"content\" (markdown body for the page), and \"tags\" (array of strings).\n3. \"concepts\": Ideas, techniques, patterns, or topics worth their own wiki page. Each has \"name\", \"content\" (markdown body), and \"tags\".\n4. \"crosslinks\": Links between pages. Each has \"from\" (relative path like \"entities/foo.md\" or \"sources/bar-summary.md\") and \"to\" (array of relative paths). Only link to pages that will exist after this analysis (existing pages from the index OR new entity/concept pages you are creating). Entity pages are at \"entities/{slugified-name}.md\", concept pages at \"concepts/{slugified-name}.md\". Slugify = lowercase, replace spaces/special chars with hyphens, remove consecutive hyphens.\n\nRules:\n- Only create entities/concepts that are substantively discussed in the source, not just mentioned in passing.\n- Keep content concise but informative (1-3 paragraphs per page).\n- Use markdown formatting: headers, bold, lists.\n- Tags should be lowercase, hyphenated keywords.\n- If the source has minimal content, return fewer or no entities/concepts.\n- Respond with ONLY valid JSON. No markdown fences, no explanation."
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "## Existing Wiki Pages\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [C-approved-replacement-2026.md](sources/c-approved-replacement-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md) (Concepts): \n\n## Source Document\n# Northstar Standard Home Loan: approved policy 2026\n\nDocument ID: C. This replacement policy was approved by the Lending Policy Committee. Its status is approved. It was published on 2026-02-15 and takes effect on 2026-03-01. It explicitly supersedes policy A on 2026-03-01.\n\nThis policy applies to Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. The product and borrower scope are unchanged from policy A.\n\nFrom the effective date, the maximum loan-to-value ratio (LTV) is 82%. The maximum loan term is 30 years. The minimum credit score is 680. These are the approved requirements for this product under this replacement policy.\n\nPublication provides notice of the forthcoming replacement. It does not bring the new requirements into effect early. Policy A continues to govern until the replacement becomes effective. Policy A remains historical evidence after that date and should be identified as the earlier policy when discussing requirements that applied before the replacement. The committee's policy governance rules continue to apply. This document does not approve an informal team statement as policy.\n"
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "{\"summary\":\"This document (ID: C) is the approved 2026 replacement policy for the **Northstar Standard Home Loan**, issued by the **Lending Policy Committee**. It was published on 2026-02-15 and takes effect 2026-03-01, explicitly superseding policy A on that same date. The scope remains unchanged from policy A: owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars.\\n\\nKey approved requirements effective 2026-03-01: maximum LTV of 82%, maximum loan term of 30 years, and minimum credit score of 680.\\n\\nThe document emphasizes precedence rules: publication merely gives notice of a forthcoming replacement and does not bring new requirements into effect early. Policy A continues to govern until the effective date, after which it becomes historical evidence only. Informal team statements are explicitly not approved policy.\",\"entities\":[],\"concepts\":[],\"crosslinks\":[{\"from\":\"sources/c-approved-replacement-2026-summary.md\",\"to\":[\"entities/lending-policy-committee.md\",\"entities/northstar-standard-home-loan.md\",\"concepts/policy-precedence-and-amendment-rules.md\",\"sources/a-approved-policy-2025-summary.md\"]}]}",
+      "started": "2026-09-14T19:29:24.131Z",
+      "finished": "2026-09-14T19:29:28.392Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [C-approved-replacement-2026.md](sources/c-approved-replacement-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md) (Concepts): \n\n## Relevant Pages\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nThe **Northstar Standard Home Loan** is a loan product governed by policy Document A, effective 2025-01-01. It applies to **owner-occupied purchase loans** for standard individual borrowers in the fictional jurisdiction of **Northland**, denominated in Northland dollars.\n\nKey approved terms:\n- Maximum LTV: **80%**\n- Maximum loan term: **30 years**\n- Minimum credit score: **680**\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Policy Precedence and Amendment Rules (concepts/policy-precedence-and-amendment-rules.md)\nThis concept covers the governance logic for how lending policy documents relate to one another:\n\n- **Replacement documents** take effect on their stated effective date, not their publication date.\n- **Amendments** only change the specific requirements they name; all other requirements remain in force.\n- If two equally authoritative documents with the same date state **incompatible requirements** and neither establishes precedence, the conflict is **unresolved** pending committee clarification.\n- Staff must not invent exceptions or choose values to resolve such conflicts on their own.\n\nThis framework ensures policy changes are traceable, authoritative, and not subject to informal interpretation.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "## Northstar Standard Home Loan — Terms as of 2026-02-20\n\n**Short answer: uncertain — the current wiki content doesn't let me confirm final values with confidence.**\n\nHere's what the wiki does establish:\n\n### What Document A (2025) specifies\nPer **Northstar Standard Home Loan** (entities/northstar-standard-home-loan.md), sourced from **A-approved-policy-2025.md**, effective 2025-01-01:\n- Maximum LTV: **80%**\n- Maximum loan term: **30 years**\n- Minimum credit score: **680**\n\n### The complication\nThe wiki index also lists **C-approved-replacement-2026.md**, described as an \"approved replacement\" — and per **Policy Precedence and Amendment Rules**:\n> \"Replacement documents take effect on their stated effective date, not their publication date.\"\n\nThis strongly implies Document C supersedes Document A for Northstar Standard Home Loan terms, but **I don't have the actual content of C-approved-replacement-2026.md in the retrieved pages** — only its filename/summary listing. I can't state what values it specifies, whether its effective date is on or before 2026-02-20, or whether it fully replaces A's terms vs. amends only some of them.\n\nAlso relevant from the precedence rules: if A and C were equally authoritative with conflicting terms and no precedence were established, the conflict would be **unresolved pending committee clarification** — but since C is explicitly a \"replacement,\" precedence likely *is* established here (C wins), just not confirmed by content I have access to.\n\n### What I'd need to answer definitively\n- The effective date and specific terms in **C-approved-replacement-2026.md**\n- Confirmation whether C is a full replacement or an amendment (per the rules, amendments only change *named* requirements — so if C only amends e.g. minimum credit score, the LTV/term from A could still stand)\n\n**Recommendation:** Pull the full text/summary of C-approved-replacement-2026.md before giving a final answer — right now stating specific 2026-02-20 values would risk inventing an interpretation, which the Policy Precedence page explicitly warns against (\"Staff must not invent exceptions or choose values to resolve such conflicts on their own\").\n\n---\nThis synthesis (and the gap it exposes) could be worth saving — e.g., as a page tracking \"Northstar Standard Home Loan — Current Effective Terms\" that gets updated once Document C's content is confirmed. Let me know if you'd like to `/save` it once we fill in the C details.",
+      "started": "2026-09-14T19:29:28.627Z",
+      "finished": "2026-09-14T19:29:40.456Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [C-approved-replacement-2026.md](sources/c-approved-replacement-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md) (Concepts): \n\n## Relevant Pages\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nThe **Northstar Standard Home Loan** is a loan product governed by policy Document A, effective 2025-01-01. It applies to **owner-occupied purchase loans** for standard individual borrowers in the fictional jurisdiction of **Northland**, denominated in Northland dollars.\n\nKey approved terms:\n- Maximum LTV: **80%**\n- Maximum loan term: **30 years**\n- Minimum credit score: **680**\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Policy Precedence and Amendment Rules (concepts/policy-precedence-and-amendment-rules.md)\nThis concept covers the governance logic for how lending policy documents relate to one another:\n\n- **Replacement documents** take effect on their stated effective date, not their publication date.\n- **Amendments** only change the specific requirements they name; all other requirements remain in force.\n- If two equally authoritative documents with the same date state **incompatible requirements** and neither establishes precedence, the conflict is **unresolved** pending committee clarification.\n- Staff must not invent exceptions or choose values to resolve such conflicts on their own.\n\nThis framework ensures policy changes are traceable, authoritative, and not subject to informal interpretation.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-03-15? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "Based on available wiki content, I can only partially answer this.\n\n## What's confirmed (Document A / Northstar Standard Home Loan)\nPer **[Northstar Standard Home Loan](entities/northstar-standard-home-loan.md)**, governed by Document A (effective 2025-01-01):\n- Maximum LTV: **80%**\n- Maximum loan term: **30 years**\n- Minimum credit score: **680**\n\n## The complication: Document C\nThe index lists **C-approved-replacement-2026.md**, which by its filename appears to be a *replacement* document for Document A, effective sometime in 2026. Per **[Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md)**:\n\n> \"Replacement documents take effect on their stated effective date, not their publication date.\"\n\nThis means if Document C's effective date is on or before 2026-03-15, its terms would supersede Document A's for the Northstar Standard Home Loan — but only for the specific requirements it names (if it's structured as an amendment) or entirely (if it's a full replacement).\n\n## Uncertainty\n**I do not have the actual content of C-approved-replacement-2026.md** — only its filename appears in the index, without a summary of its terms or effective date. I cannot confirm:\n- Whether it modifies LTV, term, or credit score (or all three)\n- Its exact effective date relative to 2026-03-15\n- Whether it fully replaces Document A or amends only specific terms\n\n**I cannot state definitive figures for 2026-03-15 without this content.** To answer accurately, please provide or add the summary/content of `C-approved-replacement-2026.md` to the wiki (e.g., as a source page), and ideally an entity or update to Northstar Standard Home Loan reflecting its post-replacement terms.\n\nIf conflicting values exist between A and C with no clear precedence, per the same concept page, the conflict would be **unresolved pending committee clarification** — worth checking the [Lending Policy Committee](entities/lending-policy-committee.md) page for related guidance.\n\n---\nWould you like me to draft a `/save`-able page once the content of Document C is available, capturing the full precedence chain for Northstar Standard Home Loan?",
+      "started": "2026-09-14T19:29:40.556Z",
+      "finished": "2026-09-14T19:29:50.934Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [C-approved-replacement-2026.md](sources/c-approved-replacement-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md) (Concepts): \n\n## Relevant Pages\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nThe **Northstar Standard Home Loan** is a loan product governed by policy Document A, effective 2025-01-01. It applies to **owner-occupied purchase loans** for standard individual borrowers in the fictional jurisdiction of **Northland**, denominated in Northland dollars.\n\nKey approved terms:\n- Maximum LTV: **80%**\n- Maximum loan term: **30 years**\n- Minimum credit score: **680**\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Policy Precedence and Amendment Rules (concepts/policy-precedence-and-amendment-rules.md)\nThis concept covers the governance logic for how lending policy documents relate to one another:\n\n- **Replacement documents** take effect on their stated effective date, not their publication date.\n- **Amendments** only change the specific requirements they name; all other requirements remain in force.\n- If two equally authoritative documents with the same date state **incompatible requirements** and neither establishes precedence, the conflict is **unresolved** pending committee clarification.\n- Staff must not invent exceptions or choose values to resolve such conflicts on their own.\n\nThis framework ensures policy changes are traceable, authoritative, and not subject to informal interpretation.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, which claims agree, disagree, are tentative, or supersede earlier claims? Identify the claims and their sources."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "## Northstar Standard Home Loan — Claims Analysis\n\n### Current authoritative claims (Document A — effective 2025-01-01)\nPer the **Northstar Standard Home Loan** page, sourced from `A-approved-policy-2025.md`:\n- Maximum LTV: **80%**\n- Maximum loan term: **30 years**\n- Minimum credit score: **680**\n\nThese are the terms currently in force, since Document A's effective date (2025-01-01) has passed.\n\n### Potential superseding claims (Document C — 2026)\nThe index lists `C-approved-replacement-2026.md` as an **approved replacement** document. Per **Policy Precedence and Amendment Rules**, a replacement document's terms take effect on its *stated effective date*, not its publication date — meaning:\n- If Document C's effective date is in the future, Document A's terms (above) remain authoritative until then.\n- If Document C's effective date has already passed, its terms would supersede Document A's for the Northstar Standard Home Loan.\n\n**Gap:** The specific terms of Document C (LTV, term, credit score, effective date) were not included in the retrieved content, so I can't confirm whether it agrees, disagrees, or amends the Document A figures above. To resolve this, the `C-approved-replacement-2026-summary.md` source page should be pulled in directly.\n\n### Conflict handling\nIf Document C does specify different terms with an ambiguous or contested effective date, or if it conflicts with Document A without clearly establishing precedence, the **Policy Precedence and Amendment Rules** page notes such conflicts are **unresolved** by design — staff should not resolve them informally and should escalate to the **Lending Policy Committee**.\n\n---\n\n**Recommendation:** Retrieve and review `C-approved-replacement-2026-summary.md` to determine whether it amends or fully replaces the Document A terms for this loan product. Once clarified, this comparison would make a good standalone wiki page (e.g., \"Northstar Standard Home Loan: A vs. C Comparison\") — consider using `/save` once the full picture is confirmed.",
+      "started": "2026-09-14T19:29:50.982Z",
+      "finished": "2026-09-14T19:30:00.342Z"
+    }
+  ],
+  "logs": [
+    "[model] Configured family \"claude-opus-4.6\" is not available — falling back to any Copilot model",
+    "[model] Using fallback model: claude-sonnet-5",
+    "[llmIngest] Using model: claude-sonnet-5",
+    "[llmIngest] LLM response length: 1174 chars",
+    "[llmIngest] Parsed: summary=yes, entities=0, concepts=0, crosslinks=1",
+    "[llmIngest] Rewrote summary: sources/c-approved-replacement-2026-summary.md",
+    "[llmIngest] Crosslinked sources/c-approved-replacement-2026-summary.md → entities/lending-policy-committee.md, entities/northstar-standard-home-loan.md, concepts/policy-precedence-and-amendment-rules.md, sources/a-approved-policy-2025-summary.md"
+  ],
+  "queries": [
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty.",
+      "text": "## Northstar Standard Home Loan — Terms as of 2026-02-20\n\n**Short answer: uncertain — the current wiki content doesn't let me confirm final values with confidence.**\n\nHere's what the wiki does establish:\n\n### What Document A (2025) specifies\nPer **Northstar Standard Home Loan** (entities/northstar-standard-home-loan.md), sourced from **A-approved-policy-2025.md**, effective 2025-01-01:\n- Maximum LTV: **80%**\n- Maximum loan term: **30 years**\n- Minimum credit score: **680**\n\n### The complication\nThe wiki index also lists **C-approved-replacement-2026.md**, described as an \"approved replacement\" — and per **Policy Precedence and Amendment Rules**:\n> \"Replacement documents take effect on their stated effective date, not their publication date.\"\n\nThis strongly implies Document C supersedes Document A for Northstar Standard Home Loan terms, but **I don't have the actual content of C-approved-replacement-2026.md in the retrieved pages** — only its filename/summary listing. I can't state what values it specifies, whether its effective date is on or before 2026-02-20, or whether it fully replaces A's terms vs. amends only some of them.\n\nAlso relevant from the precedence rules: if A and C were equally authoritative with conflicting terms and no precedence were established, the conflict would be **unresolved pending committee clarification** — but since C is explicitly a \"replacement,\" precedence likely *is* established here (C wins), just not confirmed by content I have access to.\n\n### What I'd need to answer definitively\n- The effective date and specific terms in **C-approved-replacement-2026.md**\n- Confirmation whether C is a full replacement or an amendment (per the rules, amendments only change *named* requirements — so if C only amends e.g. minimum credit score, the LTV/term from A could still stand)\n\n**Recommendation:** Pull the full text/summary of C-approved-replacement-2026.md before giving a final answer — right now stating specific 2026-02-20 values would risk inventing an interpretation, which the Policy Precedence page explicitly warns against (\"Staff must not invent exceptions or choose values to resolve such conflicts on their own\").\n\n---\nThis synthesis (and the gap it exposes) could be worth saving — e.g., as a page tracking \"Northstar Standard Home Loan — Current Effective Terms\" that gets updated once Document C's content is confirmed. Let me know if you'd like to `/save` it once we fill in the C details.\n\n---\n**Sources:**\n  ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-precedence-and-amendment-rules.md",
+          "title": "Policy Precedence and Amendment Rules"
+        }
+      ]
+    },
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-03-15? Cite the sources and state any uncertainty.",
+      "text": "Based on available wiki content, I can only partially answer this.\n\n## What's confirmed (Document A / Northstar Standard Home Loan)\nPer **[Northstar Standard Home Loan](entities/northstar-standard-home-loan.md)**, governed by Document A (effective 2025-01-01):\n- Maximum LTV: **80%**\n- Maximum loan term: **30 years**\n- Minimum credit score: **680**\n\n## The complication: Document C\nThe index lists **C-approved-replacement-2026.md**, which by its filename appears to be a *replacement* document for Document A, effective sometime in 2026. Per **[Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md)**:\n\n> \"Replacement documents take effect on their stated effective date, not their publication date.\"\n\nThis means if Document C's effective date is on or before 2026-03-15, its terms would supersede Document A's for the Northstar Standard Home Loan — but only for the specific requirements it names (if it's structured as an amendment) or entirely (if it's a full replacement).\n\n## Uncertainty\n**I do not have the actual content of C-approved-replacement-2026.md** — only its filename appears in the index, without a summary of its terms or effective date. I cannot confirm:\n- Whether it modifies LTV, term, or credit score (or all three)\n- Its exact effective date relative to 2026-03-15\n- Whether it fully replaces Document A or amends only specific terms\n\n**I cannot state definitive figures for 2026-03-15 without this content.** To answer accurately, please provide or add the summary/content of `C-approved-replacement-2026.md` to the wiki (e.g., as a source page), and ideally an entity or update to Northstar Standard Home Loan reflecting its post-replacement terms.\n\nIf conflicting values exist between A and C with no clear precedence, per the same concept page, the conflict would be **unresolved pending committee clarification** — worth checking the [Lending Policy Committee](entities/lending-policy-committee.md) page for related guidance.\n\n---\nWould you like me to draft a `/save`-able page once the content of Document C is available, capturing the full precedence chain for Northstar Standard Home Loan?\n\n---\n**Sources:**\n  ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-precedence-and-amendment-rules.md",
+          "title": "Policy Precedence and Amendment Rules"
+        }
+      ]
+    },
+    {
+      "question": "For Northstar Standard Home Loan, which claims agree, disagree, are tentative, or supersede earlier claims? Identify the claims and their sources.",
+      "text": "## Northstar Standard Home Loan — Claims Analysis\n\n### Current authoritative claims (Document A — effective 2025-01-01)\nPer the **Northstar Standard Home Loan** page, sourced from `A-approved-policy-2025.md`:\n- Maximum LTV: **80%**\n- Maximum loan term: **30 years**\n- Minimum credit score: **680**\n\nThese are the terms currently in force, since Document A's effective date (2025-01-01) has passed.\n\n### Potential superseding claims (Document C — 2026)\nThe index lists `C-approved-replacement-2026.md` as an **approved replacement** document. Per **Policy Precedence and Amendment Rules**, a replacement document's terms take effect on its *stated effective date*, not its publication date — meaning:\n- If Document C's effective date is in the future, Document A's terms (above) remain authoritative until then.\n- If Document C's effective date has already passed, its terms would supersede Document A's for the Northstar Standard Home Loan.\n\n**Gap:** The specific terms of Document C (LTV, term, credit score, effective date) were not included in the retrieved content, so I can't confirm whether it agrees, disagrees, or amends the Document A figures above. To resolve this, the `C-approved-replacement-2026-summary.md` source page should be pulled in directly.\n\n### Conflict handling\nIf Document C does specify different terms with an ambiguous or contested effective date, or if it conflicts with Document A without clearly establishing precedence, the **Policy Precedence and Amendment Rules** page notes such conflicts are **unresolved** by design — staff should not resolve them informally and should escalate to the **Lending Policy Committee**.\n\n---\n\n**Recommendation:** Retrieve and review `C-approved-replacement-2026-summary.md` to determine whether it amends or fully replaces the Document A terms for this loan product. Once clarified, this comparison would make a good standalone wiki page (e.g., \"Northstar Standard Home Loan: A vs. C Comparison\") — consider using `/save` once the full picture is confirmed.\n\n---\n**Sources:**\n  ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-precedence-and-amendment-rules.md",
+          "title": "Policy Precedence and Amendment Rules"
+        }
+      ]
+    }
+  ],
+  "step": 2,
+  "source": "C",
+  "ingest": {
+    "pagesCreated": [
+      "sources/c-approved-replacement-2026-summary.md"
+    ],
+    "pagesUpdated": [
+      "index.md",
+      "log.md",
+      "sources/c-approved-replacement-2026-summary.md",
+      "sources/c-approved-replacement-2026-summary.md"
+    ]
+  }
+}

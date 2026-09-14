@@ -1,0 +1,226 @@
+{
+  "calls": [
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a wiki knowledge-base builder. You analyse source documents and extract structured knowledge.\n\nGiven a source document and the existing wiki index, produce a JSON analysis with:\n1. \"summary\": A rich markdown summary of the source (2-4 paragraphs). Include key findings, arguments, and data points. This replaces the mechanical preview.\n2. \"entities\": Named things (people, organizations, products, places) worth their own wiki page. Each has \"name\", \"content\" (markdown body for the page), and \"tags\" (array of strings).\n3. \"concepts\": Ideas, techniques, patterns, or topics worth their own wiki page. Each has \"name\", \"content\" (markdown body), and \"tags\".\n4. \"crosslinks\": Links between pages. Each has \"from\" (relative path like \"entities/foo.md\" or \"sources/bar-summary.md\") and \"to\" (array of relative paths). Only link to pages that will exist after this analysis (existing pages from the index OR new entity/concept pages you are creating). Entity pages are at \"entities/{slugified-name}.md\", concept pages at \"concepts/{slugified-name}.md\". Slugify = lowercase, replace spaces/special chars with hyphens, remove consecutive hyphens.\n\nRules:\n- Only create entities/concepts that are substantively discussed in the source, not just mentioned in passing.\n- Keep content concise but informative (1-3 paragraphs per page).\n- Use markdown formatting: headers, bold, lists.\n- Tags should be lowercase, hyphenated keywords.\n- If the source has minimal content, return fewer or no entities/concepts.\n- Respond with ONLY valid JSON. No markdown fences, no explanation."
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "## Existing Wiki Pages\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [E-approved-score-amendment-2026.md](sources/e-approved-score-amendment-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Policy Governance and Amendment Rules](concepts/policy-governance-and-amendment-rules.md) (Concepts): \n\n## Source Document\n# Northstar Standard Home Loan: approved credit score amendment\n\nDocument ID: E. This amendment was approved by the Lending Policy Committee. Its status is approved. It was published on 2026-01-15 and takes effect on 2026-02-01. It amends only the minimum credit score requirement in policy A; it does not supersede policy A as a whole.\n\nThe amendment applies to Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. There is no change to the product, jurisdiction or borrower class covered by policy A.\n\nFrom the effective date, the minimum credit score is 700. This replaces the prior minimum credit score requirement in policy A for the same scope. All other requirements in policy A remain unchanged and in force. In particular, this amendment does not change the loan-to-value requirement or the maximum loan term.\n\nStaff must read this amendment together with policy A to determine the full applicable requirements. The omission of other numeric limits from this amendment does not cancel those limits. Publication gives advance notice; the amended score requirement applies only from the stated effective date.\n"
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "{\"summary\":\"This document (Document ID: E) is an approved amendment to the Northstar Standard Home Loan policy (Policy A), specifically targeting the minimum credit score requirement. Approved by the Lending Policy Committee, it was published on 2026-01-15 and becomes effective 2026-02-01. The amendment is narrow in scope: it changes only the minimum credit score, raising it to 700, and explicitly does not supersede or otherwise alter Policy A as a whole.\\n\\nThe amendment applies to the same scope as Policy A — owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. No changes are made to loan-to-value requirements, maximum loan term, or any other numeric limits in Policy A; these remain fully in force. Staff are instructed to read this amendment alongside Policy A to determine the complete set of applicable requirements, and the document stresses that omission of other limits from the amendment text does not cancel them.\\n\\nA key governance point is the distinction between publication and effect: publication provides advance notice, but the amended credit score requirement only becomes binding from the stated effective date (2026-02-01), not the publication date.\",\"entities\":[],\"concepts\":[{\"name\":\"Credit Score Requirement Amendment\",\"content\":\"An **approved amendment** (Document E) to the Northstar Standard Home Loan policy (Policy A), issued by the Lending Policy Committee.\\n\\n- **Scope**: Changes only the minimum credit score requirement; all other Policy A terms (LTV, max loan term, etc.) remain unchanged.\\n- **New minimum credit score**: 700\\n- **Published**: 2026-01-15\\n- **Effective**: 2026-02-01\\n- Does not supersede Policy A; must be read together with it.\\n\\nIllustrates the principle that partial amendments coexist with, rather than replace, the base policy document.\",\"tags\":[\"credit-score\",\"amendment\",\"northstar-standard-home-loan\",\"policy-a\",\"lending-policy\"]}],\"crosslinks\":[{\"from\":\"sources/e-approved-score-amendment-2026-summary.md\",\"to\":[\"entities/lending-policy-committee.md\",\"entities/northstar-standard-home-loan.md\",\"concepts/policy-governance-and-amendment-rules.md\",\"concepts/credit-score-requirement-amendment.md\",\"sources/a-approved-policy-2025-summary.md\"]},{\"from\":\"concepts/credit-score-requirement-amendment.md\",\"to\":[\"entities/lending-policy-committee.md\",\"entities/northstar-standard-home-loan.md\",\"sources/a-approved-policy-2025-summary.md\",\"concepts/policy-governance-and-amendment-rules.md\"]}]}",
+      "started": "2026-09-14T19:32:54.243Z",
+      "finished": "2026-09-14T19:33:02.831Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [E-approved-score-amendment-2026.md](sources/e-approved-score-amendment-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Policy Governance and Amendment Rules](concepts/policy-governance-and-amendment-rules.md) (Concepts): \n- [Credit Score Requirement Amendment](concepts/credit-score-requirement-amendment.md) (Concepts): \n\n## Relevant Pages\n### E-approved-score-amendment-2026.md (sources/e-approved-score-amendment-2026-summary.md)\nThis document (Document ID: E) is an approved amendment to the Northstar Standard Home Loan policy (Policy A), specifically targeting the minimum credit score requirement. Approved by the Lending Policy Committee, it was published on 2026-01-15 and becomes effective 2026-02-01. The amendment is narrow in scope: it changes only the minimum credit score, raising it to 700, and explicitly does not supersede or otherwise alter Policy A as a whole.\n\nThe amendment applies to the same scope as Policy A — owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. No changes are made to loan-to-value requirements, maximum loan term, or any other numeric limits in Policy A; these remain fully in force. Staff are instructed to read this amendment alongside Policy A to determine the complete set of applicable requirements, and the document stresses that omission of other limits from the amendment text does not cancel them.\n\nA key governance point is the distinction between publication and effect: publication provides advance notice, but the amended credit score requirement only becomes binding from the stated effective date (2026-02-01), not the publication date.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [Policy Governance and Amendment Rules](../concepts/policy-governance-and-amendment-rules.md)\n- [Credit Score Requirement Amendment](../concepts/credit-score-requirement-amendment.md)\n- [A-approved-policy-2025.md](a-approved-policy-2025-summary.md)\n\n---\n\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nThe **Northstar Standard Home Loan** is a loan product for owner-occupied purchases by standard individual borrowers in the fictional jurisdiction of Northland, denominated in Northland dollars. Under the 2025 approved policy (Document ID: A):\n\n- **Maximum LTV**: 80%\n- **Maximum loan term**: 30 years\n- **Minimum credit score**: 680\n\nThese requirements are set by the Lending Policy Committee and took effect 2025-01-01.\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Policy Governance and Amendment Rules](../concepts/policy-governance-and-amendment-rules.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Credit Score Requirement Amendment (concepts/credit-score-requirement-amendment.md)\nAn **approved amendment** (Document E) to the Northstar Standard Home Loan policy (Policy A), issued by the Lending Policy Committee.\n\n- **Scope**: Changes only the minimum credit score requirement; all other Policy A terms (LTV, max loan term, etc.) remain unchanged.\n- **New minimum credit score**: 700\n- **Published**: 2026-01-15\n- **Effective**: 2026-02-01\n- Does not supersede Policy A; must be read together with it.\n\nIllustrates the principle that partial amendments coexist with, rather than replace, the base policy document.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n- [Policy Governance and Amendment Rules](policy-governance-and-amendment-rules.md)\n\n---\n\n### Policy Governance and Amendment Rules (concepts/policy-governance-and-amendment-rules.md)\nThis concept covers the rules governing how lending policy documents are approved, amended, and superseded within the Northstar policy framework:\n\n- Only the **Lending Policy Committee** can approve or change policy.\n- **Informal notes or draft discussions** cannot alter an approved policy.\n- A **replacement document** takes effect on its stated effective date, not its publication date.\n- An **amendment** changes only the specific requirements it names; all other requirements remain in force.\n- If **equally authoritative documents** with the same dates conflict and no precedence is established, the requirement is **unresolved** pending committee clarification — staff must not invent a resolution.\n\nThis framework ensures policy changes are traceable, authoritative, and unambiguous.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "As of **2026-02-20**, the applicable requirements for the **Northstar Standard Home Loan** are:\n\n| Requirement | Value | Source |\n|---|---|---|\n| Maximum LTV | 80% | *A-approved-policy-2025* (unchanged) |\n| Maximum loan term | 30 years | *A-approved-policy-2025* (unchanged) |\n| Minimum credit score | **700** | *E-approved-score-amendment-2026* (effective 2026-02-01) |\n\n**Reasoning:**\n- Policy A (2025) originally set LTV at 80%, term at 30 years, and minimum credit score at 680.\n- Amendment E (published 2026-01-15, effective 2026-02-01) changes **only** the minimum credit score to 700, per the [Credit Score Requirement Amendment](concepts/credit-score-requirement-amendment.md) page.\n- Per [Policy Governance and Amendment Rules](concepts/policy-governance-and-amendment-rules.md), an amendment only changes the specific terms it names — LTV and loan term are explicitly stated as remaining in force.\n- Since 2026-02-20 is after the amendment's effective date (2026-02-01), the new credit score requirement is binding.\n\n**No uncertainty** here: the amendment is narrow, explicit about not superseding Policy A, and the query date falls safely after its effective date. Both source documents agree.\n\nThis synthesis (values as of a queried date, cross-referencing base policy + amendment) could make a useful reusable page — consider `/save` if you want a point-in-time snapshot for future reference.",
+      "started": "2026-09-14T19:33:03.083Z",
+      "finished": "2026-09-14T19:33:08.536Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [E-approved-score-amendment-2026.md](sources/e-approved-score-amendment-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Policy Governance and Amendment Rules](concepts/policy-governance-and-amendment-rules.md) (Concepts): \n- [Credit Score Requirement Amendment](concepts/credit-score-requirement-amendment.md) (Concepts): \n\n## Relevant Pages\n### E-approved-score-amendment-2026.md (sources/e-approved-score-amendment-2026-summary.md)\nThis document (Document ID: E) is an approved amendment to the Northstar Standard Home Loan policy (Policy A), specifically targeting the minimum credit score requirement. Approved by the Lending Policy Committee, it was published on 2026-01-15 and becomes effective 2026-02-01. The amendment is narrow in scope: it changes only the minimum credit score, raising it to 700, and explicitly does not supersede or otherwise alter Policy A as a whole.\n\nThe amendment applies to the same scope as Policy A — owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. No changes are made to loan-to-value requirements, maximum loan term, or any other numeric limits in Policy A; these remain fully in force. Staff are instructed to read this amendment alongside Policy A to determine the complete set of applicable requirements, and the document stresses that omission of other limits from the amendment text does not cancel them.\n\nA key governance point is the distinction between publication and effect: publication provides advance notice, but the amended credit score requirement only becomes binding from the stated effective date (2026-02-01), not the publication date.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [Policy Governance and Amendment Rules](../concepts/policy-governance-and-amendment-rules.md)\n- [Credit Score Requirement Amendment](../concepts/credit-score-requirement-amendment.md)\n- [A-approved-policy-2025.md](a-approved-policy-2025-summary.md)\n\n---\n\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nThe **Northstar Standard Home Loan** is a loan product for owner-occupied purchases by standard individual borrowers in the fictional jurisdiction of Northland, denominated in Northland dollars. Under the 2025 approved policy (Document ID: A):\n\n- **Maximum LTV**: 80%\n- **Maximum loan term**: 30 years\n- **Minimum credit score**: 680\n\nThese requirements are set by the Lending Policy Committee and took effect 2025-01-01.\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Policy Governance and Amendment Rules](../concepts/policy-governance-and-amendment-rules.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Credit Score Requirement Amendment (concepts/credit-score-requirement-amendment.md)\nAn **approved amendment** (Document E) to the Northstar Standard Home Loan policy (Policy A), issued by the Lending Policy Committee.\n\n- **Scope**: Changes only the minimum credit score requirement; all other Policy A terms (LTV, max loan term, etc.) remain unchanged.\n- **New minimum credit score**: 700\n- **Published**: 2026-01-15\n- **Effective**: 2026-02-01\n- Does not supersede Policy A; must be read together with it.\n\nIllustrates the principle that partial amendments coexist with, rather than replace, the base policy document.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n- [Policy Governance and Amendment Rules](policy-governance-and-amendment-rules.md)\n\n---\n\n### Policy Governance and Amendment Rules (concepts/policy-governance-and-amendment-rules.md)\nThis concept covers the rules governing how lending policy documents are approved, amended, and superseded within the Northstar policy framework:\n\n- Only the **Lending Policy Committee** can approve or change policy.\n- **Informal notes or draft discussions** cannot alter an approved policy.\n- A **replacement document** takes effect on its stated effective date, not its publication date.\n- An **amendment** changes only the specific requirements it names; all other requirements remain in force.\n- If **equally authoritative documents** with the same dates conflict and no precedence is established, the requirement is **unresolved** pending committee clarification — staff must not invent a resolution.\n\nThis framework ensures policy changes are traceable, authoritative, and unambiguous.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-03-15? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "## Northstar Standard Home Loan Requirements as of 2026-03-15\n\nCombining **Policy A** (2025) with **Amendment E** (2026), effective as of the given date:\n\n| Requirement | Value | Source |\n|---|---|---|\n| Maximum LTV | 80% | [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) — unchanged by amendment |\n| Maximum loan term | 30 years | [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) — unchanged by amendment |\n| Minimum credit score | **700** | [Credit Score Requirement Amendment](concepts/credit-score-requirement-amendment.md) / [E-approved-score-amendment-2026.md](sources/e-approved-score-amendment-2026-summary.md) |\n\n### Reasoning\n- Policy A (effective 2025-01-01) originally set the minimum credit score at 680, alongside 80% LTV and 30-year max term ([Northstar Standard Home Loan](entities/northstar-standard-home-loan.md)).\n- Amendment E, approved by the [Lending Policy Committee](entities/lending-policy-committee.md), raised the minimum credit score to 700, effective **2026-02-01** — before the query date of 2026-03-15, so it is in force.\n- Per [Policy Governance and Amendment Rules](concepts/policy-governance-and-amendment-rules.md), an amendment only changes what it explicitly names — LTV and term are untouched and Policy A remains binding for those terms.\n\n### Certainty\nNo uncertainty here: the effective date of the amendment (2026-02-01) has passed relative to 2026-03-15, and no conflicting or superseding documents are indicated in the wiki. If a newer amendment exists post-dating E, it isn't reflected in this index.\n\nThis is a clean synthesis of two sources — consider saving it via `/save` as something like \"Northstar Loan Requirements Timeline\" for quick future reference.",
+      "started": "2026-09-14T19:33:08.571Z",
+      "finished": "2026-09-14T19:33:15.574Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [E-approved-score-amendment-2026.md](sources/e-approved-score-amendment-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Policy Governance and Amendment Rules](concepts/policy-governance-and-amendment-rules.md) (Concepts): \n- [Credit Score Requirement Amendment](concepts/credit-score-requirement-amendment.md) (Concepts): \n\n## Relevant Pages\n### E-approved-score-amendment-2026.md (sources/e-approved-score-amendment-2026-summary.md)\nThis document (Document ID: E) is an approved amendment to the Northstar Standard Home Loan policy (Policy A), specifically targeting the minimum credit score requirement. Approved by the Lending Policy Committee, it was published on 2026-01-15 and becomes effective 2026-02-01. The amendment is narrow in scope: it changes only the minimum credit score, raising it to 700, and explicitly does not supersede or otherwise alter Policy A as a whole.\n\nThe amendment applies to the same scope as Policy A — owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. No changes are made to loan-to-value requirements, maximum loan term, or any other numeric limits in Policy A; these remain fully in force. Staff are instructed to read this amendment alongside Policy A to determine the complete set of applicable requirements, and the document stresses that omission of other limits from the amendment text does not cancel them.\n\nA key governance point is the distinction between publication and effect: publication provides advance notice, but the amended credit score requirement only becomes binding from the stated effective date (2026-02-01), not the publication date.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [Policy Governance and Amendment Rules](../concepts/policy-governance-and-amendment-rules.md)\n- [Credit Score Requirement Amendment](../concepts/credit-score-requirement-amendment.md)\n- [A-approved-policy-2025.md](a-approved-policy-2025-summary.md)\n\n---\n\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nThe **Northstar Standard Home Loan** is a loan product for owner-occupied purchases by standard individual borrowers in the fictional jurisdiction of Northland, denominated in Northland dollars. Under the 2025 approved policy (Document ID: A):\n\n- **Maximum LTV**: 80%\n- **Maximum loan term**: 30 years\n- **Minimum credit score**: 680\n\nThese requirements are set by the Lending Policy Committee and took effect 2025-01-01.\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Policy Governance and Amendment Rules](../concepts/policy-governance-and-amendment-rules.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Policy Governance and Amendment Rules (concepts/policy-governance-and-amendment-rules.md)\nThis concept covers the rules governing how lending policy documents are approved, amended, and superseded within the Northstar policy framework:\n\n- Only the **Lending Policy Committee** can approve or change policy.\n- **Informal notes or draft discussions** cannot alter an approved policy.\n- A **replacement document** takes effect on its stated effective date, not its publication date.\n- An **amendment** changes only the specific requirements it names; all other requirements remain in force.\n- If **equally authoritative documents** with the same dates conflict and no precedence is established, the requirement is **unresolved** pending committee clarification — staff must not invent a resolution.\n\nThis framework ensures policy changes are traceable, authoritative, and unambiguous.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Credit Score Requirement Amendment (concepts/credit-score-requirement-amendment.md)\nAn **approved amendment** (Document E) to the Northstar Standard Home Loan policy (Policy A), issued by the Lending Policy Committee.\n\n- **Scope**: Changes only the minimum credit score requirement; all other Policy A terms (LTV, max loan term, etc.) remain unchanged.\n- **New minimum credit score**: 700\n- **Published**: 2026-01-15\n- **Effective**: 2026-02-01\n- Does not supersede Policy A; must be read together with it.\n\nIllustrates the principle that partial amendments coexist with, rather than replace, the base policy document.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n- [Policy Governance and Amendment Rules](policy-governance-and-amendment-rules.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, which claims agree, disagree, are tentative, or supersede earlier claims? Identify the claims and their sources."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "# Northstar Standard Home Loan: Claim Analysis\n\nBased on the wiki, there are two relevant documents establishing requirements for the **Northstar Standard Home Loan**:\n\n## Base Policy — Document A (2025)\nPer [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) and the [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) page, effective 2025-01-01:\n\n| Requirement | Value |\n|---|---|\n| Max LTV | 80% |\n| Max loan term | 30 years |\n| Min credit score | 680 |\n\n## Amendment — Document E (2026)\nPer [Credit Score Requirement Amendment](concepts/credit-score-requirement-amendment.md) / [E-approved-score-amendment-2026.md](sources/e-approved-score-amendment-2026-summary.md), effective **2026-02-01**:\n\n- **Min credit score → 700** (supersedes the 680 figure in Document A, but *only* for this one requirement)\n\n## How the claims relate\n\n- **Supersede**: The 700 credit score in Document E supersedes the 680 credit score in Document A, but *only* from 2026-02-01 onward. Before that date, 680 is still binding — publication (2026-01-15) does not trigger the change.\n- **Agree (unchanged)**: Max LTV (80%) and max loan term (30 years) from Document A remain fully in force — Document E is explicit that it does not touch these, and the [Policy Governance and Amendment Rules](concepts/policy-governance-and-amendment-rules.md) page confirms amendments only change what they explicitly name.\n- **No disagreement or tentative claims**: There's no conflict here since Document E was issued by the same authoritative body — the [Lending Policy Committee](entities/lending-policy-committee.md) — that approved Document A, and it explicitly scopes itself as a narrow amendment rather than a full replacement.\n\n## Summary\nAs of **today** (assuming after 2026-02-01), the current, complete set of Northstar Standard Home Loan requirements is:\n- Max LTV: 80% (from A)\n- Max loan term: 30 years (from A)\n- Min credit score: **700** (from E, superseding A's 680)\n\nThis is a clean example of the wiki's governance principle: **amendments coexist with base policy** rather than replacing it wholesale — staff must read A and E together.\n\n---\nThis synthesis pulls together multiple pages into a coherent timeline/status view — you may want to run `/save` to capture it as a new page (e.g., \"Northstar Standard Home Loan — Current Requirements\").",
+      "started": "2026-09-14T19:33:15.601Z",
+      "finished": "2026-09-14T19:33:23.972Z"
+    }
+  ],
+  "logs": [
+    "[model] Configured family \"claude-opus-4.6\" is not available — falling back to any Copilot model",
+    "[model] Using fallback model: claude-sonnet-5",
+    "[llmIngest] Using model: claude-sonnet-5",
+    "[llmIngest] LLM response length: 2517 chars",
+    "[llmIngest] Parsed: summary=yes, entities=0, concepts=1, crosslinks=2",
+    "[llmIngest] Rewrote summary: sources/e-approved-score-amendment-2026-summary.md",
+    "[llmIngest] Created concept: concepts/credit-score-requirement-amendment.md",
+    "[llmIngest] Crosslinked sources/e-approved-score-amendment-2026-summary.md → entities/lending-policy-committee.md, entities/northstar-standard-home-loan.md, concepts/policy-governance-and-amendment-rules.md, concepts/credit-score-requirement-amendment.md, sources/a-approved-policy-2025-summary.md",
+    "[llmIngest] Crosslinked concepts/credit-score-requirement-amendment.md → entities/lending-policy-committee.md, entities/northstar-standard-home-loan.md, sources/a-approved-policy-2025-summary.md, concepts/policy-governance-and-amendment-rules.md"
+  ],
+  "queries": [
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty.",
+      "text": "As of **2026-02-20**, the applicable requirements for the **Northstar Standard Home Loan** are:\n\n| Requirement | Value | Source |\n|---|---|---|\n| Maximum LTV | 80% | *A-approved-policy-2025* (unchanged) |\n| Maximum loan term | 30 years | *A-approved-policy-2025* (unchanged) |\n| Minimum credit score | **700** | *E-approved-score-amendment-2026* (effective 2026-02-01) |\n\n**Reasoning:**\n- Policy A (2025) originally set LTV at 80%, term at 30 years, and minimum credit score at 680.\n- Amendment E (published 2026-01-15, effective 2026-02-01) changes **only** the minimum credit score to 700, per the [Credit Score Requirement Amendment](concepts/credit-score-requirement-amendment.md) page.\n- Per [Policy Governance and Amendment Rules](concepts/policy-governance-and-amendment-rules.md), an amendment only changes the specific terms it names — LTV and loan term are explicitly stated as remaining in force.\n- Since 2026-02-20 is after the amendment's effective date (2026-02-01), the new credit score requirement is binding.\n\n**No uncertainty** here: the amendment is narrow, explicit about not superseding Policy A, and the query date falls safely after its effective date. Both source documents agree.\n\nThis synthesis (values as of a queried date, cross-referencing base policy + amendment) could make a useful reusable page — consider `/save` if you want a point-in-time snapshot for future reference.\n\n---\n**Sources:**\n    ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\sources\\e-approved-score-amendment-2026-summary.md",
+          "title": "E-approved-score-amendment-2026.md"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\concepts\\credit-score-requirement-amendment.md",
+          "title": "Credit Score Requirement Amendment"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-governance-and-amendment-rules.md",
+          "title": "Policy Governance and Amendment Rules"
+        }
+      ]
+    },
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-03-15? Cite the sources and state any uncertainty.",
+      "text": "## Northstar Standard Home Loan Requirements as of 2026-03-15\n\nCombining **Policy A** (2025) with **Amendment E** (2026), effective as of the given date:\n\n| Requirement | Value | Source |\n|---|---|---|\n| Maximum LTV | 80% | [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) — unchanged by amendment |\n| Maximum loan term | 30 years | [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) — unchanged by amendment |\n| Minimum credit score | **700** | [Credit Score Requirement Amendment](concepts/credit-score-requirement-amendment.md) / [E-approved-score-amendment-2026.md](sources/e-approved-score-amendment-2026-summary.md) |\n\n### Reasoning\n- Policy A (effective 2025-01-01) originally set the minimum credit score at 680, alongside 80% LTV and 30-year max term ([Northstar Standard Home Loan](entities/northstar-standard-home-loan.md)).\n- Amendment E, approved by the [Lending Policy Committee](entities/lending-policy-committee.md), raised the minimum credit score to 700, effective **2026-02-01** — before the query date of 2026-03-15, so it is in force.\n- Per [Policy Governance and Amendment Rules](concepts/policy-governance-and-amendment-rules.md), an amendment only changes what it explicitly names — LTV and term are untouched and Policy A remains binding for those terms.\n\n### Certainty\nNo uncertainty here: the effective date of the amendment (2026-02-01) has passed relative to 2026-03-15, and no conflicting or superseding documents are indicated in the wiki. If a newer amendment exists post-dating E, it isn't reflected in this index.\n\nThis is a clean synthesis of two sources — consider saving it via `/save` as something like \"Northstar Loan Requirements Timeline\" for quick future reference.\n\n---\n**Sources:**\n    ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\sources\\e-approved-score-amendment-2026-summary.md",
+          "title": "E-approved-score-amendment-2026.md"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\concepts\\credit-score-requirement-amendment.md",
+          "title": "Credit Score Requirement Amendment"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-governance-and-amendment-rules.md",
+          "title": "Policy Governance and Amendment Rules"
+        }
+      ]
+    },
+    {
+      "question": "For Northstar Standard Home Loan, which claims agree, disagree, are tentative, or supersede earlier claims? Identify the claims and their sources.",
+      "text": "# Northstar Standard Home Loan: Claim Analysis\n\nBased on the wiki, there are two relevant documents establishing requirements for the **Northstar Standard Home Loan**:\n\n## Base Policy — Document A (2025)\nPer [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) and the [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) page, effective 2025-01-01:\n\n| Requirement | Value |\n|---|---|\n| Max LTV | 80% |\n| Max loan term | 30 years |\n| Min credit score | 680 |\n\n## Amendment — Document E (2026)\nPer [Credit Score Requirement Amendment](concepts/credit-score-requirement-amendment.md) / [E-approved-score-amendment-2026.md](sources/e-approved-score-amendment-2026-summary.md), effective **2026-02-01**:\n\n- **Min credit score → 700** (supersedes the 680 figure in Document A, but *only* for this one requirement)\n\n## How the claims relate\n\n- **Supersede**: The 700 credit score in Document E supersedes the 680 credit score in Document A, but *only* from 2026-02-01 onward. Before that date, 680 is still binding — publication (2026-01-15) does not trigger the change.\n- **Agree (unchanged)**: Max LTV (80%) and max loan term (30 years) from Document A remain fully in force — Document E is explicit that it does not touch these, and the [Policy Governance and Amendment Rules](concepts/policy-governance-and-amendment-rules.md) page confirms amendments only change what they explicitly name.\n- **No disagreement or tentative claims**: There's no conflict here since Document E was issued by the same authoritative body — the [Lending Policy Committee](entities/lending-policy-committee.md) — that approved Document A, and it explicitly scopes itself as a narrow amendment rather than a full replacement.\n\n## Summary\nAs of **today** (assuming after 2026-02-01), the current, complete set of Northstar Standard Home Loan requirements is:\n- Max LTV: 80% (from A)\n- Max loan term: 30 years (from A)\n- Min credit score: **700** (from E, superseding A's 680)\n\nThis is a clean example of the wiki's governance principle: **amendments coexist with base policy** rather than replacing it wholesale — staff must read A and E together.\n\n---\nThis synthesis pulls together multiple pages into a coherent timeline/status view — you may want to run `/save` to capture it as a new page (e.g., \"Northstar Standard Home Loan — Current Requirements\").\n\n---\n**Sources:**\n    ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\sources\\e-approved-score-amendment-2026-summary.md",
+          "title": "E-approved-score-amendment-2026.md"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-governance-and-amendment-rules.md",
+          "title": "Policy Governance and Amendment Rules"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\workspace\\.wiki\\wiki\\concepts\\credit-score-requirement-amendment.md",
+          "title": "Credit Score Requirement Amendment"
+        }
+      ]
+    }
+  ],
+  "step": 2,
+  "source": "E",
+  "ingest": {
+    "pagesCreated": [
+      "sources/e-approved-score-amendment-2026-summary.md",
+      "concepts/credit-score-requirement-amendment.md"
+    ],
+    "pagesUpdated": [
+      "index.md",
+      "log.md",
+      "sources/e-approved-score-amendment-2026-summary.md",
+      "sources/e-approved-score-amendment-2026-summary.md",
+      "concepts/credit-score-requirement-amendment.md"
+    ]
+  }
+}

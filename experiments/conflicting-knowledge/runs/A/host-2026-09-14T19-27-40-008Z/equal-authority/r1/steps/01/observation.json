@@ -1,0 +1,214 @@
+{
+  "calls": [
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a wiki knowledge-base builder. You analyse source documents and extract structured knowledge.\n\nGiven a source document and the existing wiki index, produce a JSON analysis with:\n1. \"summary\": A rich markdown summary of the source (2-4 paragraphs). Include key findings, arguments, and data points. This replaces the mechanical preview.\n2. \"entities\": Named things (people, organizations, products, places) worth their own wiki page. Each has \"name\", \"content\" (markdown body for the page), and \"tags\" (array of strings).\n3. \"concepts\": Ideas, techniques, patterns, or topics worth their own wiki page. Each has \"name\", \"content\" (markdown body), and \"tags\".\n4. \"crosslinks\": Links between pages. Each has \"from\" (relative path like \"entities/foo.md\" or \"sources/bar-summary.md\") and \"to\" (array of relative paths). Only link to pages that will exist after this analysis (existing pages from the index OR new entity/concept pages you are creating). Entity pages are at \"entities/{slugified-name}.md\", concept pages at \"concepts/{slugified-name}.md\". Slugify = lowercase, replace spaces/special chars with hyphens, remove consecutive hyphens.\n\nRules:\n- Only create entities/concepts that are substantively discussed in the source, not just mentioned in passing.\n- Keep content concise but informative (1-3 paragraphs per page).\n- Use markdown formatting: headers, bold, lists.\n- Tags should be lowercase, hyphenated keywords.\n- If the source has minimal content, return fewer or no entities/concepts.\n- Respond with ONLY valid JSON. No markdown fences, no explanation."
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "## Existing Wiki Pages\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n\n## Source Document\n# Northstar Standard Home Loan: approved policy 2025\n\nDocument ID: A. This policy was approved by the Lending Policy Committee and published on 2024-12-15. Its status is approved and its effective date is 2025-01-01. It does not supersede another document.\n\nThis policy applies to Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in the fictional jurisdiction of Northland, denominated in Northland dollars. All requirements below apply to that same product and borrower class.\n\nThe maximum loan-to-value ratio (LTV) is 80%. The maximum loan term is 30 years. The minimum credit score is 680.\n\nThe Lending Policy Committee is the approving authority for this product. Informal team notes and draft discussions cannot change an approved policy. An explicit replacement takes effect on its stated effective date, not its publication date. An amendment changes only the requirements it names; other requirements remain in force. If equally authoritative documents with the same dates state incompatible requirements and neither establishes precedence, the requirement remains unresolved pending committee clarification. Staff must not choose a value or invent an exception to resolve that situation.\n"
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "{\"summary\":\"This document defines the **approved 2025 policy** (Document ID: A) for the **Northstar Standard Home Loan**, an owner-occupied purchase loan product for standard individual borrowers in the fictional jurisdiction of **Northland**, denominated in Northland dollars. The policy was approved by the **Lending Policy Committee** on 2024-12-15, with an effective date of 2025-01-01, and does not supersede any prior document.\\n\\nKey lending parameters specified are: a maximum loan-to-value ratio (LTV) of **80%**, a maximum loan term of **30 years**, and a minimum credit score of **680**. These requirements apply uniformly to the specified product and borrower class.\\n\\nThe document also establishes **governance rules** for policy interpretation: only the Lending Policy Committee can approve changes; informal notes or drafts cannot override approved policy; replacements take effect on their stated effective date rather than publication date; amendments only alter the specific requirements they name, leaving others intact; and in cases of conflicting, equally authoritative documents with no established precedence, the conflict must remain unresolved pending committee clarification rather than being resolved unilaterally by staff.\",\"entities\":[{\"name\":\"Northstar Standard Home Loan\",\"content\":\"A loan product for **owner-occupied purchase loans** targeting standard individual borrowers in the fictional jurisdiction of **Northland**, denominated in Northland dollars.\\n\\n**2025 Approved Policy Parameters (Document ID: A):**\\n- Maximum LTV: 80%\\n- Maximum loan term: 30 years\\n- Minimum credit score: 680\\n\\nApproved by the Lending Policy Committee, effective 2025-01-01.\",\"tags\":[\"loan-product\",\"home-loan\",\"northstar\",\"policy\",\"northland\"]},{\"name\":\"Lending Policy Committee\",\"content\":\"The **approving authority** for Northstar Standard Home Loan policy. Responsible for approving, amending, and clarifying lending policy documents.\\n\\nKey governance principles tied to this committee:\\n- Only the committee can approve changes to policy.\\n- Informal team notes or draft discussions cannot override approved policy.\\n- Conflicts between equally authoritative documents must be resolved by the committee, not by staff.\",\"tags\":[\"governance\",\"committee\",\"approval-authority\",\"lending-policy\"]}],\"concepts\":[{\"name\":\"Policy Precedence and Amendment Rules\",\"content\":\"A set of governance rules for interpreting and applying lending policy documents:\\n\\n- **Replacement policies** take effect on their stated *effective date*, not their publication date.\\n- **Amendments** only change the specific requirements they name; all other requirements remain in force.\\n- If two equally authoritative documents have the **same date** and state **incompatible requirements**, with no established precedence, the conflict is **unresolved** pending committee clarification.\\n- Staff must **not** invent exceptions or choose values to resolve such conflicts unilaterally.\\n\\nThese rules ensure consistent, auditable governance over lending policy documents like the Northstar Standard Home Loan policy.\",\"tags\":[\"governance\",\"policy-precedence\",\"amendments\",\"conflict-resolution\"]},{\"name\":\"Loan-to-Value Ratio (LTV)\",\"content\":\"The **loan-to-value ratio** is a key underwriting parameter representing the loan amount as a percentage of the property's value. For the Northstar Standard Home Loan under the 2025 approved policy, the **maximum LTV is 80%**.\",\"tags\":[\"ltv\",\"underwriting\",\"risk-parameter\"]}],\"crosslinks\":[{\"from\":\"sources/a-approved-policy-2025-summary.md\",\"to\":[\"entities/northstar-standard-home-loan.md\",\"entities/lending-policy-committee.md\",\"concepts/policy-precedence-and-amendment-rules.md\",\"concepts/loan-to-value-ratio-ltv.md\"]},{\"from\":\"entities/northstar-standard-home-loan.md\",\"to\":[\"entities/lending-policy-committee.md\",\"concepts/loan-to-value-ratio-ltv.md\",\"sources/a-approved-policy-2025-summary.md\"]},{\"from\":\"entities/lending-policy-committee.md\",\"to\":[\"entities/northstar-standard-home-loan.md\",\"concepts/policy-precedence-and-amendment-rules.md\",\"sources/a-approved-policy-2025-summary.md\"]},{\"from\":\"concepts/policy-precedence-and-amendment-rules.md\",\"to\":[\"entities/lending-policy-committee.md\",\"sources/a-approved-policy-2025-summary.md\"]},{\"from\":\"concepts/loan-to-value-ratio-ltv.md\",\"to\":[\"entities/northstar-standard-home-loan.md\"]}]}",
+      "started": "2026-09-14T19:31:11.056Z",
+      "finished": "2026-09-14T19:31:23.909Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md) (Concepts): \n- [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) (Concepts): \n\n## Relevant Pages\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nA loan product for **owner-occupied purchase loans** targeting standard individual borrowers in the fictional jurisdiction of **Northland**, denominated in Northland dollars.\n\n**2025 Approved Policy Parameters (Document ID: A):**\n- Maximum LTV: 80%\n- Maximum loan term: 30 years\n- Minimum credit score: 680\n\nApproved by the Lending Policy Committee, effective 2025-01-01.\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Policy Precedence and Amendment Rules (concepts/policy-precedence-and-amendment-rules.md)\nA set of governance rules for interpreting and applying lending policy documents:\n\n- **Replacement policies** take effect on their stated *effective date*, not their publication date.\n- **Amendments** only change the specific requirements they name; all other requirements remain in force.\n- If two equally authoritative documents have the **same date** and state **incompatible requirements**, with no established precedence, the conflict is **unresolved** pending committee clarification.\n- Staff must **not** invent exceptions or choose values to resolve such conflicts unilaterally.\n\nThese rules ensure consistent, auditable governance over lending policy documents like the Northstar Standard Home Loan policy.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "## Northstar Standard Home Loan — Parameters as of 2026-02-20\n\nBased on the current wiki content, the only policy on record is **Document A** (effective 2025-01-01), per [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md):\n\n- **Maximum LTV:** 80%\n- **Maximum loan term:** 30 years\n- **Minimum credit score:** 680\n\n## Uncertainty\n\nThe wiki contains **no record of any amendment or replacement policy** issued after Document A. Per [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md), replacement policies take effect on their *stated effective date*, and amendments only change the specific terms they name — so if a later policy exists but isn't in this wiki, these parameters could be outdated for 2026-02-20.\n\n**I cannot confirm these values are still current as of 2026-02-20** — only that they were correct as of the 2025-01-01 effective date, with no contradicting or superseding document indexed here.\n\nTo resolve this confidently, the wiki should include:\n- Any 2026 policy update or amendment document from the [Lending Policy Committee](entities/lending-policy-committee.md)\n- Confirmation that Document A has not been superseded\n\nIf you have a newer policy document, I'd recommend adding it and cross-linking it to this entity — this is exactly the kind of precedence question the [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md) page is meant to govern.",
+      "started": "2026-09-14T19:31:24.225Z",
+      "finished": "2026-09-14T19:31:30.172Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md) (Concepts): \n- [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) (Concepts): \n\n## Relevant Pages\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nA loan product for **owner-occupied purchase loans** targeting standard individual borrowers in the fictional jurisdiction of **Northland**, denominated in Northland dollars.\n\n**2025 Approved Policy Parameters (Document ID: A):**\n- Maximum LTV: 80%\n- Maximum loan term: 30 years\n- Minimum credit score: 680\n\nApproved by the Lending Policy Committee, effective 2025-01-01.\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Policy Precedence and Amendment Rules (concepts/policy-precedence-and-amendment-rules.md)\nA set of governance rules for interpreting and applying lending policy documents:\n\n- **Replacement policies** take effect on their stated *effective date*, not their publication date.\n- **Amendments** only change the specific requirements they name; all other requirements remain in force.\n- If two equally authoritative documents have the **same date** and state **incompatible requirements**, with no established precedence, the conflict is **unresolved** pending committee clarification.\n- Staff must **not** invent exceptions or choose values to resolve such conflicts unilaterally.\n\nThese rules ensure consistent, auditable governance over lending policy documents like the Northstar Standard Home Loan policy.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-03-15? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "## Northstar Standard Home Loan — Parameters as of 2026-03-15\n\nBased on the current wiki content, the only policy document on record is the **2025 Approved Policy (Document ID: A)**, effective 2025-01-01, per [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md):\n\n- **Maximum LTV:** 80%\n- **Maximum loan term:** 30 years\n- **Minimum credit score:** 680\n\n## Applicability to 2026-03-15\n\nPer [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md), replacement policies take effect on their *stated effective date*, and amendments only alter the specific terms they name — otherwise prior terms remain in force. Since:\n\n- The wiki shows no later replacement policy or amendment document dated after 2025-01-01,\n- No conflicting or superseding document is indexed,\n\nthe 2025 parameters (80% LTV / 30-year term / 680 credit score) **appear to still be in effect** on 2026-03-15.\n\n## Uncertainty\n\n⚠️ This conclusion assumes no amendment or replacement policy exists beyond what's indexed here. The wiki only contains one source document ([A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md)). If a later policy (e.g., a 2026 update from the [Lending Policy Committee](entities/lending-policy-committee.md)) exists outside this wiki, it would take precedence and isn't reflected here.\n\n**Suggested addition:** If a 2026 policy document exists, add it as a new source page and cross-link it to Northstar Standard Home Loan and Policy Precedence and Amendment Rules to keep the effective-parameters history auditable.",
+      "started": "2026-09-14T19:31:30.210Z",
+      "finished": "2026-09-14T19:31:36.905Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md) (Concepts): \n- [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) (Concepts): \n\n## Relevant Pages\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nA loan product for **owner-occupied purchase loans** targeting standard individual borrowers in the fictional jurisdiction of **Northland**, denominated in Northland dollars.\n\n**2025 Approved Policy Parameters (Document ID: A):**\n- Maximum LTV: 80%\n- Maximum loan term: 30 years\n- Minimum credit score: 680\n\nApproved by the Lending Policy Committee, effective 2025-01-01.\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Policy Precedence and Amendment Rules (concepts/policy-precedence-and-amendment-rules.md)\nA set of governance rules for interpreting and applying lending policy documents:\n\n- **Replacement policies** take effect on their stated *effective date*, not their publication date.\n- **Amendments** only change the specific requirements they name; all other requirements remain in force.\n- If two equally authoritative documents have the **same date** and state **incompatible requirements**, with no established precedence, the conflict is **unresolved** pending committee clarification.\n- Staff must **not** invent exceptions or choose values to resolve such conflicts unilaterally.\n\nThese rules ensure consistent, auditable governance over lending policy documents like the Northstar Standard Home Loan policy.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, which claims agree, disagree, are tentative, or supersede earlier claims? Identify the claims and their sources."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "## Northstar Standard Home Loan — Claim Status\n\nBased on the wiki content currently indexed, there is only **one** source document tied to the Northstar Standard Home Loan: **A-approved-policy-2025.md**, which establishes the 2025 approved policy parameters via the **Lending Policy Committee**.\n\n### Claims from A-approved-policy-2025.md\n| Claim | Status | Source |\n|---|---|---|\n| Maximum LTV: 80% | Baseline (uncontested) | A-approved-policy-2025 |\n| Maximum loan term: 30 years | Baseline (uncontested) | A-approved-policy-2025 |\n| Minimum credit score: 680 | Baseline (uncontested) | A-approved-policy-2025 |\n| Effective date: 2025-01-01 | Baseline (uncontested) | A-approved-policy-2025 |\n\n### No conflicts, amendments, or supersession found\nThe wiki does **not** currently contain any other policy document (e.g., a later amendment, replacement policy, or draft) referencing the Northstar Standard Home Loan's LTV, term, or credit score parameters. Per **Policy Precedence and Amendment Rules**, without a second document:\n- There's nothing to agree or disagree with.\n- Nothing is \"tentative\" — the single source is treated as the approved, effective policy.\n- No supersession applies, since a replacement would need its own dated document with stated effective date.\n\n### Suggestion for completeness\nIf you're auditing this loan product for consistency, it would help to add:\n- Any **amendment documents** (e.g., \"B-amendment-2025\" or similar) that might update specific parameters.\n- A **draft or proposed policy** if one exists, to test the Policy Precedence rules for conflicting/same-date scenarios.\n\nWould you like me to save this claim-audit as a new wiki page (e.g., `northstar-standard-home-loan-claim-audit.md`) for future reference via `/save`?",
+      "started": "2026-09-14T19:31:37.041Z",
+      "finished": "2026-09-14T19:31:44.300Z"
+    }
+  ],
+  "logs": [
+    "[model] Configured family \"claude-opus-4.6\" is not available — falling back to any Copilot model",
+    "[model] Using fallback model: claude-sonnet-5",
+    "[llmIngest] Using model: claude-sonnet-5",
+    "[llmIngest] LLM response length: 4384 chars",
+    "[llmIngest] Parsed: summary=yes, entities=2, concepts=2, crosslinks=5",
+    "[llmIngest] Rewrote summary: sources/a-approved-policy-2025-summary.md",
+    "[llmIngest] Created entity: entities/northstar-standard-home-loan.md",
+    "[llmIngest] Created entity: entities/lending-policy-committee.md",
+    "[llmIngest] Created concept: concepts/policy-precedence-and-amendment-rules.md",
+    "[llmIngest] Created concept: concepts/loan-to-value-ratio-ltv.md",
+    "[llmIngest] Crosslinked sources/a-approved-policy-2025-summary.md → entities/northstar-standard-home-loan.md, entities/lending-policy-committee.md, concepts/policy-precedence-and-amendment-rules.md, concepts/loan-to-value-ratio-ltv.md",
+    "[llmIngest] Crosslinked entities/northstar-standard-home-loan.md → entities/lending-policy-committee.md, concepts/loan-to-value-ratio-ltv.md, sources/a-approved-policy-2025-summary.md",
+    "[llmIngest] Crosslinked entities/lending-policy-committee.md → entities/northstar-standard-home-loan.md, concepts/policy-precedence-and-amendment-rules.md, sources/a-approved-policy-2025-summary.md",
+    "[llmIngest] Crosslinked concepts/policy-precedence-and-amendment-rules.md → entities/lending-policy-committee.md, sources/a-approved-policy-2025-summary.md",
+    "[llmIngest] Crosslinked concepts/loan-to-value-ratio-ltv.md → entities/northstar-standard-home-loan.md"
+  ],
+  "queries": [
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty.",
+      "text": "## Northstar Standard Home Loan — Parameters as of 2026-02-20\n\nBased on the current wiki content, the only policy on record is **Document A** (effective 2025-01-01), per [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md):\n\n- **Maximum LTV:** 80%\n- **Maximum loan term:** 30 years\n- **Minimum credit score:** 680\n\n## Uncertainty\n\nThe wiki contains **no record of any amendment or replacement policy** issued after Document A. Per [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md), replacement policies take effect on their *stated effective date*, and amendments only change the specific terms they name — so if a later policy exists but isn't in this wiki, these parameters could be outdated for 2026-02-20.\n\n**I cannot confirm these values are still current as of 2026-02-20** — only that they were correct as of the 2025-01-01 effective date, with no contradicting or superseding document indexed here.\n\nTo resolve this confidently, the wiki should include:\n- Any 2026 policy update or amendment document from the [Lending Policy Committee](entities/lending-policy-committee.md)\n- Confirmation that Document A has not been superseded\n\nIf you have a newer policy document, I'd recommend adding it and cross-linking it to this entity — this is exactly the kind of precedence question the [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md) page is meant to govern.\n\n---\n**Sources:**\n  ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-precedence-and-amendment-rules.md",
+          "title": "Policy Precedence and Amendment Rules"
+        }
+      ]
+    },
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-03-15? Cite the sources and state any uncertainty.",
+      "text": "## Northstar Standard Home Loan — Parameters as of 2026-03-15\n\nBased on the current wiki content, the only policy document on record is the **2025 Approved Policy (Document ID: A)**, effective 2025-01-01, per [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md):\n\n- **Maximum LTV:** 80%\n- **Maximum loan term:** 30 years\n- **Minimum credit score:** 680\n\n## Applicability to 2026-03-15\n\nPer [Policy Precedence and Amendment Rules](concepts/policy-precedence-and-amendment-rules.md), replacement policies take effect on their *stated effective date*, and amendments only alter the specific terms they name — otherwise prior terms remain in force. Since:\n\n- The wiki shows no later replacement policy or amendment document dated after 2025-01-01,\n- No conflicting or superseding document is indexed,\n\nthe 2025 parameters (80% LTV / 30-year term / 680 credit score) **appear to still be in effect** on 2026-03-15.\n\n## Uncertainty\n\n⚠️ This conclusion assumes no amendment or replacement policy exists beyond what's indexed here. The wiki only contains one source document ([A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md)). If a later policy (e.g., a 2026 update from the [Lending Policy Committee](entities/lending-policy-committee.md)) exists outside this wiki, it would take precedence and isn't reflected here.\n\n**Suggested addition:** If a 2026 policy document exists, add it as a new source page and cross-link it to Northstar Standard Home Loan and Policy Precedence and Amendment Rules to keep the effective-parameters history auditable.\n\n---\n**Sources:**\n  ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-precedence-and-amendment-rules.md",
+          "title": "Policy Precedence and Amendment Rules"
+        }
+      ]
+    },
+    {
+      "question": "For Northstar Standard Home Loan, which claims agree, disagree, are tentative, or supersede earlier claims? Identify the claims and their sources.",
+      "text": "## Northstar Standard Home Loan — Claim Status\n\nBased on the wiki content currently indexed, there is only **one** source document tied to the Northstar Standard Home Loan: **A-approved-policy-2025.md**, which establishes the 2025 approved policy parameters via the **Lending Policy Committee**.\n\n### Claims from A-approved-policy-2025.md\n| Claim | Status | Source |\n|---|---|---|\n| Maximum LTV: 80% | Baseline (uncontested) | A-approved-policy-2025 |\n| Maximum loan term: 30 years | Baseline (uncontested) | A-approved-policy-2025 |\n| Minimum credit score: 680 | Baseline (uncontested) | A-approved-policy-2025 |\n| Effective date: 2025-01-01 | Baseline (uncontested) | A-approved-policy-2025 |\n\n### No conflicts, amendments, or supersession found\nThe wiki does **not** currently contain any other policy document (e.g., a later amendment, replacement policy, or draft) referencing the Northstar Standard Home Loan's LTV, term, or credit score parameters. Per **Policy Precedence and Amendment Rules**, without a second document:\n- There's nothing to agree or disagree with.\n- Nothing is \"tentative\" — the single source is treated as the approved, effective policy.\n- No supersession applies, since a replacement would need its own dated document with stated effective date.\n\n### Suggestion for completeness\nIf you're auditing this loan product for consistency, it would help to add:\n- Any **amendment documents** (e.g., \"B-amendment-2025\" or similar) that might update specific parameters.\n- A **draft or proposed policy** if one exists, to test the Policy Precedence rules for conflicting/same-date scenarios.\n\nWould you like me to save this claim-audit as a new wiki page (e.g., `northstar-standard-home-loan-claim-audit.md`) for future reference via `/save`?\n\n---\n**Sources:**\n  ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\equal-authority\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-precedence-and-amendment-rules.md",
+          "title": "Policy Precedence and Amendment Rules"
+        }
+      ]
+    }
+  ],
+  "step": 1,
+  "source": "A",
+  "ingest": {
+    "pagesCreated": [
+      "sources/a-approved-policy-2025-summary.md",
+      "entities/northstar-standard-home-loan.md",
+      "entities/lending-policy-committee.md",
+      "concepts/policy-precedence-and-amendment-rules.md",
+      "concepts/loan-to-value-ratio-ltv.md"
+    ],
+    "pagesUpdated": [
+      "index.md",
+      "log.md",
+      "sources/a-approved-policy-2025-summary.md",
+      "sources/a-approved-policy-2025-summary.md",
+      "entities/northstar-standard-home-loan.md",
+      "entities/lending-policy-committee.md",
+      "concepts/policy-precedence-and-amendment-rules.md",
+      "concepts/loan-to-value-ratio-ltv.md"
+    ]
+  }
+}

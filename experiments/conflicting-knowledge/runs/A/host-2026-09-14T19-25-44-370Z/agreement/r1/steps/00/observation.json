@@ -1,0 +1,46 @@
+{
+  "calls": [
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\nNo pages in the index yet.\n\n## Relevant Pages\nNo pages matched the query."
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": " wiki currexed, and none query — so I information on \"Northstar Standard the knowledge base.ately, to flan par **maximum LTV** and **minimum credit scoreactly the kind of detail byessing wouldleading (entially harmful if real decision as).\n\n****\n- Add a wan product (e.g., \" Home Loan\") with s fromheet oridelines document.\n-ective date of the ter since these fig oftenised.\n- If you have a document (P, interno), share it or cont I can ext specific page exists, I can pterm/credit score requly and cite by page Would you like to it `/save` source details",
+      "started": "2026-09-14T19:25:44.766Z",
+      "finished": "2026-09-14T19:25:52.882Z"
+    }
+  ],
+  "logs": [],
+  "queries": [
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty.",
+      "text": " wiki currexed, and none query — so I information on \"Northstar Standard the knowledge base.ately, to flan par **maximum LTV** and **minimum credit scoreactly the kind of detail byessing wouldleading (entially harmful if real decision as).\n\n****\n- Add a wan product (e.g., \" Home Loan\") with s fromheet oridelines document.\n-ective date of the ter since these fig oftenised.\n- If you have a document (P, interno), share it or cont I can ext specific page exists, I can pterm/credit score requly and cite by page Would you like to it `/save` source details",
+      "references": []
+    }
+  ],
+  "step": 0,
+  "source": null
+}

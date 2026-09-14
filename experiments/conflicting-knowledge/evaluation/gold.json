@@ -1,0 +1,43 @@
+{
+  "schema_version":1,
+  "corpus_id":"northstar-conflicts-v1",
+  "visibility":"evaluator-only; never ingest this file",
+  "semantics":"Checkpoint state IDs below select complete expected states, not patches. Values are LTV percent, term years, and credit score points. Requirements describe meaning, not mandatory page layout. Source summaries are evaluated against their own source assertions, not the later current state.",
+  "assertions":{
+    "A.ltv":{"source":"A","claim":"maximum_ltv","value":80,"evidence":"The maximum loan-to-value ratio (LTV) is 80%."},
+    "A.term":{"source":"A","claim":"maximum_term","value":30,"evidence":"The maximum loan term is 30 years."},
+    "A.score":{"source":"A","claim":"minimum_credit_score","value":680,"evidence":"The minimum credit score is 680."},
+    "G.ltv":{"source":"G","claim":"maximum_ltv","value":80,"evidence":"maximum loan-to-value ratio (LTV) is 80%"},
+    "G.term":{"source":"G","claim":"maximum_term","value":30,"evidence":"maximum loan term is 30 years"},
+    "G.score":{"source":"G","claim":"minimum_credit_score","value":680,"evidence":"minimum credit score is 680"},
+    "B.ltv":{"source":"B","claim":"maximum_ltv","value":85,"evidence":"The maximum loan-to-value ratio (LTV) is 85%."},
+    "C.ltv":{"source":"C","claim":"maximum_ltv","value":82,"evidence":"From the effective date, the maximum loan-to-value ratio (LTV) is 82%."},
+    "C.term":{"source":"C","claim":"maximum_term","value":30,"evidence":"The maximum loan term is 30 years."},
+    "C.score":{"source":"C","claim":"minimum_credit_score","value":680,"evidence":"The minimum credit score is 680."},
+    "D.ltv":{"source":"D","claim":"maximum_ltv","value":83,"evidence":"The maximum loan-to-value ratio (LTV) is 83%."},
+    "E.score":{"source":"E","claim":"minimum_credit_score","value":700,"evidence":"From the effective date, the minimum credit score is 700."},
+    "F.ltv":{"source":"F","claim":"maximum_ltv","value":85,"modality":"tentative, scope unspecified","evidence":"We may be able to go up to 85% LTV for some applications; scope and approval are still to be confirmed."}
+  },
+  "states":{
+    "empty":{"values":{"maximum_ltv":null,"maximum_term":null,"minimum_credit_score":null},"current":[],"required":"Insufficient evidence for any policy figure."},
+    "a":{"values":{"maximum_ltv":80,"maximum_term":30,"minimum_credit_score":680},"current":["A.ltv","A.term","A.score"],"required":"No future sources known. No conflict established."},
+    "ag":{"values":{"maximum_ltv":80,"maximum_term":30,"minimum_credit_score":680},"current":["A.ltv","A.term","A.score","G.ltv","G.term","G.score"],"required":"Agreement, with A and G supporting each figure. G does not supersede A."},
+    "ab":{"values":{"maximum_ltv":80,"maximum_term":30,"minimum_credit_score":680},"current":["A.ltv","A.term","A.score"],"informal_conflicting":["B.ltv"],"required":"Attribute 85% to B and distinguish it from approved 80%. No approved-policy replacement or numerical compromise."},
+    "ac-before":{"values":{"maximum_ltv":80,"maximum_term":30,"minimum_credit_score":680},"current":["A.ltv","A.term","A.score"],"future":["C.ltv","C.term","C.score"],"required":"C is published but not effective. It replaces A on 2026-03-01. Do not apply 82% early."},
+    "ac-after":{"values":{"maximum_ltv":82,"maximum_term":30,"minimum_credit_score":680},"current":["C.ltv","C.term","C.score"],"historical":["A.ltv","A.term","A.score"],"required":"C supersedes A effective 2026-03-01. Keep historical 80% attributable to A; unchanged numeric facts remain supported by C."},
+    "ad":{"values":{"maximum_ltv":null,"maximum_term":30,"minimum_credit_score":680},"current":["A.term","A.score"],"unresolved":["A.ltv","D.ltv"],"required":"No uniquely justified current LTV: disclose equal-authority 80% versus 83%. Null means unresolved here, not absent evidence. No averaging or invented exception."},
+    "ae":{"values":{"maximum_ltv":80,"maximum_term":30,"minimum_credit_score":700},"current":["A.ltv","A.term","E.score"],"historical":["A.score"],"required":"E replaces only A's minimum score from 2026-02-01. Preserve A's LTV and term, with provenance to A. Historical score 680 stays attributable to A."},
+    "af":{"values":{"maximum_ltv":80,"maximum_term":30,"minimum_credit_score":680},"current":["A.ltv","A.term","A.score"],"tentative":["F.ltv"],"required":"F is tentative and underspecified, not approved policy or a definite same-scope incompatible requirement. Do not invent eligible applications."},
+    "abc-before":{"values":{"maximum_ltv":80,"maximum_term":30,"minimum_credit_score":680},"current":["A.ltv","A.term","A.score"],"informal_conflicting":["B.ltv"],"future":["C.ltv","C.term","C.score"],"required":"A governs; B's 85% is informal; C's 82% is future-effective on 2026-03-01. Preserve each attribution."},
+    "abc-after":{"values":{"maximum_ltv":82,"maximum_term":30,"minimum_credit_score":680},"current":["C.ltv","C.term","C.score"],"historical":["A.ltv","A.term","A.score"],"informal_conflicting":["B.ltv"],"required":"C governs; A is historical; B's 85% is an informal disagreement, not a previously approved policy. Preserve all three distinctions."}
+  },
+  "checkpoints":{
+    "agreement":[{"after":[],"2026-02-20":"empty","2026-03-15":"empty"},{"after":["A"],"2026-02-20":"a","2026-03-15":"a"},{"after":["A","G"],"2026-02-20":"ag","2026-03-15":"ag"}],
+    "supersession":[{"after":[],"2026-02-20":"empty","2026-03-15":"empty"},{"after":["A"],"2026-02-20":"a","2026-03-15":"a"},{"after":["A","C"],"2026-02-20":"ac-before","2026-03-15":"ac-after"}],
+    "lower-authority":[{"after":[],"2026-02-20":"empty","2026-03-15":"empty"},{"after":["A"],"2026-02-20":"a","2026-03-15":"a"},{"after":["A","B"],"2026-02-20":"ab","2026-03-15":"ab"}],
+    "equal-authority":[{"after":[],"2026-02-20":"empty","2026-03-15":"empty"},{"after":["A"],"2026-02-20":"a","2026-03-15":"a"},{"after":["A","D"],"2026-02-20":"ad","2026-03-15":"ad"}],
+    "partial-update":[{"after":[],"2026-02-20":"empty","2026-03-15":"empty"},{"after":["A"],"2026-02-20":"a","2026-03-15":"a"},{"after":["A","E"],"2026-02-20":"ae","2026-03-15":"ae"}],
+    "ambiguity":[{"after":[],"2026-02-20":"empty","2026-03-15":"empty"},{"after":["A"],"2026-02-20":"a","2026-03-15":"a"},{"after":["A","F"],"2026-02-20":"af","2026-03-15":"af"}],
+    "combined":[{"after":[],"2026-02-20":"empty","2026-03-15":"empty"},{"after":["A"],"2026-02-20":"a","2026-03-15":"a"},{"after":["A","B"],"2026-02-20":"ab","2026-03-15":"ab"},{"after":["A","B","C"],"2026-02-20":"abc-before","2026-03-15":"abc-after"}]
+  }
+}

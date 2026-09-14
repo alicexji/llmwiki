@@ -1,0 +1,210 @@
+{
+  "calls": [
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a wiki knowledge-base builder. You analyse source documents and extract structured knowledge.\n\nGiven a source document and the existing wiki index, produce a JSON analysis with:\n1. \"summary\": A rich markdown summary of the source (2-4 paragraphs). Include key findings, arguments, and data points. This replaces the mechanical preview.\n2. \"entities\": Named things (people, organizations, products, places) worth their own wiki page. Each has \"name\", \"content\" (markdown body for the page), and \"tags\" (array of strings).\n3. \"concepts\": Ideas, techniques, patterns, or topics worth their own wiki page. Each has \"name\", \"content\" (markdown body), and \"tags\".\n4. \"crosslinks\": Links between pages. Each has \"from\" (relative path like \"entities/foo.md\" or \"sources/bar-summary.md\") and \"to\" (array of relative paths). Only link to pages that will exist after this analysis (existing pages from the index OR new entity/concept pages you are creating). Entity pages are at \"entities/{slugified-name}.md\", concept pages at \"concepts/{slugified-name}.md\". Slugify = lowercase, replace spaces/special chars with hyphens, remove consecutive hyphens.\n\nRules:\n- Only create entities/concepts that are substantively discussed in the source, not just mentioned in passing.\n- Keep content concise but informative (1-3 paragraphs per page).\n- Use markdown formatting: headers, bold, lists.\n- Tags should be lowercase, hyphenated keywords.\n- If the source has minimal content, return fewer or no entities/concepts.\n- Respond with ONLY valid JSON. No markdown fences, no explanation."
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "## Existing Wiki Pages\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [B-informal-team-notes-2026.md](sources/b-informal-team-notes-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) (Concepts): \n- [Policy Governance and Precedence Rules](concepts/policy-governance-and-precedence-rules.md) (Concepts): \n\n## Source Document\n# Northstar Standard Home Loan: team notes\n\nDocument ID: B. These informal team notes were published on 2026-02-01 by the lending operations team. Their status is informal. They have no effective date and do not supersede another document. The lending operations team is not the Lending Policy Committee, and these notes are not policy approval.\n\nThe discussion concerns Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. It is about the same product and borrower class covered by policy A, rather than a separate product or exception.\n\nThe maximum loan-to-value ratio (LTV) is 85%. That is the figure the team recorded during its discussion of the product. These notes do not state a maximum loan term or a minimum credit score.\n\nThe notes record the team's statement, not a committee decision. No approval of a policy change accompanies this document. Its publication date identifies when the team recorded the statement; it is not an effective date for a revised lending policy. The document contains no instruction that it takes precedence over an approved policy.\n"
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "{\"summary\":\"These informal team notes (Document ID: B), published 2026-02-01 by the lending operations team, discuss the Northstar Standard Home Loan for owner-occupied purchase loans by standard individual borrowers in Northland, denominated in Northland dollars — the same product and borrower class covered by the approved policy (Document A). The notes are explicitly informal and not a product of the Lending Policy Committee, nor do they constitute policy approval or a policy change.\\n\\nThe key data point recorded is a maximum LTV of 85%, differing from whatever figure is in the approved policy. No maximum loan term or minimum credit score is stated. Critically, the document contains no language asserting precedence over approved policy, and its publication date is not an effective date for any revised lending rule.\\n\\nThis source serves as a case study in policy governance: it demonstrates a scenario where informal, undocumented team discussion diverges from formal approved policy, and underscores that such notes cannot override or supersede committee-approved documents absent explicit approval and effective-dating.\",\"entities\":[],\"concepts\":[],\"crosslinks\":[{\"from\":\"sources/b-informal-team-notes-2026-summary.md\",\"to\":[\"sources/a-approved-policy-2025-summary.md\",\"entities/lending-policy-committee.md\",\"entities/northstar-standard-home-loan.md\",\"concepts/loan-to-value-ratio-ltv.md\",\"concepts/policy-governance-and-precedence-rules.md\"]}]}",
+      "started": "2026-09-14T19:30:39.418Z",
+      "finished": "2026-09-14T19:30:44.765Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [B-informal-team-notes-2026.md](sources/b-informal-team-notes-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) (Concepts): \n- [Policy Governance and Precedence Rules](concepts/policy-governance-and-precedence-rules.md) (Concepts): \n\n## Relevant Pages\n### B-informal-team-notes-2026.md (sources/b-informal-team-notes-2026-summary.md)\nThese informal team notes (Document ID: B), published 2026-02-01 by the lending operations team, discuss the Northstar Standard Home Loan for owner-occupied purchase loans by standard individual borrowers in Northland, denominated in Northland dollars — the same product and borrower class covered by the approved policy (Document A). The notes are explicitly informal and not a product of the Lending Policy Committee, nor do they constitute policy approval or a policy change.\n\nThe key data point recorded is a maximum LTV of 85%, differing from whatever figure is in the approved policy. No maximum loan term or minimum credit score is stated. Critically, the document contains no language asserting precedence over approved policy, and its publication date is not an effective date for any revised lending rule.\n\nThis source serves as a case study in policy governance: it demonstrates a scenario where informal, undocumented team discussion diverges from formal approved policy, and underscores that such notes cannot override or supersede committee-approved documents absent explicit approval and effective-dating.\n\n## See also\n\n- [A-approved-policy-2025.md](a-approved-policy-2025-summary.md)\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n- [Policy Governance and Precedence Rules](../concepts/policy-governance-and-precedence-rules.md)\n\n---\n\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nThe **Northstar Standard Home Loan** is a loan product for owner-occupied purchase loans targeting standard individual borrowers in the fictional jurisdiction of Northland, denominated in Northland dollars.\n\nUnder the 2025 approved policy (Document A):\n- Maximum LTV: 80%\n- Maximum loan term: 30 years\n- Minimum credit score: 680\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Policy Governance and Precedence Rules (concepts/policy-governance-and-precedence-rules.md)\nThis concept covers the rules governing how lending policy documents are approved, amended, replaced, and interpreted:\n\n- Only the approving authority (e.g., Lending Policy Committee) can change approved policy.\n- Informal notes/drafts cannot override approved policy.\n- Explicit replacements take effect on their **stated effective date**, not publication date.\n- Amendments only change the specific requirements they name; other requirements remain in force.\n- If equally authoritative documents conflict with no established precedence, the requirement is **unresolved** pending clarification — staff must not invent values or exceptions.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "## Northstar Standard Home Loan — Requirements as of 2026-02-20\n\nBased on the **approved policy (Document A, 2025)**, which remains the only committee-approved, authoritative source per [Policy Governance and Precedence Rules](concepts/policy-governance-and-precedence-rules.md):\n\n- **Maximum LTV:** 80%\n- **Maximum loan term:** 30 years\n- **Minimum credit score:** 680\n\n(See [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md).)\n\n### On the conflicting figure\n\nThe **informal team notes (Document B, 2026)** record a maximum LTV of **85%**, differing from the approved policy's 80%. However, per governance rules:\n\n- Document B is explicitly informal, produced by the lending operations team — **not** the [Lending Policy Committee](entities/lending-policy-committee.md).\n- It contains no language asserting precedence, no effective date for a policy change, and does not constitute an approved amendment or replacement.\n- Informal notes/drafts **cannot override approved policy**.\n\n### Conclusion\n\nAs of 2026-02-20, the governing figures remain those in Document A: **80% max LTV, 30-year max term, 680 minimum credit score**. The 85% LTV figure in Document B is **not authoritative** and should be treated as an unofficial/proposed figure at most — not a valid basis for underwriting decisions unless and until the Lending Policy Committee formally approves and effective-dates a change.\n\nNo max term or minimum credit score is stated in Document B at all, so no conflict exists on those two points.\n\n---\n\nThis is a clean case study in policy governance and could be saved as a standalone page (e.g., \"Northstar Standard Home Loan — Current Requirements & Precedence Analysis\") via **/save** if you'd like it preserved for future reference.",
+      "started": "2026-09-14T19:30:44.999Z",
+      "finished": "2026-09-14T19:30:51.662Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [B-informal-team-notes-2026.md](sources/b-informal-team-notes-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) (Concepts): \n- [Policy Governance and Precedence Rules](concepts/policy-governance-and-precedence-rules.md) (Concepts): \n\n## Relevant Pages\n### B-informal-team-notes-2026.md (sources/b-informal-team-notes-2026-summary.md)\nThese informal team notes (Document ID: B), published 2026-02-01 by the lending operations team, discuss the Northstar Standard Home Loan for owner-occupied purchase loans by standard individual borrowers in Northland, denominated in Northland dollars — the same product and borrower class covered by the approved policy (Document A). The notes are explicitly informal and not a product of the Lending Policy Committee, nor do they constitute policy approval or a policy change.\n\nThe key data point recorded is a maximum LTV of 85%, differing from whatever figure is in the approved policy. No maximum loan term or minimum credit score is stated. Critically, the document contains no language asserting precedence over approved policy, and its publication date is not an effective date for any revised lending rule.\n\nThis source serves as a case study in policy governance: it demonstrates a scenario where informal, undocumented team discussion diverges from formal approved policy, and underscores that such notes cannot override or supersede committee-approved documents absent explicit approval and effective-dating.\n\n## See also\n\n- [A-approved-policy-2025.md](a-approved-policy-2025-summary.md)\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n- [Policy Governance and Precedence Rules](../concepts/policy-governance-and-precedence-rules.md)\n\n---\n\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nThe **Northstar Standard Home Loan** is a loan product for owner-occupied purchase loans targeting standard individual borrowers in the fictional jurisdiction of Northland, denominated in Northland dollars.\n\nUnder the 2025 approved policy (Document A):\n- Maximum LTV: 80%\n- Maximum loan term: 30 years\n- Minimum credit score: 680\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Policy Governance and Precedence Rules (concepts/policy-governance-and-precedence-rules.md)\nThis concept covers the rules governing how lending policy documents are approved, amended, replaced, and interpreted:\n\n- Only the approving authority (e.g., Lending Policy Committee) can change approved policy.\n- Informal notes/drafts cannot override approved policy.\n- Explicit replacements take effect on their **stated effective date**, not publication date.\n- Amendments only change the specific requirements they name; other requirements remain in force.\n- If equally authoritative documents conflict with no established precedence, the requirement is **unresolved** pending clarification — staff must not invent values or exceptions.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-03-15? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "## Northstar Standard Home Loan — Requirements as of 2026-03-15\n\nBased on the **A-approved-policy-2025.md** (approved by the Lending Policy Committee), the governing figures for the **Northstar Standard Home Loan** are:\n\n- **Maximum LTV:** 80%\n- **Maximum loan term:** 30 years\n- **Minimum credit score:** 680\n\n(See [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md).)\n\n### On the conflicting 85% LTV figure\nThe **B-informal-team-notes-2026.md** (Feb 2026, lending operations team) records a *different* maximum LTV of 85% for this same product/borrower class. However, per **Policy Governance and Precedence Rules**:\n\n- These notes are explicitly **informal** and not issued or approved by the Lending Policy Committee.\n- They contain **no language asserting precedence** over the approved policy.\n- Their publication date is **not an effective date** for any policy change.\n\nTherefore, the 85% figure has **no governing authority** — it does not override or amend the approved 80% LTV in Document A.\n\n### Answer as of 2026-03-15\n| Requirement | Value | Source |\n|---|---|---|\n| Max LTV | **80%** | A-approved-policy-2025 |\n| Max term | **30 years** | A-approved-policy-2025 |\n| Min credit score | **680** | A-approved-policy-2025 |\n\n**No uncertainty exists here per the governance rules** — the informal notes simply don't count as a valid amendment. The 85% figure should be treated as an internal discrepancy/case study (flagging a team possibly operating on outdated or unapproved assumptions), not a live policy conflict.\n\n---\nThis looks like a solid synthesis of how the sources interact — you might want to save it via `/save` as something like \"Northstar Standard Home Loan — Current Requirements & Governance Case Study.\"",
+      "started": "2026-09-14T19:30:51.702Z",
+      "finished": "2026-09-14T19:30:58.535Z"
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\n- [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) (Sources): Source file (.md)\n- [B-informal-team-notes-2026.md](sources/b-informal-team-notes-2026-summary.md) (Sources): Source file (.md)\n- [Lending Policy Committee](entities/lending-policy-committee.md) (Entities): \n- [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md) (Entities): \n- [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) (Concepts): \n- [Policy Governance and Precedence Rules](concepts/policy-governance-and-precedence-rules.md) (Concepts): \n\n## Relevant Pages\n### B-informal-team-notes-2026.md (sources/b-informal-team-notes-2026-summary.md)\nThese informal team notes (Document ID: B), published 2026-02-01 by the lending operations team, discuss the Northstar Standard Home Loan for owner-occupied purchase loans by standard individual borrowers in Northland, denominated in Northland dollars — the same product and borrower class covered by the approved policy (Document A). The notes are explicitly informal and not a product of the Lending Policy Committee, nor do they constitute policy approval or a policy change.\n\nThe key data point recorded is a maximum LTV of 85%, differing from whatever figure is in the approved policy. No maximum loan term or minimum credit score is stated. Critically, the document contains no language asserting precedence over approved policy, and its publication date is not an effective date for any revised lending rule.\n\nThis source serves as a case study in policy governance: it demonstrates a scenario where informal, undocumented team discussion diverges from formal approved policy, and underscores that such notes cannot override or supersede committee-approved documents absent explicit approval and effective-dating.\n\n## See also\n\n- [A-approved-policy-2025.md](a-approved-policy-2025-summary.md)\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n- [Policy Governance and Precedence Rules](../concepts/policy-governance-and-precedence-rules.md)\n\n---\n\n### Northstar Standard Home Loan (entities/northstar-standard-home-loan.md)\nThe **Northstar Standard Home Loan** is a loan product for owner-occupied purchase loans targeting standard individual borrowers in the fictional jurisdiction of Northland, denominated in Northland dollars.\n\nUnder the 2025 approved policy (Document A):\n- Maximum LTV: 80%\n- Maximum loan term: 30 years\n- Minimum credit score: 680\n\n## See also\n\n- [Lending Policy Committee](lending-policy-committee.md)\n- [Loan-to-Value Ratio \\(LTV\\)](../concepts/loan-to-value-ratio-ltv.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)\n\n---\n\n### Policy Governance and Precedence Rules (concepts/policy-governance-and-precedence-rules.md)\nThis concept covers the rules governing how lending policy documents are approved, amended, replaced, and interpreted:\n\n- Only the approving authority (e.g., Lending Policy Committee) can change approved policy.\n- Informal notes/drafts cannot override approved policy.\n- Explicit replacements take effect on their **stated effective date**, not publication date.\n- Amendments only change the specific requirements they name; other requirements remain in force.\n- If equally authoritative documents conflict with no established precedence, the requirement is **unresolved** pending clarification — staff must not invent values or exceptions.\n\n## See also\n\n- [Lending Policy Committee](../entities/lending-policy-committee.md)\n- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)"
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, which claims agree, disagree, are tentative, or supersede earlier claims? Identify the claims and their sources."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "## Northstar Standard Home Loan: Claims Comparison\n\n| Requirement | Source A (Approved Policy, 2025) | Source B (Informal Team Notes, 2026) | Status |\n|---|---|---|---|\n| Maximum LTV | 80% | 85% | **Disagree** |\n| Maximum loan term | 30 years | Not stated | No conflict (silent) |\n| Minimum credit score | 680 | Not stated | No conflict (silent) |\n\n### Analysis\n\n- **Agree:** Nothing explicit — Document B doesn't restate the loan term or credit score, so there's no direct agreement, just silence on those points.\n- **Disagree:** The maximum LTV is the clear point of conflict — 80% (Document A) vs. 85% (Document B).\n- **Tentative:** Document B's 85% LTV figure is tentative/informal by nature — it comes from **B-informal-team-notes-2026**, explicitly described as informal team discussion, not a Lending Policy Committee product.\n- **Supersede:** Document B does **not** supersede Document A. Per [Policy Governance and Precedence Rules](concepts/policy-governance-and-precedence-rules.md):\n  - Only the Lending Policy Committee can change approved policy.\n  - Informal notes cannot override approved policy.\n  - Even explicit replacements require a stated effective date — Document B's 2026 publication date is not an effective date for a policy change.\n\n### Conclusion\n\nThe **approved policy (Document A, 80% max LTV)** remains authoritative. The 85% figure in Document B should be treated as an unofficial/internal discussion point only, **not a valid or resolved policy value** — staff should not apply it, per the governance rules against inventing or accepting unapproved changes.\n\nThis is a clean case study illustrating the [Policy Governance and Precedence Rules](concepts/policy-governance-and-precedence-rules.md) in action, with cross-references to the [Lending Policy Committee](entities/lending-policy-committee.md) as the sole approving authority and [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) as the specific concept in dispute.\n\n*This synthesis could make a useful standalone wiki page — consider saving it with `/save` if you'll want to reference this comparison again.*",
+      "started": "2026-09-14T19:30:58.633Z",
+      "finished": "2026-09-14T19:31:06.412Z"
+    }
+  ],
+  "logs": [
+    "[model] Configured family \"claude-opus-4.6\" is not available — falling back to any Copilot model",
+    "[model] Using fallback model: claude-sonnet-5",
+    "[llmIngest] Using model: claude-sonnet-5",
+    "[llmIngest] LLM response length: 1462 chars",
+    "[llmIngest] Parsed: summary=yes, entities=0, concepts=0, crosslinks=1",
+    "[llmIngest] Rewrote summary: sources/b-informal-team-notes-2026-summary.md",
+    "[llmIngest] Crosslinked sources/b-informal-team-notes-2026-summary.md → sources/a-approved-policy-2025-summary.md, entities/lending-policy-committee.md, entities/northstar-standard-home-loan.md, concepts/loan-to-value-ratio-ltv.md, concepts/policy-governance-and-precedence-rules.md"
+  ],
+  "queries": [
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty.",
+      "text": "## Northstar Standard Home Loan — Requirements as of 2026-02-20\n\nBased on the **approved policy (Document A, 2025)**, which remains the only committee-approved, authoritative source per [Policy Governance and Precedence Rules](concepts/policy-governance-and-precedence-rules.md):\n\n- **Maximum LTV:** 80%\n- **Maximum loan term:** 30 years\n- **Minimum credit score:** 680\n\n(See [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md).)\n\n### On the conflicting figure\n\nThe **informal team notes (Document B, 2026)** record a maximum LTV of **85%**, differing from the approved policy's 80%. However, per governance rules:\n\n- Document B is explicitly informal, produced by the lending operations team — **not** the [Lending Policy Committee](entities/lending-policy-committee.md).\n- It contains no language asserting precedence, no effective date for a policy change, and does not constitute an approved amendment or replacement.\n- Informal notes/drafts **cannot override approved policy**.\n\n### Conclusion\n\nAs of 2026-02-20, the governing figures remain those in Document A: **80% max LTV, 30-year max term, 680 minimum credit score**. The 85% LTV figure in Document B is **not authoritative** and should be treated as an unofficial/proposed figure at most — not a valid basis for underwriting decisions unless and until the Lending Policy Committee formally approves and effective-dates a change.\n\nNo max term or minimum credit score is stated in Document B at all, so no conflict exists on those two points.\n\n---\n\nThis is a clean case study in policy governance and could be saved as a standalone page (e.g., \"Northstar Standard Home Loan — Current Requirements & Precedence Analysis\") via **/save** if you'd like it preserved for future reference.\n\n---\n**Sources:**\n   ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\workspace\\.wiki\\wiki\\sources\\b-informal-team-notes-2026-summary.md",
+          "title": "B-informal-team-notes-2026.md"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-governance-and-precedence-rules.md",
+          "title": "Policy Governance and Precedence Rules"
+        }
+      ]
+    },
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-03-15? Cite the sources and state any uncertainty.",
+      "text": "## Northstar Standard Home Loan — Requirements as of 2026-03-15\n\nBased on the **A-approved-policy-2025.md** (approved by the Lending Policy Committee), the governing figures for the **Northstar Standard Home Loan** are:\n\n- **Maximum LTV:** 80%\n- **Maximum loan term:** 30 years\n- **Minimum credit score:** 680\n\n(See [Northstar Standard Home Loan](entities/northstar-standard-home-loan.md).)\n\n### On the conflicting 85% LTV figure\nThe **B-informal-team-notes-2026.md** (Feb 2026, lending operations team) records a *different* maximum LTV of 85% for this same product/borrower class. However, per **Policy Governance and Precedence Rules**:\n\n- These notes are explicitly **informal** and not issued or approved by the Lending Policy Committee.\n- They contain **no language asserting precedence** over the approved policy.\n- Their publication date is **not an effective date** for any policy change.\n\nTherefore, the 85% figure has **no governing authority** — it does not override or amend the approved 80% LTV in Document A.\n\n### Answer as of 2026-03-15\n| Requirement | Value | Source |\n|---|---|---|\n| Max LTV | **80%** | A-approved-policy-2025 |\n| Max term | **30 years** | A-approved-policy-2025 |\n| Min credit score | **680** | A-approved-policy-2025 |\n\n**No uncertainty exists here per the governance rules** — the informal notes simply don't count as a valid amendment. The 85% figure should be treated as an internal discrepancy/case study (flagging a team possibly operating on outdated or unapproved assumptions), not a live policy conflict.\n\n---\nThis looks like a solid synthesis of how the sources interact — you might want to save it via `/save` as something like \"Northstar Standard Home Loan — Current Requirements & Governance Case Study.\"\n\n---\n**Sources:**\n   ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\workspace\\.wiki\\wiki\\sources\\b-informal-team-notes-2026-summary.md",
+          "title": "B-informal-team-notes-2026.md"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-governance-and-precedence-rules.md",
+          "title": "Policy Governance and Precedence Rules"
+        }
+      ]
+    },
+    {
+      "question": "For Northstar Standard Home Loan, which claims agree, disagree, are tentative, or supersede earlier claims? Identify the claims and their sources.",
+      "text": "## Northstar Standard Home Loan: Claims Comparison\n\n| Requirement | Source A (Approved Policy, 2025) | Source B (Informal Team Notes, 2026) | Status |\n|---|---|---|---|\n| Maximum LTV | 80% | 85% | **Disagree** |\n| Maximum loan term | 30 years | Not stated | No conflict (silent) |\n| Minimum credit score | 680 | Not stated | No conflict (silent) |\n\n### Analysis\n\n- **Agree:** Nothing explicit — Document B doesn't restate the loan term or credit score, so there's no direct agreement, just silence on those points.\n- **Disagree:** The maximum LTV is the clear point of conflict — 80% (Document A) vs. 85% (Document B).\n- **Tentative:** Document B's 85% LTV figure is tentative/informal by nature — it comes from **B-informal-team-notes-2026**, explicitly described as informal team discussion, not a Lending Policy Committee product.\n- **Supersede:** Document B does **not** supersede Document A. Per [Policy Governance and Precedence Rules](concepts/policy-governance-and-precedence-rules.md):\n  - Only the Lending Policy Committee can change approved policy.\n  - Informal notes cannot override approved policy.\n  - Even explicit replacements require a stated effective date — Document B's 2026 publication date is not an effective date for a policy change.\n\n### Conclusion\n\nThe **approved policy (Document A, 80% max LTV)** remains authoritative. The 85% figure in Document B should be treated as an unofficial/internal discussion point only, **not a valid or resolved policy value** — staff should not apply it, per the governance rules against inventing or accepting unapproved changes.\n\nThis is a clean case study illustrating the [Policy Governance and Precedence Rules](concepts/policy-governance-and-precedence-rules.md) in action, with cross-references to the [Lending Policy Committee](entities/lending-policy-committee.md) as the sole approving authority and [Loan-to-Value Ratio (LTV)](concepts/loan-to-value-ratio-ltv.md) as the specific concept in dispute.\n\n*This synthesis could make a useful standalone wiki page — consider saving it with `/save` if you'll want to reference this comparison again.*\n\n---\n**Sources:**\n   ",
+      "references": [
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\workspace\\.wiki\\wiki\\sources\\b-informal-team-notes-2026-summary.md",
+          "title": "B-informal-team-notes-2026.md"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\workspace\\.wiki\\wiki\\entities\\northstar-standard-home-loan.md",
+          "title": "Northstar Standard Home Loan"
+        },
+        {
+          "path": "c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\workspace\\.wiki\\wiki\\concepts\\policy-governance-and-precedence-rules.md",
+          "title": "Policy Governance and Precedence Rules"
+        }
+      ]
+    }
+  ],
+  "step": 2,
+  "source": "B",
+  "ingest": {
+    "pagesCreated": [
+      "sources/b-informal-team-notes-2026-summary.md"
+    ],
+    "pagesUpdated": [
+      "index.md",
+      "log.md",
+      "sources/b-informal-team-notes-2026-summary.md",
+      "sources/b-informal-team-notes-2026-summary.md"
+    ]
+  }
+}

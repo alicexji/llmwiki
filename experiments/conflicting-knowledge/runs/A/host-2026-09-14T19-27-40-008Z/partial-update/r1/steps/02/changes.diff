@@ -1,0 +1,110 @@
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/raw/E-approved-score-amendment-2026.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/raw/E-approved-score-amendment-2026.md"
+new file mode 100644
+index 0000000..da9449f
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/raw/E-approved-score-amendment-2026.md"
+@@ -0,0 +1,9 @@
++# Northstar Standard Home Loan: approved credit score amendment
++
++Document ID: E. This amendment was approved by the Lending Policy Committee. Its status is approved. It was published on 2026-01-15 and takes effect on 2026-02-01. It amends only the minimum credit score requirement in policy A; it does not supersede policy A as a whole.
++
++The amendment applies to Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. There is no change to the product, jurisdiction or borrower class covered by policy A.
++
++From the effective date, the minimum credit score is 700. This replaces the prior minimum credit score requirement in policy A for the same scope. All other requirements in policy A remain unchanged and in force. In particular, this amendment does not change the loan-to-value requirement or the maximum loan term.
++
++Staff must read this amendment together with policy A to determine the full applicable requirements. The omission of other numeric limits from this amendment does not cancel those limits. Publication gives advance notice; the amended score requirement applies only from the stated effective date.
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/wiki/concepts/credit-score-requirement-amendment.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/wiki/concepts/credit-score-requirement-amendment.md"
+new file mode 100644
+index 0000000..aa36b46
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/wiki/concepts/credit-score-requirement-amendment.md"
+@@ -0,0 +1,29 @@
++---
++type: concept
++title: Credit Score Requirement Amendment
++tags:
++  - credit-score
++  - amendment
++  - northstar-standard-home-loan
++  - policy-a
++  - lending-policy
++created: '2026-09-14T19:33:02.840Z'
++sources:
++  - sources/e-approved-score-amendment-2026-summary.md
++---
++An **approved amendment** (Document E) to the Northstar Standard Home Loan policy (Policy A), issued by the Lending Policy Committee.
++
++- **Scope**: Changes only the minimum credit score requirement; all other Policy A terms (LTV, max loan term, etc.) remain unchanged.
++- **New minimum credit score**: 700
++- **Published**: 2026-01-15
++- **Effective**: 2026-02-01
++- Does not supersede Policy A; must be read together with it.
++
++Illustrates the principle that partial amendments coexist with, rather than replace, the base policy document.
++
++## See also
++
++- [Lending Policy Committee](../entities/lending-policy-committee.md)
++- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)
++- [A-approved-policy-2025.md](../sources/a-approved-policy-2025-summary.md)
++- [Policy Governance and Amendment Rules](policy-governance-and-amendment-rules.md)
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\01\\state/wiki/index.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/wiki/index.md"
+index eace9ea..fa0571d 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\01\\state/wiki/index.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/wiki/index.md"
+@@ -3,6 +3,7 @@
+ ## Sources
+ 
+ - [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) — Source file (.md)
++- [E-approved-score-amendment-2026.md](sources/e-approved-score-amendment-2026-summary.md) — Source file (.md)
+ 
+ ## Entities
+ 
+@@ -12,3 +13,4 @@
+ ## Concepts
+ 
+ - [Policy Governance and Amendment Rules](concepts/policy-governance-and-amendment-rules.md) — #policy-governance #amendment-rules #document-precedence #compliance
++- [Credit Score Requirement Amendment](concepts/credit-score-requirement-amendment.md) — #credit-score #amendment #northstar-standard-home-loan #policy-a #lending-policy
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\01\\state/wiki/log.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/wiki/log.md"
+index 93c06d5..280d431 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\01\\state/wiki/log.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/wiki/log.md"
+@@ -10,3 +10,11 @@ Ingested source "A-approved-policy-2025.md" → sources/a-approved-policy-2025-s
+ 
+ LLM created 2 entities, 1 concepts, 4 crosslinks.
+ 
++## [2026-09-14] ingested | E-approved-score-amendment-2026.md
++
++Ingested source "E-approved-score-amendment-2026.md" → sources/e-approved-score-amendment-2026-summary.md
++
++## [2026-09-14] enriched | sources/e-approved-score-amendment-2026-summary.md
++
++LLM created 0 entities, 1 concepts, 2 crosslinks.
++
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/wiki/sources/e-approved-score-amendment-2026-summary.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/wiki/sources/e-approved-score-amendment-2026-summary.md"
+new file mode 100644
+index 0000000..9ab38e0
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\partial-update\\r1\\steps\\02\\state/wiki/sources/e-approved-score-amendment-2026-summary.md"
+@@ -0,0 +1,21 @@
++---
++type: source
++title: E-approved-score-amendment-2026.md
++source_path: raw/E-approved-score-amendment-2026.md
++ingested: '2026-09-14'
++created: '2026-09-14'
++tags: []
++---
++This document (Document ID: E) is an approved amendment to the Northstar Standard Home Loan policy (Policy A), specifically targeting the minimum credit score requirement. Approved by the Lending Policy Committee, it was published on 2026-01-15 and becomes effective 2026-02-01. The amendment is narrow in scope: it changes only the minimum credit score, raising it to 700, and explicitly does not supersede or otherwise alter Policy A as a whole.
++
++The amendment applies to the same scope as Policy A — owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. No changes are made to loan-to-value requirements, maximum loan term, or any other numeric limits in Policy A; these remain fully in force. Staff are instructed to read this amendment alongside Policy A to determine the complete set of applicable requirements, and the document stresses that omission of other limits from the amendment text does not cancel them.
++
++A key governance point is the distinction between publication and effect: publication provides advance notice, but the amended credit score requirement only becomes binding from the stated effective date (2026-02-01), not the publication date.
++
++## See also
++
++- [Lending Policy Committee](../entities/lending-policy-committee.md)
++- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)
++- [Policy Governance and Amendment Rules](../concepts/policy-governance-and-amendment-rules.md)
++- [Credit Score Requirement Amendment](../concepts/credit-score-requirement-amendment.md)
++- [A-approved-policy-2025.md](a-approved-policy-2025-summary.md)

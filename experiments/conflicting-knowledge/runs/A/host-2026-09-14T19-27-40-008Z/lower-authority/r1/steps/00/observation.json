@@ -1,0 +1,46 @@
+{
+  "calls": [
+    {
+      "model": {
+        "id": "claude-sonnet-5",
+        "family": "claude-sonnet-5",
+        "version": "claude-sonnet-5",
+        "vendor": "copilot"
+      },
+      "messages": [
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "You are a knowledgeable assistant that answers questions using a personal wiki knowledge base. You have access to the wiki's index and relevant page content below.\n\nRules:\n- Answer based on the wiki content. Cite specific pages by name when referencing information.\n- If the wiki doesn't contain enough information to answer, say so honestly and suggest what sources could be added.\n- Be concise but thorough. Use markdown formatting.\n- If the answer reveals connections between pages, mention them — cross-referencing is a core value of this wiki.\n- Good answers can become wiki pages themselves. If the user's question produces a valuable synthesis, suggest they save it with /save.\n\n## Wiki Index\nNo pages in the index yet.\n\n## Relevant Pages\nNo pages matched the query."
+            }
+          ],
+          "role": 1
+        },
+        {
+          "_content": [
+            {
+              "$mid": 21,
+              "value": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty."
+            }
+          ],
+          "role": 1
+        }
+      ],
+      "options": {},
+      "response": "Your wiki doesn't currently contain any pages on \"Northstar Standard Home Loan\" or related loan program details — the index is empty and no matching pages were found for this query.\n\n**I can't answer this from the wiki as it stands.** I have no verified source to cite for maximum LTV, maximum term, or minimum credit score for this product, and I won't guess at figures for a financial product since inaccuracies here could be costly.\n\nTo get a reliable answer, you'd want to add a page with:\n- The lender's official rate sheet or program guidelines for Northstar Standard Home Loan\n- Effective date info (since terms change — your question specifies 2026-02-20, suggesting you may already have a dated source in mind)\n- Any internal notes on underwriting overlays if this is used in a mortgage/lending context\n\nIf you have a document, rate sheet, or notes with this information, feel free to paste the details in and I can help summarize it — and then you could save it with `/save` so it's indexed for future questions.",
+      "started": "2026-09-14T19:30:00.454Z",
+      "finished": "2026-09-14T19:30:05.463Z"
+    }
+  ],
+  "logs": [],
+  "queries": [
+    {
+      "question": "For Northstar Standard Home Loan, what maximum LTV, maximum term and minimum credit score apply as of 2026-02-20? Cite the sources and state any uncertainty.",
+      "text": "Your wiki doesn't currently contain any pages on \"Northstar Standard Home Loan\" or related loan program details — the index is empty and no matching pages were found for this query.\n\n**I can't answer this from the wiki as it stands.** I have no verified source to cite for maximum LTV, maximum term, or minimum credit score for this product, and I won't guess at figures for a financial product since inaccuracies here could be costly.\n\nTo get a reliable answer, you'd want to add a page with:\n- The lender's official rate sheet or program guidelines for Northstar Standard Home Loan\n- Effective date info (since terms change — your question specifies 2026-02-20, suggesting you may already have a dated source in mind)\n- Any internal notes on underwriting overlays if this is used in a mortgage/lending context\n\nIf you have a document, rate sheet, or notes with this information, feel free to paste the details in and I can help summarize it — and then you could save it with `/save` so it's indexed for future questions.",
+      "references": []
+    }
+  ],
+  "step": 0,
+  "source": null
+}

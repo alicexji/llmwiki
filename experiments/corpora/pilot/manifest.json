@@ -1,0 +1,22 @@
+{
+  "id": "pilot-v1",
+  "synthetic": true,
+  "metadata_visibility": "evaluator-only",
+  "documents": [
+    {"file": "01-atlas.md", "type": "service-catalog", "authority": "approved", "published": "2025-01-01", "effective": "2025-01-01", "superseded_by": null},
+    {"file": "02-retention-policy.md", "type": "policy", "authority": "approved", "published": "2025-01-02", "effective": "2025-01-02", "superseded_by": "05-retention-update.md"},
+    {"file": "03-team-note.md", "type": "chat-note", "authority": "informal", "published": "2025-03-01", "effective": null, "superseded_by": null},
+    {"file": "04-atlas-copy.md", "type": "service-catalog", "authority": "approved", "published": "2025-01-01", "effective": "2025-01-01", "superseded_by": null, "duplicate_of": "01-atlas.md"},
+    {"file": "05-retention-update.md", "type": "policy", "authority": "approved", "published": "2025-04-01", "effective": "2025-07-01", "superseded_by": null},
+    {"file": "06-old-runbook.md", "type": "runbook", "authority": "operational", "published": "2024-06-01", "effective": "2024-06-01", "superseded_by": "02-retention-policy.md"},
+    {"file": "07-beacon.md", "type": "service-catalog", "authority": "approved", "published": "2025-04-02", "effective": "2025-04-02", "superseded_by": null},
+    {"file": "08-exception.md", "type": "policy-exception", "authority": "approved", "published": "2025-04-03", "effective": "2025-04-03", "superseded_by": null}
+  ],
+  "queries": ["Atlas", "retention", "Orion", "How long are Atlas audit logs retained as of 2025-05-01?", "How long are Atlas audit logs retained as of 2025-08-01?", "Which service depends on Atlas?"],
+  "evaluation_notes": {
+    "2025-05-01": "Approved standard Atlas audit retention is 90 days; the informal 30-day note does not override policy.",
+    "2025-08-01": "Approved standard Atlas audit retention is 180 days.",
+    "exception": "Active legal holds suspend deletion for affected records only.",
+    "ownership": "Orion owns Atlas; Beacon depends on Atlas."
+  }
+}

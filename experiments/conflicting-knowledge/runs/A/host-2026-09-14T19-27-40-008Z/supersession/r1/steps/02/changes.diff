@@ -1,0 +1,69 @@
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\02\\state/raw/C-approved-replacement-2026.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\02\\state/raw/C-approved-replacement-2026.md"
+new file mode 100644
+index 0000000..f5db4d4
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\02\\state/raw/C-approved-replacement-2026.md"
+@@ -0,0 +1,9 @@
++# Northstar Standard Home Loan: approved policy 2026
++
++Document ID: C. This replacement policy was approved by the Lending Policy Committee. Its status is approved. It was published on 2026-02-15 and takes effect on 2026-03-01. It explicitly supersedes policy A on 2026-03-01.
++
++This policy applies to Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. The product and borrower scope are unchanged from policy A.
++
++From the effective date, the maximum loan-to-value ratio (LTV) is 82%. The maximum loan term is 30 years. The minimum credit score is 680. These are the approved requirements for this product under this replacement policy.
++
++Publication provides notice of the forthcoming replacement. It does not bring the new requirements into effect early. Policy A continues to govern until the replacement becomes effective. Policy A remains historical evidence after that date and should be identified as the earlier policy when discussing requirements that applied before the replacement. The committee's policy governance rules continue to apply. This document does not approve an informal team statement as policy.
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\01\\state/wiki/index.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\02\\state/wiki/index.md"
+index 3b0912d..c6392bd 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\01\\state/wiki/index.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\02\\state/wiki/index.md"
+@@ -3,6 +3,7 @@
+ ## Sources
+ 
+ - [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) — Source file (.md)
++- [C-approved-replacement-2026.md](sources/c-approved-replacement-2026-summary.md) — Source file (.md)
+ 
+ ## Entities
+ 
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\01\\state/wiki/log.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\02\\state/wiki/log.md"
+index 93c06d5..bfe2773 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\01\\state/wiki/log.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\02\\state/wiki/log.md"
+@@ -10,3 +10,11 @@ Ingested source "A-approved-policy-2025.md" → sources/a-approved-policy-2025-s
+ 
+ LLM created 2 entities, 1 concepts, 4 crosslinks.
+ 
++## [2026-09-14] ingested | C-approved-replacement-2026.md
++
++Ingested source "C-approved-replacement-2026.md" → sources/c-approved-replacement-2026-summary.md
++
++## [2026-09-14] enriched | sources/c-approved-replacement-2026-summary.md
++
++LLM created 0 entities, 0 concepts, 1 crosslinks.
++
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\02\\state/wiki/sources/c-approved-replacement-2026-summary.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\02\\state/wiki/sources/c-approved-replacement-2026-summary.md"
+new file mode 100644
+index 0000000..fe2d3ea
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\supersession\\r1\\steps\\02\\state/wiki/sources/c-approved-replacement-2026-summary.md"
+@@ -0,0 +1,20 @@
++---
++type: source
++title: C-approved-replacement-2026.md
++source_path: raw/C-approved-replacement-2026.md
++ingested: '2026-09-14'
++created: '2026-09-14'
++tags: []
++---
++This document (ID: C) is the approved 2026 replacement policy for the **Northstar Standard Home Loan**, issued by the **Lending Policy Committee**. It was published on 2026-02-15 and takes effect 2026-03-01, explicitly superseding policy A on that same date. The scope remains unchanged from policy A: owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars.
++
++Key approved requirements effective 2026-03-01: maximum LTV of 82%, maximum loan term of 30 years, and minimum credit score of 680.
++
++The document emphasizes precedence rules: publication merely gives notice of a forthcoming replacement and does not bring new requirements into effect early. Policy A continues to govern until the effective date, after which it becomes historical evidence only. Informal team statements are explicitly not approved policy.
++
++## See also
++
++- [Lending Policy Committee](../entities/lending-policy-committee.md)
++- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)
++- [Policy Precedence and Amendment Rules](../concepts/policy-precedence-and-amendment-rules.md)
++- [A-approved-policy-2025.md](a-approved-policy-2025-summary.md)

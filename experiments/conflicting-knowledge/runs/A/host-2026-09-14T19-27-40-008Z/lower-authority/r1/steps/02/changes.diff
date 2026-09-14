@@ -1,0 +1,70 @@
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\02\\state/raw/B-informal-team-notes-2026.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\02\\state/raw/B-informal-team-notes-2026.md"
+new file mode 100644
+index 0000000..575802d
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\02\\state/raw/B-informal-team-notes-2026.md"
+@@ -0,0 +1,9 @@
++# Northstar Standard Home Loan: team notes
++
++Document ID: B. These informal team notes were published on 2026-02-01 by the lending operations team. Their status is informal. They have no effective date and do not supersede another document. The lending operations team is not the Lending Policy Committee, and these notes are not policy approval.
++
++The discussion concerns Northstar Standard Home Loan owner-occupied purchase loans for standard individual borrowers in Northland, denominated in Northland dollars. It is about the same product and borrower class covered by policy A, rather than a separate product or exception.
++
++The maximum loan-to-value ratio (LTV) is 85%. That is the figure the team recorded during its discussion of the product. These notes do not state a maximum loan term or a minimum credit score.
++
++The notes record the team's statement, not a committee decision. No approval of a policy change accompanies this document. Its publication date identifies when the team recorded the statement; it is not an effective date for a revised lending policy. The document contains no instruction that it takes precedence over an approved policy.
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\01\\state/wiki/index.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\02\\state/wiki/index.md"
+index 6cf3f03..3c6c5de 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\01\\state/wiki/index.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\02\\state/wiki/index.md"
+@@ -3,6 +3,7 @@
+ ## Sources
+ 
+ - [A-approved-policy-2025.md](sources/a-approved-policy-2025-summary.md) — Source file (.md)
++- [B-informal-team-notes-2026.md](sources/b-informal-team-notes-2026-summary.md) — Source file (.md)
+ 
+ ## Entities
+ 
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\01\\state/wiki/log.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\02\\state/wiki/log.md"
+index 4787bee..75ea497 100644
+--- "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\01\\state/wiki/log.md"
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\02\\state/wiki/log.md"
+@@ -10,3 +10,11 @@ Ingested source "A-approved-policy-2025.md" → sources/a-approved-policy-2025-s
+ 
+ LLM created 2 entities, 2 concepts, 5 crosslinks.
+ 
++## [2026-09-14] ingested | B-informal-team-notes-2026.md
++
++Ingested source "B-informal-team-notes-2026.md" → sources/b-informal-team-notes-2026-summary.md
++
++## [2026-09-14] enriched | sources/b-informal-team-notes-2026-summary.md
++
++LLM created 0 entities, 0 concepts, 1 crosslinks.
++
+diff --git "a/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\02\\state/wiki/sources/b-informal-team-notes-2026-summary.md" "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\02\\state/wiki/sources/b-informal-team-notes-2026-summary.md"
+new file mode 100644
+index 0000000..e7cc10b
+--- /dev/null
++++ "b/c:\\Users\\alice\\workspace\\llmwiki\\experiments\\conflicting-knowledge\\runs\\A\\host-2026-09-14T19-27-40-008Z\\lower-authority\\r1\\steps\\02\\state/wiki/sources/b-informal-team-notes-2026-summary.md"
+@@ -0,0 +1,21 @@
++---
++type: source
++title: B-informal-team-notes-2026.md
++source_path: raw/B-informal-team-notes-2026.md
++ingested: '2026-09-14'
++created: '2026-09-14'
++tags: []
++---
++These informal team notes (Document ID: B), published 2026-02-01 by the lending operations team, discuss the Northstar Standard Home Loan for owner-occupied purchase loans by standard individual borrowers in Northland, denominated in Northland dollars — the same product and borrower class covered by the approved policy (Document A). The notes are explicitly informal and not a product of the Lending Policy Committee, nor do they constitute policy approval or a policy change.
++
++The key data point recorded is a maximum LTV of 85%, differing from whatever figure is in the approved policy. No maximum loan term or minimum credit score is stated. Critically, the document contains no language asserting precedence over approved policy, and its publication date is not an effective date for any revised lending rule.
++
++This source serves as a case study in policy governance: it demonstrates a scenario where informal, undocumented team discussion diverges from formal approved policy, and underscores that such notes cannot override or supersede committee-approved documents absent explicit approval and effective-dating.
++
++## See also
++
++- [A-approved-policy-2025.md](a-approved-policy-2025-summary.md)
++- [Lending Policy Committee](../entities/lending-policy-committee.md)
++- [Northstar Standard Home Loan](../entities/northstar-standard-home-loan.md)
++- [Loan-to-Value Ratio \(LTV\)](../concepts/loan-to-value-ratio-ltv.md)
++- [Policy Governance and Precedence Rules](../concepts/policy-governance-and-precedence-rules.md)

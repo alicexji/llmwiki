@@ -6,15 +6,12 @@ ingested: '2026-09-15'
 created: '2026-09-15'
 tags: []
 ---
-This delivery update revises the Project Atlas rollout timeline due to unforeseen problems in **integration testing**. Specifically, issues were discovered in the **customer identity migration workflow**, which the engineering team estimates will require about **three additional weeks** to remediate and fully regression-test.
+This delivery update reports a **delay in the Project Atlas rollout** due to problems found in the customer identity migration workflow during integration testing. Engineering estimates approximately **three additional weeks** are needed for remediation and regression testing, pushing the planned launch date to **November 1**.
 
-As a direct consequence, the Atlas rollout date has been pushed to **November 1**, superseding the previously planned launch date. The update explicitly calls on Sales and Customer Success teams to update customer-facing communications and onboarding plans to reflect the new schedule.
-
-Importantly, the document clarifies that the release **scope remains unchanged** — only the timeline is affected, not the feature set or functionality planned for initial launch.
+The update instructs Sales and Customer Success teams to revise customer communications and onboarding plans to reflect the new timeline. Notably, the **scope of the initial release remains unchanged** — this is a schedule slip, not a reduction in planned functionality.
 
 ## See also
 
 - [Project Atlas](../entities/project-atlas.md)
 - [Atlas Launch Timeline](../concepts/atlas-launch-timeline.md)
-- [Customer Identity Migration Workflow](../entities/customer-identity-migration-workflow.md)
-- [Integration Testing Delay](../concepts/integration-testing-delay.md)
+- [Customer Identity Migration Workflow](../concepts/customer-identity-migration-workflow.md)

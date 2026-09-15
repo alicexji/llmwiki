@@ -4,26 +4,25 @@ title: Acme Risk Assessment
 tags:
   - risk-assessment
   - acme
-  - rollout-planning
+  - atlas-rollout
   - account-risk
-created: '2026-09-15T03:39:21.669Z'
+created: '2026-09-15T04:27:13.473Z'
 sources:
   - sources/08-acme-risk-assessment-summary.md
 ---
-The **Acme Risk Assessment** is an evaluation conducted by the Risk team ahead of the planned Atlas rollout to Acme.
+## Overview
+A **Risk team evaluation of Acme** conducted prior to the planned Atlas rollout, identifying elevated account risk due to financial position changes and outstanding contractual dependencies.
 
-**Key findings:**
-- Elevated account risk due to recent changes in Acme's financial position.
-- Several outstanding contractual dependencies increase potential for disruption during large-scale deployment.
+## Key Recommendations
+- Limit initial exposure during rollout
+- Monitor the account closely
+- Establish clear escalation criteria before expanding the relationship
 
-**Recommendations:**
-- Limit initial exposure.
-- Monitor the account closely.
-- Establish clear escalation criteria before expanding the relationship.
-
-These findings do not prevent deployment but should shape the scale and pacing of the rollout.
+## Impact on Rollout
+The assessment does not block the Atlas deployment but informs decisions on rollout **size and pace** for the Acme account.
 
 ## See also
 
 - [Acme](../entities/acme.md)
 - [Project Atlas](../entities/project-atlas.md)
+- [Acme Account Review](acme-account-review.md)

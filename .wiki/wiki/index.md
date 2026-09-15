@@ -14,19 +14,20 @@
 ## Entities
 
 - [Project Atlas](entities/project-atlas.md) — #project #product-launch #planning
-- [Customer Identity Migration Workflow](entities/customer-identity-migration-workflow.md) — #identity-migration #integration-testing #project-atlas #engineering
-- [PostgreSQL](entities/postgresql.md) — #database #postgresql #infrastructure #storage
-- [Acme](entities/acme.md) — #customer #account #sales #acme
-- [Acme](entities/acme.md) — #customer #acme #risk #account-management
+- [PostgreSQL](entities/postgresql.md) — #database #postgresql #infrastructure #project-atlas
+- [Platform Team](entities/platform-team.md) — #team #platform #organization
+- [DynamoDB](entities/dynamodb.md) — #dynamodb #nosql #database #architecture
+- [Acme](entities/acme.md) — #customer #account #acme #sales
+- [Sales Team](entities/sales-team.md) — #sales #team #account-management
 
 ## Concepts
 
-- [Atlas Launch Timeline](concepts/atlas-launch-timeline.md) — #timeline #launch #planning #schedule
-- [Integration Testing Delay](concepts/integration-testing-delay.md) — #delay #testing #project-atlas #schedule-change
-- [DynamoDB Datastore Decision](concepts/dynamodb-datastore-decision.md) — #dynamodb #architecture-decision #project-atlas #database #nosql
-- [Atlas Data Architecture](concepts/atlas-data-architecture.md) — #architecture #data-storage #proposal #planning
-- [Shared Data-Access Layer](concepts/shared-data-access-layer.md) — #architecture #data-access #design-pattern
-- [Three-Day Remote Schedule](concepts/three-day-remote-schedule.md) — #remote-work #scheduling #engineering-leadership #policy
-- [Hybrid Work Program](concepts/hybrid-work-program.md) — #hybrid-work #hr-policy #workplace-policy #remote-work
-- [Acme Launch Prioritization](concepts/acme-launch-prioritization.md) — #prioritization #launch-planning #sales-strategy #customer-success
-- [Acme Risk Assessment](concepts/acme-risk-assessment.md) — #risk-assessment #acme #rollout-planning #account-risk
+- [Atlas Launch Timeline](concepts/atlas-launch-timeline.md) — #timeline #launch-plan #milestones
+- [Customer Identity Migration Workflow](concepts/customer-identity-migration-workflow.md) — #identity-migration #integration-testing #project-atlas #delay
+- [Shared Data-Access Layer](concepts/shared-data-access-layer.md) — #architecture #data-access #design-pattern #project-atlas
+- [Atlas Data Architecture Proposal](concepts/atlas-data-architecture-proposal.md) — #architecture #proposal #project-atlas #database
+- [Atlas Architecture Review](concepts/atlas-architecture-review.md) — #architecture-review #decision #dynamodb #atlas
+- [Hybrid Work Program](concepts/hybrid-work-program.md) — #hr-policy #hybrid-work #remote-work #workplace-policy
+- [Three-Day Remote Schedule](concepts/three-day-remote-schedule.md) — #remote-work #scheduling #engineering #policy #hybrid-work
+- [Acme Account Review](concepts/acme-account-review.md) — #account-review #sales #atlas #customer-success
+- [Acme Risk Assessment](concepts/acme-risk-assessment.md) — #risk-assessment #acme #atlas-rollout #account-risk

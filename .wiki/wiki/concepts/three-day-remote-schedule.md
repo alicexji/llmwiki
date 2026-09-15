@@ -4,21 +4,23 @@ title: Three-Day Remote Schedule
 tags:
   - remote-work
   - scheduling
-  - engineering-leadership
+  - engineering
   - policy
-created: '2026-09-15T03:39:12.482Z'
+  - hybrid-work
+created: '2026-09-15T04:26:58.666Z'
 sources:
   - sources/06-engineering-leadership-meeting-summary.md
 ---
-A scheduling policy adopted by engineering leadership allowing engineering teams to work remotely three days per week for the upcoming quarter.
+A scheduling arrangement decided by engineering leadership allowing **three days of remote work per week** for engineering teams during the upcoming quarter.
 
-**Key points:**
-- Motivated by positive impact of flexible scheduling on recruiting and retention.
-- Managers must coordinate team-level schedules to maintain meeting coverage and collaboration.
-- Team leads responsible for communicating the change.
-- Arrangement to be reviewed at end of quarter.
+- Motivated by positive feedback on flexible scheduling's impact on **recruiting and retention**.
+- Managers must coordinate within teams to maintain meeting and collaboration coverage.
+- Team leads communicate the arrangement to their teams directly.
+- To be **revisited at the end of the quarter** for potential adjustment.
+
+Related to the broader [Hybrid Work Program](hybrid-work-program.md) and discussed in the [Employee Workplace Policy](../sources/05-employee-workplace-policy-summary.md).
 
 ## See also
 
-- [06_engineering_leadership_meeting.md](../sources/06-engineering-leadership-meeting-summary.md)
+- [Hybrid Work Program](hybrid-work-program.md)
 - [05_employee_workplace_policy.md](../sources/05-employee-workplace-policy-summary.md)

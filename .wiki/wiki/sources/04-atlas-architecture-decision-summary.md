@@ -6,8 +6,6 @@ ingested: '2026-09-15'
 created: '2026-09-15'
 tags: []
 ---
-This document records the outcome of the Project Atlas architecture review, where the platform and Atlas engineering teams evaluated the proposed relational data architecture against an alternative DynamoDB-based design. Concerns about the operational overhead of running the relational design at Atlas's expected workload prompted the team to consider DynamoDB as an alternative.
+This short source documents the outcome of the Project Atlas architecture review, in which the platform and Atlas engineering teams evaluated the previously proposed relational (PostgreSQL-based) data architecture against operational requirements at expected Atlas workload scale. Concerns about the relational design's operational demands led the team to evaluate an alternative using DynamoDB.
 
-The review concluded with a decision: **DynamoDB will be the production datastore for Atlas**. The platform team will supply the standard DynamoDB deployment configuration, and the Atlas team will revise the service design to align with this choice. With this decision finalized, engineering has been given the green light to proceed with implementation.
-
-This marks the resolution of the architectural debate previously raised in the architecture proposal, confirming a shift away from the relational approach.
+The final decision reverses the earlier architecture proposal: DynamoDB will be the production datastore for Atlas, not PostgreSQL. The platform team will supply a standard DynamoDB deployment configuration, and the Atlas team will revise its service design accordingly. Engineering is cleared to proceed with implementation based on this new architecture.

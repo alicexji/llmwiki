@@ -2,26 +2,22 @@
 type: concept
 title: Hybrid Work Program
 tags:
-  - hybrid-work
   - hr-policy
-  - workplace-policy
+  - hybrid-work
   - remote-work
-created: '2026-09-15T03:39:13.543Z'
+  - workplace-policy
+created: '2026-09-15T04:26:51.985Z'
 sources:
   - sources/05-employee-workplace-policy-summary.md
 ---
-## Overview
-The company's **Hybrid Work Program** permits employees to work remotely up to **two days per week** as part of a standard schedule.
+A company policy allowing employees to work remotely **up to two days** per standard work week.
 
-## Key Rules
-- Teams coordinate specific remote days based on operational needs.
-- Managers can require onsite work when business needs dictate.
-- The two-day remote limit cannot be expanded by individual department managers.
-- Changes to the policy require approval through the formal workplace policy process.
-- Human Resources handles questions and policy administration.
-
-## Governance
-This policy is centrally governed, preventing inconsistent application across departments while still allowing local scheduling flexibility.
+**Key rules:**
+- Teams coordinate which specific days are remote based on operational needs.
+- Managers can require onsite work when business needs require it, overriding remote day preferences.
+- Any changes to the number of allowed remote days must go through the formal workplace policy approval process.
+- Department managers cannot independently expand remote day allowances.
+- Human Resources is the point of contact for questions.
 
 ## See also
 

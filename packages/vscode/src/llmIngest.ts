@@ -20,6 +20,12 @@ interface LlmAnalysis {
   entities: Array<{ name: string; content: string; tags: string[] }>;
   concepts: Array<{ name: string; content: string; tags: string[] }>;
   crosslinks: Array<{ from: string; to: string[] }>;
+  reconciliation: Array<{
+    pagePath: string;
+    relation: 'support' | 'contradict' | 'supersede';
+    claim: string;
+    revisedContent: string;
+  }>;
 }
 
 /**
@@ -68,8 +74,21 @@ export async function llmIngest(
     // Index may not parse; proceed with empty context
   }
 
-  const wikiContext = existingEntries.length > 0
-    ? existingEntries.map(e => `- [${e.title}](${e.path}) (${e.category}): ${e.summary}`).join('\n')
+  const newlyCreatedPaths = new Set([
+    ...ingestResult.pages_created,
+    ...ingestResult.pages_updated,
+  ]);
+  const priorEntries = existingEntries.filter((entry) => !newlyCreatedPaths.has(entry.path));
+  const existingPagePaths = new Set(priorEntries.map((entry) => entry.path));
+  const wikiContext = priorEntries.length > 0
+    ? (await Promise.all(priorEntries.map(async (entry) => {
+        try {
+          const page = await readPage(join(wikiDir, entry.path));
+          return `### ${entry.title} (${entry.path})\n${page.body}`;
+        } catch {
+          return `### ${entry.title} (${entry.path})\n${entry.summary}`;
+        }
+      }))).join('\n\n')
     : 'No existing wiki pages yet.';
 
   // ── Step 3: Call VS Code Copilot LLM ─────────────────────────
@@ -97,8 +116,34 @@ export async function llmIngest(
     }
   }
 
-  // ── Step 5: Create entity pages ──────────────────────────────
+  // ── Step 5: Reconcile affected existing pages ─────────────────
   const sourceRelPath = ingestResult.pages_created[0] ?? '';
+  for (const change of analysis.reconciliation) {
+    if (!existingPagePaths.has(change.pagePath) || !change.revisedContent.trim()) {
+      continue;
+    }
+
+    progress.report({ message: `Reconciling ${change.pagePath}…` });
+    try {
+      const pagePath = join(wikiDir, change.pagePath);
+      const page = await readPage(pagePath);
+      page.body = change.revisedContent;
+      const sources = Array.isArray(page.frontmatter.sources)
+        ? page.frontmatter.sources
+        : [];
+      page.frontmatter.sources = [...new Set([...sources, sourceRelPath])];
+      page.frontmatter.updated = new Date().toISOString();
+      await writePage(pagePath, page);
+      pagesUpdated.push(change.pagePath);
+      outputChannel.appendLine(
+        `[llmIngest] Reconciled ${change.pagePath} (${change.relation}): ${change.claim}`,
+      );
+    } catch (err) {
+      outputChannel.appendLine(`[llmIngest] Failed to reconcile "${change.pagePath}": ${err}`);
+    }
+  }
+
+  // ── Step 6: Create entity pages ──────────────────────────────
   for (const entity of analysis.entities) {
     progress.report({ message: `Creating entity: ${entity.name}…` });
     try {
@@ -116,6 +161,7 @@ export async function llmIngest(
   }
 
   // ── Step 6: Create concept pages ─────────────────────────────
+  // ── Step 7: Create concept pages ──────────────────────────────
   for (const concept of analysis.concepts) {
     progress.report({ message: `Creating concept: ${concept.name}…` });
     try {
@@ -133,6 +179,7 @@ export async function llmIngest(
   }
 
   // ── Step 7: Add crosslinks ───────────────────────────────────
+  // ── Step 8: Add crosslinks ────────────────────────────────────
   for (const link of analysis.crosslinks) {
     progress.report({ message: `Adding crosslinks from ${link.from}…` });
     try {
@@ -144,11 +191,11 @@ export async function llmIngest(
     }
   }
 
-  // ── Step 8: Log the enrichment ───────────────────────────────
+  // ── Step 9: Log the enrichment ───────────────────────────────
   await appendEntry(logPath, {
     verb: 'enriched',
     subject: ingestResult.pages_created[0] ?? sourcePath,
-    details: `LLM created ${analysis.entities.length} entities, ${analysis.concepts.length} concepts, ${analysis.crosslinks.length} crosslinks.`,
+    details: `LLM created ${analysis.entities.length} entities, ${analysis.concepts.length} concepts, ${analysis.crosslinks.length} crosslinks and reconciled ${analysis.reconciliation.length} existing page(s).`,
   });
 
   return { pagesCreated, pagesUpdated };
@@ -183,10 +230,12 @@ Given a source document and the existing wiki index, produce a JSON analysis wit
 2. "entities": Named things (people, organizations, products, places) worth their own wiki page. Each has "name", "content" (markdown body for the page), and "tags" (array of strings).
 3. "concepts": Ideas, techniques, patterns, or topics worth their own wiki page. Each has "name", "content" (markdown body), and "tags".
 4. "crosslinks": Links between pages. Each has "from" (relative path like "entities/foo.md" or "sources/bar-summary.md") and "to" (array of relative paths). Only link to pages that will exist after this analysis (existing pages from the index OR new entity/concept pages you are creating). Entity pages are at "entities/{slugified-name}.md", concept pages at "concepts/{slugified-name}.md". Slugify = lowercase, replace spaces/special chars with hyphens, remove consecutive hyphens.
+5. "reconciliation": Existing indexed pages affected by claims in this source. Each has "pagePath" (an existing index path), "relation" (exactly "support", "contradict", or "supersede"), "claim" (short explanation of the relationship), and "revisedContent" (the complete replacement markdown body for that page). Include only pages whose content should change. Preserve compatible existing facts, mark superseded facts as historical, and do not silently present contradicted old facts as current.
 
 Rules:
 - Only create entities/concepts that are substantively discussed in the source, not just mentioned in passing.
 - Keep content concise but informative (1-3 paragraphs per page).
+- Reconciliation is a maintenance step: compare the new source with the full existing page content, identify affected pages, and revise those pages using both old and new source context.
 - Use markdown formatting: headers, bold, lists.
 - Tags should be lowercase, hyphenated keywords.
 - If the source has minimal content, return fewer or no entities/concepts.
@@ -211,7 +260,6 @@ ${truncatedSource}`;
     for await (const chunk of response.text) {
       fullResponse += chunk;
     }
-
     outputChannel.appendLine(`[llmIngest] LLM response length: ${fullResponse.length} chars`);
 
     return parseLlmResponse(fullResponse, outputChannel);
@@ -273,12 +321,29 @@ function parseLlmResponse(raw: string, outputChannel: vscode.OutputChannel): Llm
             to: l.to.filter((t: unknown) => typeof t === 'string') as string[],
           }))
         : [],
+      reconciliation: Array.isArray(parsed.reconciliation)
+        ? parsed.reconciliation.filter(
+            (r: unknown): r is { pagePath: string; relation: string; claim: string; revisedContent: string } =>
+              typeof r === 'object' && r !== null &&
+              typeof (r as Record<string, unknown>).pagePath === 'string' &&
+              ['support', 'contradict', 'supersede'].includes(
+                (r as Record<string, unknown>).relation as string,
+              ) &&
+              typeof (r as Record<string, unknown>).claim === 'string' &&
+              typeof (r as Record<string, unknown>).revisedContent === 'string',
+          ).map((r: { pagePath: string; relation: 'support' | 'contradict' | 'supersede'; claim: string; revisedContent: string }) => ({
+            pagePath: r.pagePath,
+            relation: r.relation,
+            claim: r.claim,
+            revisedContent: r.revisedContent,
+          }))
+        : [],
     };
 
     outputChannel.appendLine(
       `[llmIngest] Parsed: summary=${analysis.summary.length > 0 ? 'yes' : 'no'}, ` +
       `entities=${analysis.entities.length}, concepts=${analysis.concepts.length}, ` +
-      `crosslinks=${analysis.crosslinks.length}`,
+      `crosslinks=${analysis.crosslinks.length}, reconciliation=${analysis.reconciliation.length}`,
     );
 
     return analysis;

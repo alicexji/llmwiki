@@ -3,21 +3,22 @@ type: entity
 title: Acme
 tags:
   - customer
+  - account
   - acme
-  - risk
-  - account-management
-created: '2026-09-15T03:39:21.657Z'
+  - sales
+created: '2026-09-15T04:27:07.278Z'
 sources:
-  - sources/08-acme-risk-assessment-summary.md
+  - sources/07-acme-account-review-summary.md
 ---
-**Acme** is a customer account undergoing a formal risk assessment ahead of a planned Atlas deployment.
+**Acme** is a strategically important customer being prioritized in the initial rollout of Project Atlas. The Sales team recommends dedicated onboarding support for Acme given its potential to expand usage across multiple business units following a successful deployment.
 
-- Presents **elevated account risk** due to recent changes in financial position and outstanding contractual dependencies.
-- Risk team recommends limiting initial exposure, close monitoring, and clear escalation criteria before expanding the relationship.
-- Concerns do not block the Atlas rollout but should influence its size and pace.
+- Identified as a key account for the Atlas launch
+- Expansion opportunity across business units possible with successful rollout
+- Dedicated support recommended during onboarding
 
 ## See also
 
-- [Acme Risk Assessment](../concepts/acme-risk-assessment.md)
 - [Project Atlas](project-atlas.md)
-- [07_acme_account_review.md](../sources/07-acme-account-review-summary.md)
+- [Atlas Launch Timeline](../concepts/atlas-launch-timeline.md)
+- [Acme Account Review](../concepts/acme-account-review.md)
+- [Acme Risk Assessment](../concepts/acme-risk-assessment.md)

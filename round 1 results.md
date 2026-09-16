@@ -2,7 +2,7 @@
 
 ## Scope
 
-This report evaluates the generated LLM Wiki against the predefined ground truth for eight relationship tests. The ground truth is treated as authoritative. The wiki was inspected without applying any independent judgment about whether a relationship was supported.
+This report evaluates only the generated LLM Wiki against the predefined ground truth for eight relationship tests. The ground truth is treated as authoritative. Raw source files are excluded from the evaluation.
 
 ## Results
 
@@ -68,11 +68,11 @@ It continues:
 
 > "This implies findings from a security review are influencing scope and timeline decisions ahead of launch."
 
-The source material states that the launch schedule was being reevaluated while security recommendations were being incorporated, but does not establish that the recommendations caused a launch delay. The generated summary therefore falls for this trap.
+The generated summary therefore falls for this trap because it presents the relationship as causal, while the authoritative ground truth says it is unsupported.
 
 Evidence: [September Leadership Update Summary](.wiki/wiki/sources/08-leadership-update-summary.md)
 
-The related readiness page is more cautious, saying that the final GA date remains contingent on a readiness review. However, the stronger causal wording in the generated source summary is sufficient to count this as a failure.
+The related readiness page is more cautious, saying that the final GA date remains contingent on a readiness review. However, the stronger causal wording elsewhere in the generated wiki is sufficient to count this as a failure.
 
 Evidence: [September Readiness Review](.wiki/wiki/concepts/september-readiness-review.md)
 
@@ -155,7 +155,7 @@ Evidence: [September Readiness Review](.wiki/wiki/concepts/september-readiness-r
 
 ## Hallucination Types
 
-The single failure was an unsupported causal inference. The wiki converted two events that appeared together in the source material into a causal relationship:
+The single failure was an unsupported causal inference. The wiki connected two events into a causal relationship:
 
 - Security recommendations were received and incorporated into engineering work.
 - The launch schedule was being reevaluated.

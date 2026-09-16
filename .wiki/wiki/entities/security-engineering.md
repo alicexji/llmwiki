@@ -5,15 +5,12 @@ tags:
   - team
   - security
   - atlas
-  - organization
-created: '2026-09-16T01:04:32.255Z'
+created: '2026-09-16T09:58:23.212Z'
 sources:
   - sources/10-atlas-team-structure-summary.md
 ---
-**Security Engineering** is a team that performs security reviews and defines security requirements for Project Atlas, supporting Platform Engineering's development efforts.
+Security Engineering is a team that contributes to Project Atlas by performing security reviews and providing security requirements.
 
 ## See also
 
-- [Project Atlas](project-atlas.md)
-- [Platform Engineering](platform-engineering.md)
-- [Atlas Security Approval Status](../concepts/atlas-security-approval-status.md)
+- [Project Atlas](../concepts/project-atlas.md)

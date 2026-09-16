@@ -3,15 +3,10 @@ type: entity
 title: Forecasting
 tags:
   - application
-  - data-consumer
+  - data-platform
   - northstar
-created: '2026-09-16T01:04:24.614Z'
+created: '2026-09-16T09:58:13.988Z'
 sources:
   - sources/09-data-platform-overview-summary.md
 ---
-**Forecasting** is an internal Northstar application that relies on the same shared data ingestion pipelines used by Project Atlas and Portfolio Analytics.
-
-## See also
-
-- [Enterprise Data Platform](../concepts/enterprise-data-platform.md)
-- [Data Engineering](data-engineering.md)
+Forecasting is an internal application that consumes data from the same shared ingestion pipelines used by Project Atlas, maintained by Data Engineering.

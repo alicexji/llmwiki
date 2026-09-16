@@ -2,16 +2,15 @@
 type: entity
 title: Product Lending
 tags:
-  - team
   - product
   - atlas
-  - pilot-program
-created: '2026-09-16T01:04:32.286Z'
+  - strategy
+created: '2026-09-16T10:00:51.609Z'
 sources:
-  - sources/10-atlas-team-structure-summary.md
+  - sources/26-maya-role-summary.md
 ---
-The **Product Lending** team defines product requirements for Project Atlas and coordinates the pilot program, acting as the business/product counterpart to engineering teams.
+**Product Lending** is the organization that leads product strategy for Project Atlas.
 
 ## See also
 
-- [Project Atlas](project-atlas.md)
+- [Project Atlas](../concepts/project-atlas.md)

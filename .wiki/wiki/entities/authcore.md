@@ -5,12 +5,12 @@ tags:
   - vendor
   - authentication
   - external
-created: '2026-09-16T01:57:01.723Z'
+created: '2026-09-16T09:56:56.872Z'
 sources:
   - sources/01-atlas-project-overview-summary.md
 ---
-**AuthCore** is an external vendor providing authentication services that Project Atlas depends on.
+**AuthCore** is an external vendor that provides authentication services on which Project Atlas depends.
 
 ## See also
 
-- [Project Atlas](project-atlas.md)
+- [Project Atlas](../concepts/project-atlas.md)

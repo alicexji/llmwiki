@@ -2,23 +2,25 @@
 type: concept
 title: Atlas Compliance Review
 tags:
-  - compliance
   - atlas
-  - ga-readiness
+  - compliance
   - documentation
-created: '2026-09-16T01:58:47.824Z'
+  - general-availability
+  - readiness
+created: '2026-09-16T09:59:29.617Z'
 sources:
   - sources/17-compliance-review-summary.md
 ---
-The Compliance team completed its initial review of **Project Atlas** on September 2, identifying **three documentation items** that needed completion before general availability (GA).
+The Compliance team completed its initial review of Project Atlas on September 2, identifying **three documentation items** that needed to be completed before general availability (GA).
 
-- Two items were resolved within the following week.
-- One item remained open as of September 12.
+- Two of the three items were completed within the following week.
+- The third item remained open as of September 12.
+- The Atlas readiness team continued tracking the remaining item as part of GA preparation.
 
-Jordan Lee coordinated the review between Compliance and the Atlas Product team, and the Atlas readiness team continued tracking the remaining item as part of GA preparation.
+Jordan Lee coordinated the review between the Compliance team and the Atlas Product team.
 
 ## See also
 
-- [Project Atlas](../entities/project-atlas.md)
 - [Jordan Lee](../entities/jordan-lee.md)
-- [Atlas GA Readiness Review](atlas-ga-readiness-review.md)
+- [Project Atlas](project-atlas.md)
+- [Atlas Readiness Review](atlas-readiness-review.md)

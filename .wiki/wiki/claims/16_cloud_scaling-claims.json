@@ -1,0 +1,47 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\16_cloud_scaling.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Atlas cloud compute capacity was increased by approximately 30% in August",
+      "evidence": "Atlas cloud compute capacity was increased by approximately 30% in August to support the expanding pilot program.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The capacity increase was to support the expanding pilot program",
+      "evidence": "Atlas cloud compute capacity was increased by approximately 30% in August to support the expanding pilot program.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Average API response times improved in August compared with July",
+      "evidence": "During the same month, average API response times improved compared with July.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Engineering continued performance initiatives during August including query optimization, caching improvements, and frontend performance work",
+      "evidence": "Engineering continued several performance initiatives during August, including query optimization, caching improvements, and frontend performance work.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The team plans to continue monitoring capacity as pilot usage grows",
+      "evidence": "The team plans to continue monitoring capacity as pilot usage grows.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The document does not establish that the capacity increase or performance initiatives caused the improvement in response times",
+      "evidence": "During the same month, average API response times improved compared with July.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Cloud Scaling",
+      "claim": "Cloud capacity increase and performance initiatives occurred concurrently with improved response times, without established causation",
+      "evidence": "During the same month, average API response times improved compared with July.",
+      "supported": true
+    }
+  ]
+}

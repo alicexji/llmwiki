@@ -1,0 +1,35 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\25_pilot_adoption.md",
+  "claims": [
+    {
+      "target": "Atlas Pilot Adoption",
+      "claim": "The Atlas pilot expanded during August and September as more internal users received access.",
+      "evidence": "The Atlas pilot expanded during August and September as additional internal users received access to the platform.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Pilot Adoption",
+      "claim": "Usage has increased as more lending teams participate in the pilot.",
+      "evidence": "Usage has increased as more lending teams participate in the pilot.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Pilot Adoption",
+      "claim": "Product received generally positive feedback along with requests for workflow and performance improvements.",
+      "evidence": "Product has received generally positive feedback alongside requests for workflow and performance improvements.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Pilot Adoption",
+      "claim": "The pilot team continues to collect usage metrics and user feedback.",
+      "evidence": "The pilot team continues to collect usage metrics and user feedback.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Pilot Adoption",
+      "claim": "The update does not include a final user count or adoption percentage.",
+      "evidence": "This update does not include a final user count or adoption percentage.",
+      "supported": true
+    }
+  ]
+}

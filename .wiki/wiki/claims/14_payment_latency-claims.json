@@ -1,0 +1,53 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\14_payment_latency.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "On September 8, the Atlas team deployed an updated payment-processing service.",
+      "evidence": "On September 8, the Atlas team deployed an updated payment-processing service.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "On September 10, monitoring showed an increase in average payment-processing latency during peak usage periods.",
+      "evidence": "On September 10, monitoring showed an increase in average payment-processing latency during peak usage periods.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The engineering team reviewed service logs and infrastructure metrics throughout the week.",
+      "evidence": "The engineering team reviewed service logs and infrastructure metrics throughout the week.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Performance returned to typical levels by September 12 after several application configuration changes were deployed.",
+      "evidence": "Performance returned to typical levels by September 12 after several application configuration changes were deployed.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The September 8 deployment caused the latency increase observed on September 10.",
+      "evidence": "On September 8, the Atlas team deployed an updated payment-processing service. On September 10, monitoring showed an increase in average payment-processing latency during peak usage periods.",
+      "supported": false
+    },
+    {
+      "target": "Payment Latency Incident",
+      "claim": "The incident involved increased average payment-processing latency during peak usage periods starting September 10.",
+      "evidence": "On September 10, monitoring showed an increase in average payment-processing latency during peak usage periods.",
+      "supported": true
+    },
+    {
+      "target": "Payment Latency Incident",
+      "claim": "Performance returned to typical levels by September 12 after configuration changes were deployed.",
+      "evidence": "Performance returned to typical levels by September 12 after several application configuration changes were deployed.",
+      "supported": true
+    },
+    {
+      "target": "Payment Latency Incident",
+      "claim": "A causal link between the September 8 deployment and the latency increase is not established in the source.",
+      "evidence": "On September 8, the Atlas team deployed an updated payment-processing service.\n\nOn September 10, monitoring showed an increase in average payment-processing latency during peak usage periods.",
+      "supported": true
+    }
+  ]
+}

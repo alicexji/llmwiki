@@ -1,0 +1,71 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\02_database_migration.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "The Atlas engineering team completed a production migration of its primary transactional database from MySQL to PostgreSQL on August 10.",
+      "evidence": "On August 10, the Atlas engineering team completed the production migration of its primary transactional database from MySQL to PostgreSQL.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The migration had been planned for approximately three months.",
+      "evidence": "The migration had been planned for approximately three months and was intended to improve scalability as transaction volume increases.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The migration was intended to improve scalability as transaction volume increases.",
+      "evidence": "The migration had been planned for approximately three months and was intended to improve scalability as transaction volume increases.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Initial validation after the migration showed that primary Atlas services were operating normally.",
+      "evidence": "Initial validation completed after the migration showed that the primary Atlas services were operating normally.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Engineering planned to continue monitoring database performance over the following weeks.",
+      "evidence": "Engineering will continue monitoring database performance over the next several weeks.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The migration was one of the largest infrastructure changes completed by the Atlas team this quarter.",
+      "evidence": "The migration was one of the largest infrastructure changes completed by the Atlas team this quarter.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Database Migration",
+      "claim": "The migration moved the database from MySQL to PostgreSQL, completed on August 10.",
+      "evidence": "On August 10, the Atlas engineering team completed the production migration of its primary transactional database from MySQL to PostgreSQL.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Database Migration",
+      "claim": "The migration was planned for approximately three months prior to execution.",
+      "evidence": "The migration had been planned for approximately three months and was intended to improve scalability as transaction volume increases.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Database Migration",
+      "claim": "Initial validation indicated primary Atlas services were operating normally after migration.",
+      "evidence": "Initial validation completed after the migration showed that the primary Atlas services were operating normally.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Database Migration",
+      "claim": "This migration was one of the largest infrastructure changes completed by the Atlas team this quarter.",
+      "evidence": "The migration was one of the largest infrastructure changes completed by the Atlas team this quarter.",
+      "supported": true
+    },
+    {
+      "target": "crosslinks",
+      "claim": "The Atlas Database Migration concept is related to Project Atlas.",
+      "evidence": "On August 10, the Atlas engineering team completed the production migration of its primary transactional database from MySQL to PostgreSQL.",
+      "supported": false
+    }
+  ]
+}

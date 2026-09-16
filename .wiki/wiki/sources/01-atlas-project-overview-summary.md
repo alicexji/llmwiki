@@ -6,16 +6,15 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This document introduces **Project Atlas**, Northstar Financial's initiative to modernize its commercial lending platform. Launched in January 2026, the project is led by the Platform Engineering team under **Maya Chen**, Director of Platform Engineering, who oversees Atlas development.
+**Project Atlas** is Northstar Financial's initiative to modernize its commercial lending platform, launched in January 2026. The project is developed primarily by the **Platform Engineering** team, directed by **Maya Chen**. Atlas aims to replace several legacy lending services with a single unified platform covering loan processing, pricing, and risk analysis.
 
-Atlas aims to consolidate several legacy lending services into a unified platform covering loan processing, pricing, and risk analysis. The current internal general availability target is **October 2026**.
-
-The project relies on cross-team dependencies: the **Data Engineering** team maintains shared data pipelines used by Atlas and other Northstar applications, while authentication services are provided by an external vendor, **AuthCore**.
+The current target for general internal availability is October 2026. Atlas relies on shared data pipelines maintained by the **Data Engineering** team, which are also used by other Northstar applications, and depends on authentication services provided by external vendor **AuthCore**.
 
 ## See also
 
-- [Project Atlas](../entities/project-atlas.md)
+- [Project Atlas](../concepts/project-atlas.md)
 - [Maya Chen](../entities/maya-chen.md)
-- [Northstar Financial](../entities/northstar-financial.md)
+- [Platform Engineering](../entities/platform-engineering.md)
+- [Data Engineering](../entities/data-engineering.md)
 - [AuthCore](../entities/authcore.md)
-- [Commercial Lending Platform](../concepts/commercial-lending-platform.md)
+- [Northstar Financial](../entities/northstar-financial.md)

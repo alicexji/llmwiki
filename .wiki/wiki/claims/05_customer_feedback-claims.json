@@ -1,0 +1,47 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\05_customer_feedback.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Pilot users reported slower page performance during periods of heavy usage.",
+      "evidence": "Several pilot users reported that some pages felt slower during periods of heavy usage.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Users mentioned delays when loading large loan scenarios.",
+      "evidence": "Users specifically mentioned delays when loading large loan scenarios.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Support tickets increased compared to July.",
+      "evidence": "The team also received more support tickets than in July.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Common ticket topics included navigation questions, login difficulties, and slow page loads.",
+      "evidence": "Common topics included navigation questions, login difficulties, and slow page loads.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Product asked Engineering to continue monitoring application performance as the pilot expands.",
+      "evidence": "Product has asked Engineering to continue monitoring application performance as the pilot expands.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "No single cause has been identified for the increase in support requests.",
+      "evidence": "No single cause has been identified for the increase in support requests.",
+      "supported": true
+    },
+    {
+      "target": "August Customer Feedback",
+      "claim": "The increase in support tickets is not attributed to a specific cause.",
+      "evidence": "No single cause has been identified for the increase in support requests.",
+      "supported": true
+    }
+  ]
+}

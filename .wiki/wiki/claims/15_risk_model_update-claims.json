@@ -1,0 +1,47 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\15_risk_model_update.md",
+  "claims": [
+    {
+      "target": "Risk Model Update",
+      "claim": "The Risk Modeling team released an updated credit-risk model used by Atlas on August 18.",
+      "evidence": "On August 18, the Risk Modeling team released an updated credit-risk model used by Atlas.",
+      "supported": true
+    },
+    {
+      "target": "Risk Model Update",
+      "claim": "The new model introduced additional borrower and property characteristics into risk calculations.",
+      "evidence": "The new model introduced additional borrower and property characteristics into risk calculations.",
+      "supported": true
+    },
+    {
+      "target": "Risk Model Update",
+      "claim": "The Atlas Product team received several questions from pilot users about unexpected changes in risk scores during the following week.",
+      "evidence": "During the following week, the Atlas Product team received several questions from pilot users about unexpected changes in risk scores.",
+      "supported": true
+    },
+    {
+      "target": "Risk Model Update",
+      "claim": "Product and Risk Modeling met on August 27 to review the user feedback.",
+      "evidence": "Product and Risk Modeling met on August 27 to review the user feedback.",
+      "supported": true
+    },
+    {
+      "target": "Risk Model Update",
+      "claim": "Additional documentation explaining the model inputs was distributed to pilot users.",
+      "evidence": "Additional documentation explaining the model inputs was distributed to pilot users.",
+      "supported": true
+    },
+    {
+      "target": "Risk Model Update",
+      "claim": "The model update caused the unexpected risk score changes reported by pilot users.",
+      "evidence": "During the following week, the Atlas Product team received several questions from pilot users about unexpected changes in risk scores.",
+      "supported": false
+    },
+    {
+      "target": "Risk Modeling",
+      "claim": "Risk Modeling is a team distinct from Atlas Product that develops credit-risk models used by Atlas.",
+      "evidence": "On August 18, the Risk Modeling team released an updated credit-risk model used by Atlas.",
+      "supported": true
+    }
+  ]
+}

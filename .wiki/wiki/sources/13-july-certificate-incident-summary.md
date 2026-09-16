@@ -6,8 +6,23 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This source describes a 22-minute service interruption to Project Atlas that occurred on July 7. The incident investigation determined that an expired TLS certificate prevented internal communication between an application service and the loan processing service, causing the outage.
+# 13_july_certificate_incident.md
 
-Engineering resolved the issue by renewing the certificate, which restored normal service. The post-incident review confirmed the expired TLS certificate as the definitive root cause.
+**Source:** raw/13_july_certificate_incident.md  
+**Type:** .md  
+**Size:** 541 bytes  
+**Ingested:** 2026-09-16
 
-As a preventative measure, Platform Engineering implemented automated certificate expiration monitoring to avoid recurrence of similar failures in the future.
+## Content Preview
+
+# Atlas Service Incident — July 7
+
+Atlas experienced a 22-minute service interruption on July 7.
+
+The incident investigation determined that an expired TLS certificate prevented one of the application's internal services from communicating with the loan processing service.
+
+Engineering renewed the certificate and restored normal service.
+
+The incident review identified the expired TLS certificate as the root cause of the outage.
+
+Following the incident, Platform Engineering added autom…

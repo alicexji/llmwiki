@@ -1,0 +1,41 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\21_hiring_and_delivery.md",
+  "claims": [
+    {
+      "target": "Atlas Staffing Update",
+      "claim": "Platform Engineering added four engineers to the Atlas team during August.",
+      "evidence": "Platform Engineering added four engineers to the Atlas team during August.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Staffing Update",
+      "claim": "The new engineers joined the backend and site reliability groups.",
+      "evidence": "The new engineers joined the backend and site reliability groups.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Staffing Update",
+      "claim": "The team completed database migration work, pilot expansion, and monitoring improvements during August.",
+      "evidence": "During August, the team also completed several planned milestones, including database migration work, pilot expansion, and improvements to operational monitoring.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Staffing Update",
+      "claim": "Atlas leadership reported the project made significant progress during the month.",
+      "evidence": "Atlas leadership reported that the project made significant progress during the month.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Staffing Update",
+      "claim": "The additional engineers are continuing to complete onboarding and training.",
+      "evidence": "The additional engineers are continuing to complete onboarding and training.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Staffing Update",
+      "claim": "The new hires caused or contributed to the completed milestones.",
+      "evidence": "During August, the team also completed several planned milestones, including database migration work, pilot expansion, and improvements to operational monitoring.",
+      "supported": false
+    }
+  ]
+}

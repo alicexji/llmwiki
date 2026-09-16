@@ -1,0 +1,59 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\20_explicit_performance_cause.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Atlas experienced elevated API response times on September 15 between 10:20 AM and 11:05 AM.",
+      "evidence": "Atlas experienced elevated API response times on September 15 between 10:20 AM and 11:05 AM.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "A recently introduced caching configuration caused repeated requests to bypass the application cache.",
+      "evidence": "Engineering's investigation determined that a recently introduced caching configuration caused repeated requests to bypass the application cache.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The increase in database queries caused API response times to rise during periods of heavy usage.",
+      "evidence": "The resulting increase in database queries caused API response times to rise during periods of heavy usage.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Engineering corrected the caching configuration at 11:02 AM and performance returned to normal shortly afterward.",
+      "evidence": "Engineering corrected the caching configuration at 11:02 AM. Performance returned to normal shortly afterward.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The incident review identified the caching configuration error as the root cause of the performance degradation.",
+      "evidence": "The incident review identified the caching configuration error as the root cause of the performance degradation.",
+      "supported": true
+    },
+    {
+      "target": "September Performance Incident",
+      "claim": "The incident occurred between 10:20 AM and 11:05 AM on September 15.",
+      "evidence": "Atlas experienced elevated API response times on September 15 between 10:20 AM and 11:05 AM.",
+      "supported": true
+    },
+    {
+      "target": "September Performance Incident",
+      "claim": "A caching configuration error caused repeated requests to bypass the application cache, increasing database query volume.",
+      "evidence": "Engineering's investigation determined that a recently introduced caching configuration caused repeated requests to bypass the application cache. The resulting increase in database queries caused API response times to rise during periods of heavy usage.",
+      "supported": true
+    },
+    {
+      "target": "September Performance Incident",
+      "claim": "Engineering corrected the caching configuration at 11:02 AM, resolving the incident.",
+      "evidence": "Engineering corrected the caching configuration at 11:02 AM. Performance returned to normal shortly afterward.",
+      "supported": true
+    },
+    {
+      "target": "crosslink: concepts/september-performance-incident.md -> concepts/project-atlas.md",
+      "claim": "The September performance incident relates to Project Atlas.",
+      "evidence": "Atlas experienced elevated API response times on September 15",
+      "supported": true
+    }
+  ]
+}

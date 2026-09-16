@@ -1,0 +1,41 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\10_atlas_team_structure.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Platform Engineering is the primary engineering organization responsible for Project Atlas.",
+      "evidence": "Platform Engineering is the primary engineering organization responsible for Project Atlas.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Maya Chen is Director of Platform Engineering.",
+      "evidence": "Maya Chen is Director of Platform Engineering.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The Atlas development team includes backend, frontend, and site reliability engineers within Platform Engineering.",
+      "evidence": "The Atlas development team includes backend engineers, frontend engineers, and site reliability engineers within Platform Engineering.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Data Engineering provides shared loan and risk data pipelines.",
+      "evidence": "Data Engineering provides shared loan and risk data pipelines.",
+      "supported": true
+    },
+    {
+      "target": "Security Engineering",
+      "claim": "Security Engineering performs security reviews and provides security requirements.",
+      "evidence": "Security Engineering performs security reviews and provides security requirements.",
+      "supported": true
+    },
+    {
+      "target": "Product Lending",
+      "claim": "The Product Lending team defines product requirements and coordinates the pilot program.",
+      "evidence": "The Product Lending team defines product requirements and coordinates the pilot program.",
+      "supported": true
+    }
+  ]
+}

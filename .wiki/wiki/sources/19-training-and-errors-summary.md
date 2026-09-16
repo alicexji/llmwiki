@@ -6,6 +6,23 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This short update reports that twenty-five additional users joined the Atlas pilot during the first week of September, each completing a two-hour training session before being granted platform access. During that same week, the Product team observed an increase in incorrectly configured loan scenarios among pilot users. In response, additional training sessions were scheduled for later in September, and Product updated the Atlas user guide with more examples of scenario configuration to help reduce user errors.
+# 19_training_and_errors.md
 
-The document connects onboarding scale with a rise in configuration mistakes, suggesting a correlation between rapid pilot expansion and insufficient user familiarity with scenario setup. The corrective actions—expanded training and improved documentation—indicate an iterative approach to pilot rollout management.
+**Source:** raw/19_training_and_errors.md  
+**Type:** .md  
+**Size:** 492 bytes  
+**Ingested:** 2026-09-16
+
+## Content Preview
+
+# Atlas Pilot Training Update
+
+Twenty-five additional users joined the Atlas pilot during the first week of September.
+
+The new users attended a two-hour training session before receiving access to the platform.
+
+During that week, the Product team recorded an increase in incorrectly configured loan scenarios.
+
+Several additional training sessions were scheduled for later in September.
+
+Product also updated the Atlas user guide with additional examples of scenario configuration.

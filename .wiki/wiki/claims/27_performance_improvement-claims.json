@@ -1,0 +1,29 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\27_performance_improvement.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Engineering implemented query optimization, caching adjustments, and frontend performance work during September.",
+      "evidence": "The changes included query optimization, caching adjustments, and frontend performance work.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Internal monitoring showed application responsiveness improved following the changes.",
+      "evidence": "Internal monitoring showed that application responsiveness improved following the changes.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The amount of improvement varied by workflow and usage conditions, with no single percentage applying across the application.",
+      "evidence": "The amount of improvement varied by workflow and usage conditions.\n\nNo single percentage improvement applies across the Atlas application.",
+      "supported": true
+    },
+    {
+      "target": "Atlas September Performance Improvements",
+      "claim": "The improvements were made specifically to Project Atlas.",
+      "evidence": "Engineering implemented several performance improvements during September.",
+      "supported": false
+    }
+  ]
+}

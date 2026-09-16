@@ -1,0 +1,53 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\01_atlas_project_overview.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Project Atlas is Northstar Financial's initiative to modernize its commercial lending platform.",
+      "evidence": "Project Atlas is Northstar Financial's initiative to modernize its commercial lending platform.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The project began in January 2026.",
+      "evidence": "The project began in January 2026 and is being developed primarily by the Platform Engineering team.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The project is developed primarily by the Platform Engineering team.",
+      "evidence": "The project began in January 2026 and is being developed primarily by the Platform Engineering team.",
+      "supported": true
+    },
+    {
+      "target": "Maya Chen",
+      "claim": "Maya Chen is Director of Platform Engineering and oversees the team responsible for Atlas.",
+      "evidence": "Maya Chen, Director of Platform Engineering, oversees the team responsible for Atlas.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Atlas is intended to replace several legacy lending services with a unified platform for loan processing, pricing, and risk analysis.",
+      "evidence": "Atlas is intended to replace several legacy lending services with a unified platform for loan processing, pricing, and risk analysis.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The current target is to make Atlas generally available to internal users in October 2026.",
+      "evidence": "The current target is to make Atlas generally available to internal users in October 2026.",
+      "supported": true
+    },
+    {
+      "target": "Data Engineering",
+      "claim": "The Data Engineering team maintains several shared data pipelines used by Atlas and other Northstar applications.",
+      "evidence": "The Data Engineering team maintains several shared data pipelines used by Atlas and other Northstar applications.",
+      "supported": true
+    },
+    {
+      "target": "AuthCore",
+      "claim": "The project depends on authentication services provided by external vendor AuthCore.",
+      "evidence": "The project also depends on authentication services provided by external vendor AuthCore.",
+      "supported": true
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\26_maya_role.md",
+  "claims": [
+    {
+      "target": "Maya Chen",
+      "claim": "Maya Chen is Director of Platform Engineering.",
+      "evidence": "Maya Chen is Director of Platform Engineering.",
+      "supported": true
+    },
+    {
+      "target": "Maya Chen",
+      "claim": "Her organization includes the engineering team responsible for developing and operating Atlas.",
+      "evidence": "Her organization includes the engineering team responsible for developing and operating Atlas.",
+      "supported": true
+    },
+    {
+      "target": "Maya Chen",
+      "claim": "Maya Chen participates in Atlas leadership reviews and provides engineering updates to technology leadership.",
+      "evidence": "Maya participates in Atlas leadership reviews and provides engineering updates to technology leadership.",
+      "supported": true
+    },
+    {
+      "target": "Product Lending",
+      "claim": "Product strategy for Atlas is led by the Product Lending organization.",
+      "evidence": "Product strategy for Atlas is led by the Product Lending organization.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Readiness Review",
+      "claim": "Final release decisions are made through the Atlas readiness and leadership review process rather than by a single individual.",
+      "evidence": "Final release decisions are made through the Atlas readiness and leadership review process rather than by a single individual.",
+      "supported": true
+    },
+    {
+      "target": "Maya Chen",
+      "claim": "Maya Chen does not unilaterally control Atlas release decisions.",
+      "evidence": "Final release decisions are made through the Atlas readiness and leadership review process rather than by a single individual.",
+      "supported": true
+    }
+  ]
+}

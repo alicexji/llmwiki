@@ -6,6 +6,11 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This short update reports that Atlas cloud compute capacity was increased by roughly 30% in August 2024 to accommodate the expanding pilot program. Coinciding with this capacity increase, average API response times improved relative to July, though the document does not draw a direct causal link between the two, noting instead that multiple performance initiatives were underway simultaneously.
+This short update reports that Atlas cloud compute capacity was increased by approximately 30% in August 2023 to support the expanding pilot program. It notes that average API response times improved during the same month compared with July. The document separately mentions that engineering continued several performance initiatives during August, including query optimization, caching improvements, and frontend performance work. The team plans to continue monitoring capacity as pilot usage grows.
 
-Engineering teams pursued several parallel performance efforts during August, including query optimization, caching improvements, and frontend performance work, making it difficult to attribute the response time improvements to any single change. The team indicates it will continue monitoring capacity levels as pilot usage grows, suggesting capacity planning remains an ongoing, iterative process tied to adoption trends rather than a one-time fix.
+The source does not establish a causal link between the capacity increase, the performance initiatives, and the observed improvement in response times — these are reported as concurrent developments rather than as cause and effect.
+
+## See also
+
+- [Atlas Cloud Scaling](../concepts/atlas-cloud-scaling.md)
+- [Project Atlas](../concepts/project-atlas.md)

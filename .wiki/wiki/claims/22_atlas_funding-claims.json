@@ -1,0 +1,47 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\22_atlas_funding.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Finance and Platform Engineering are reviewing remaining 2026 funding needs for Project Atlas.",
+      "evidence": "Finance and Platform Engineering are reviewing the remaining 2026 funding needs for Project Atlas.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The project has sufficient funding to continue planned development and pilot activities through the current quarter.",
+      "evidence": "The project has sufficient funding to continue planned development and pilot activities through the current quarter.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Leadership will review the 2027 funding request during the annual planning process.",
+      "evidence": "Leadership will review the 2027 funding request during the annual planning process.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "A final budget for 2027 has not yet been approved.",
+      "evidence": "A final budget for 2027 has not yet been approved.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Specific funding amounts are not included in this update.",
+      "evidence": "Specific funding amounts are not included in this update.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Funding Review",
+      "claim": "The review is conducted jointly by Finance and Platform Engineering.",
+      "evidence": "Finance and Platform Engineering are reviewing the remaining 2026 funding needs for Project Atlas.",
+      "supported": true
+    },
+    {
+      "target": "crosslink: concepts/atlas-funding-review.md -> entities/platform-engineering.md",
+      "claim": "Platform Engineering is involved in the Atlas funding review.",
+      "evidence": "Finance and Platform Engineering are reviewing the remaining 2026 funding needs for Project Atlas.",
+      "supported": true
+    }
+  ]
+}

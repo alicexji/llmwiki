@@ -1,0 +1,41 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\13_july_certificate_incident.md",
+  "claims": [
+    {
+      "target": "July Certificate Incident",
+      "claim": "Atlas experienced a 22-minute service interruption on July 7.",
+      "evidence": "Atlas experienced a 22-minute service interruption on July 7.",
+      "supported": true
+    },
+    {
+      "target": "July Certificate Incident",
+      "claim": "An expired TLS certificate prevented an internal service from communicating with the loan processing service.",
+      "evidence": "The incident investigation determined that an expired TLS certificate prevented one of the application's internal services from communicating with the loan processing service.",
+      "supported": true
+    },
+    {
+      "target": "July Certificate Incident",
+      "claim": "Engineering renewed the certificate and restored normal service.",
+      "evidence": "Engineering renewed the certificate and restored normal service.",
+      "supported": true
+    },
+    {
+      "target": "July Certificate Incident",
+      "claim": "The incident review identified the expired TLS certificate as the root cause of the outage.",
+      "evidence": "The incident review identified the expired TLS certificate as the root cause of the outage.",
+      "supported": true
+    },
+    {
+      "target": "July Certificate Incident",
+      "claim": "Platform Engineering added automated certificate expiration monitoring after the incident.",
+      "evidence": "Following the incident, Platform Engineering added automated certificate expiration monitoring.",
+      "supported": true
+    },
+    {
+      "target": "crosslink concepts/july-certificate-incident.md -> entities/product-lending.md",
+      "claim": "The incident involved the loan processing service, related to Product Lending.",
+      "evidence": "prevented one of the application's internal services from communicating with the loan processing service.",
+      "supported": false
+    }
+  ]
+}

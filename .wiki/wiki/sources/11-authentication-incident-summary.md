@@ -6,13 +6,25 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This brief incident note describes intermittent login failures affecting Atlas users on September 4. The Atlas platform relies on AuthCore, a third-party authentication service, and during the incident the team observed elevated authentication error rates, prompting outreach to AuthCore for joint investigation. Service returned to normal later the same morning.
+# 11_authentication_incident.md
 
-Notably, the root cause remains unresolved: the document explicitly states it has not been determined whether the failures originated within Atlas itself, within AuthCore, or from another upstream dependency. AuthCore is continuing to assist Northstar Financial with the investigation, indicating an ongoing, unclosed incident rather than a fully diagnosed one.
+**Source:** raw/11_authentication_incident.md  
+**Type:** .md  
+**Size:** 536 bytes  
+**Ingested:** 2026-09-16
 
-## See also
+## Content Preview
 
-- [September 4 Authentication Incident](../concepts/september-4-authentication-incident.md)
-- [Project Atlas](../entities/project-atlas.md)
-- [AuthCore](../entities/authcore.md)
-- [Northstar Financial](../entities/northstar-financial.md)
+# Authentication Incident — September 4
+
+Some Atlas users experienced intermittent login failures on September 4.
+
+Atlas uses AuthCore for user authentication.
+
+During the incident, the Atlas team observed elevated authentication error rates and contacted AuthCore as part of the investigation.
+
+Service returned to normal later that morning.
+
+The incident review has not yet determined whether the failures originated within Atlas, AuthCore, or another dependency.
+
+AuthCore is assisting…

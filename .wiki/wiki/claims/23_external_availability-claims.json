@@ -1,0 +1,47 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\23_external_availability.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Project Atlas is currently available only to approved Northstar Financial employees in an internal pilot.",
+      "evidence": "Project Atlas is currently available only to approved Northstar Financial employees participating in the internal pilot.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Atlas has not been released to external customers.",
+      "evidence": "Atlas has not been released to external customers.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The pilot is intended to gather feedback before a broader internal rollout.",
+      "evidence": "The current pilot is intended to gather feedback before a broader internal rollout.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "External customer availability has not been approved or scheduled.",
+      "evidence": "External customer availability has not been approved or scheduled.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Any future external release would require additional product, compliance, and security review.",
+      "evidence": "Any future external release would require additional product, compliance, and security review.",
+      "supported": true
+    },
+    {
+      "target": "Atlas External Availability",
+      "claim": "Atlas external availability is restricted to an internal pilot for approved Northstar Financial employees.",
+      "evidence": "Project Atlas is currently available only to approved Northstar Financial employees participating in the internal pilot.",
+      "supported": true
+    },
+    {
+      "target": "crosslink: concepts/atlas-external-availability.md -> entities/northstar-financial.md",
+      "claim": "The Atlas pilot involves Northstar Financial employees.",
+      "evidence": "Project Atlas is currently available only to approved Northstar Financial employees participating in the internal pilot.",
+      "supported": true
+    }
+  ]
+}

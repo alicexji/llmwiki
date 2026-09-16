@@ -6,6 +6,10 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This brief update covers the ongoing expansion of the Atlas pilot program during August and September, as additional internal users from lending teams were granted access to the platform. Usage has grown as more lending teams participate, and the pilot team continues collecting usage metrics and user feedback.
+This brief update describes the ongoing expansion of the Atlas pilot program during August and September, as more internal lending teams received access to the platform. The document notes that usage has increased alongside pilot participation growth, and that Product has collected generally positive feedback, along with requests for workflow and performance improvements.
 
-Product feedback has generally been positive, though users have requested improvements to workflow and performance. Notably, the update does not provide a final user count or adoption percentage, leaving the scale of pilot growth unquantified.
+The pilot team continues to gather usage metrics and user feedback, but the update explicitly does not provide a final user count or adoption percentage, leaving the scope of adoption undefined.
+
+## See also
+
+- [Atlas Pilot Adoption](../concepts/atlas-pilot-adoption.md)

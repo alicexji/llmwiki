@@ -1,0 +1,47 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\19_training_and_errors.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Twenty-five additional users joined the Atlas pilot during the first week of September.",
+      "evidence": "Twenty-five additional users joined the Atlas pilot during the first week of September.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "New users attended a two-hour training session before receiving access.",
+      "evidence": "The new users attended a two-hour training session before receiving access to the platform.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The Product team recorded an increase in incorrectly configured loan scenarios during that week.",
+      "evidence": "During that week, the Product team recorded an increase in incorrectly configured loan scenarios.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Additional training sessions were scheduled for later in September.",
+      "evidence": "Several additional training sessions were scheduled for later in September.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Product updated the Atlas user guide with additional examples of scenario configuration.",
+      "evidence": "Product also updated the Atlas user guide with additional examples of scenario configuration.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The new user onboarding caused the increase in configuration errors.",
+      "evidence": "During that week, the Product team recorded an increase in incorrectly configured loan scenarios.",
+      "supported": false
+    },
+    {
+      "target": "Atlas Pilot Training",
+      "claim": "Twenty-five additional users joined the Atlas pilot after a two-hour training session.",
+      "evidence": "The new users attended a two-hour training session before receiving access to the platform.",
+      "supported": true
+    }
+  ]
+}

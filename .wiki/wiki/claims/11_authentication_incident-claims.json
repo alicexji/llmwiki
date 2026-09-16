@@ -1,0 +1,53 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\11_authentication_incident.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Some Atlas users experienced intermittent login failures on September 4.",
+      "evidence": "Some Atlas users experienced intermittent login failures on September 4.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Atlas uses AuthCore for user authentication.",
+      "evidence": "Atlas uses AuthCore for user authentication.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The Atlas team observed elevated authentication error rates and contacted AuthCore during the investigation.",
+      "evidence": "During the incident, the Atlas team observed elevated authentication error rates and contacted AuthCore as part of the investigation.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Service returned to normal later that morning.",
+      "evidence": "Service returned to normal later that morning.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The incident review has not yet determined whether the failures originated within Atlas, AuthCore, or another dependency.",
+      "evidence": "The incident review has not yet determined whether the failures originated within Atlas, AuthCore, or another dependency.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "AuthCore is assisting Northstar with the investigation.",
+      "evidence": "AuthCore is assisting Northstar with the investigation.",
+      "supported": true
+    },
+    {
+      "target": "September Authentication Incident",
+      "claim": "The root cause of the incident is unestablished among Atlas, AuthCore, or another dependency.",
+      "evidence": "The incident review has not yet determined whether the failures originated within Atlas, AuthCore, or another dependency.",
+      "supported": true
+    },
+    {
+      "target": "September Authentication Incident",
+      "claim": "AuthCore caused the login failures.",
+      "evidence": "The incident review has not yet determined whether the failures originated within Atlas, AuthCore, or another dependency.",
+      "supported": false
+    }
+  ]
+}

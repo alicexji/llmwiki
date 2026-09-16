@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
-import { join } from 'node:path';
+import { basename, join } from 'node:path';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { extractText } from './extractText';
 import { selectPreferredModel } from './modelSelection';
 import {
@@ -20,6 +21,12 @@ interface LlmAnalysis {
   entities: Array<{ name: string; content: string; tags: string[] }>;
   concepts: Array<{ name: string; content: string; tags: string[] }>;
   crosslinks: Array<{ from: string; to: string[] }>;
+  claims: Array<{
+    target: string;
+    claim: string;
+    evidence: string;
+    supported: boolean;
+  }>;
 }
 
 /**
@@ -79,6 +86,18 @@ export async function llmIngest(
   const analysis = await callLlm(sourceContent, wikiContext, outputChannel, token);
   if (!analysis) {
     outputChannel.appendLine('[llmIngest] LLM analysis returned nothing — skipping enrichment');
+    return { pagesCreated, pagesUpdated, status: 'ingested' };
+  }
+
+  // Keep claim evidence separate from page prose and fail closed when the
+  // proposed enrichment contains a claim the source does not establish.
+  const claimPath = await writeClaimEvidence(wikiDir, sourcePath, analysis.claims);
+  pagesUpdated.push(claimPath);
+  const unsupportedClaims = analysis.claims.filter((claim) => !claim.supported);
+  if (unsupportedClaims.length > 0) {
+    outputChannel.appendLine(
+      `[llmIngest] Skipping enrichment: ${unsupportedClaims.length} unsupported claim(s)`,
+    );
     return { pagesCreated, pagesUpdated, status: 'ingested' };
   }
 
@@ -184,6 +203,7 @@ Given a source document and the existing wiki index, produce a JSON analysis wit
 2. "entities": Named things (people, organizations, products, places) worth their own wiki page. Each has "name", "content" (markdown body for the page), and "tags" (array of strings).
 3. "concepts": Ideas, techniques, patterns, or topics worth their own wiki page. Each has "name", "content" (markdown body), and "tags".
 4. "crosslinks": Links between pages. Each has "from" (relative path like "entities/foo.md" or "sources/bar-summary.md") and "to" (array of relative paths). Only link to pages that will exist after this analysis (existing pages from the index OR new entity/concept pages you are creating). Entity pages are at "entities/{slugified-name}.md", concept pages at "concepts/{slugified-name}.md". Slugify = lowercase, replace spaces/special chars with hyphens, remove consecutive hyphens.
+5. "claims": An array covering every material factual or relational claim in the summary, entity content, concept content, and crosslinks. Each has "target" (summary, entity/concept name, or crosslink), "claim", "evidence" (a supporting passage copied from the source document), and "supported" (true only when the evidence establishes the full claim).
 
 Rules:
 - Only create entities/concepts that are substantively discussed in the source, not just mentioned in passing.
@@ -197,6 +217,9 @@ Rules:
 - Do not attribute an incident or outcome to a vendor, system, person, or change unless the sources establish that relationship.
 - Preserve uncertainty when a relationship has not been established.
 - Continue to preserve and synthesize relationships that the sources explicitly support.
+- Do not write a material claim into the human-readable content unless it appears in "claims" with supported=true.
+- Temporal sequence, correlation, co-occurrence, or plausibility alone do not support causality.
+- If any proposed claim is unsupported, mark it supported=false and omit or rewrite that claim in the human-readable content.
 - Respond with ONLY valid JSON. No markdown fences, no explanation.`;
 
   const userMessage = `## Existing Wiki Pages
@@ -242,6 +265,29 @@ function parseLlmResponse(raw: string, outputChannel: vscode.OutputChannel): Llm
   try {
     const parsed = JSON.parse(cleaned);
 
+    if (!Array.isArray(parsed.claims)) {
+      outputChannel.appendLine('[llmIngest] Missing claim/evidence representation — skipping enrichment');
+      return null;
+    }
+
+    const claims = parsed.claims.filter(
+      (claim: unknown): claim is {
+        target: string;
+        claim: string;
+        evidence: string;
+        supported: boolean;
+      } =>
+        typeof claim === 'object' && claim !== null &&
+        typeof (claim as Record<string, unknown>).target === 'string' &&
+        typeof (claim as Record<string, unknown>).claim === 'string' &&
+        typeof (claim as Record<string, unknown>).evidence === 'string' &&
+        typeof (claim as Record<string, unknown>).supported === 'boolean',
+    );
+    if (claims.length !== parsed.claims.length) {
+      outputChannel.appendLine('[llmIngest] Invalid claim/evidence representation — skipping enrichment');
+      return null;
+    }
+
     // Validate shape
     const analysis: LlmAnalysis = {
       summary: typeof parsed.summary === 'string' ? parsed.summary : '',
@@ -280,12 +326,13 @@ function parseLlmResponse(raw: string, outputChannel: vscode.OutputChannel): Llm
             to: l.to.filter((t: unknown) => typeof t === 'string') as string[],
           }))
         : [],
+      claims,
     };
 
     outputChannel.appendLine(
       `[llmIngest] Parsed: summary=${analysis.summary.length > 0 ? 'yes' : 'no'}, ` +
       `entities=${analysis.entities.length}, concepts=${analysis.concepts.length}, ` +
-      `crosslinks=${analysis.crosslinks.length}`,
+      `crosslinks=${analysis.crosslinks.length}, claims=${analysis.claims.length}`,
     );
 
     return analysis;
@@ -294,4 +341,21 @@ function parseLlmResponse(raw: string, outputChannel: vscode.OutputChannel): Llm
     outputChannel.appendLine(`[llmIngest] Raw response: ${raw.slice(0, 500)}`);
     return null;
   }
+}
+
+async function writeClaimEvidence(
+  wikiDir: string,
+  sourcePath: string,
+  claims: LlmAnalysis['claims'],
+): Promise<string> {
+  const claimsDir = join(wikiDir, 'claims');
+  await mkdir(claimsDir, { recursive: true });
+  const sourceName = basename(sourcePath).replace(/\.[^.]+$/, '');
+  const claimPath = join(claimsDir, `${sourceName}-claims.json`);
+  await writeFile(
+    claimPath,
+    JSON.stringify({ source: sourcePath, claims }, null, 2) + '\n',
+    'utf-8',
+  );
+  return 'claims/' + `${sourceName}-claims.json`;
 }

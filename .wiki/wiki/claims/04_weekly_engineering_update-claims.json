@@ -1,0 +1,53 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\04_weekly_engineering_update.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Engineering completed the planned PostgreSQL migration on Monday.",
+      "evidence": "On Monday, engineering completed the planned PostgreSQL migration.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Initial validation of the migration was successful.",
+      "evidence": "Initial validation was successful.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The team responded to a 47-minute production service interruption on Wednesday affecting loan scenario submissions.",
+      "evidence": "On Wednesday, the team responded to a 47-minute production service interruption affecting loan scenario submissions.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Engineers spent the rest of the week reviewing application logs, database metrics, and service dependencies.",
+      "evidence": "Engineers spent the remainder of the week reviewing application logs, database metrics, and service dependencies.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The team continued preparing Atlas for its planned October release.",
+      "evidence": "The team also continued preparing Atlas for its planned October release.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Maya thanked the engineering team for responding quickly to the incident.",
+      "evidence": "Maya thanked the engineering team for responding quickly to the incident.",
+      "supported": true
+    },
+    {
+      "target": "October Release",
+      "claim": "October is a planned release milestone for Project Atlas.",
+      "evidence": "The team also continued preparing Atlas for its planned October release.",
+      "supported": true
+    },
+    {
+      "target": "crosslink: sources/04-weekly-engineering-update-summary.md -> entities/maya-chen.md",
+      "claim": "The weekly update references Maya, who thanked the engineering team.",
+      "evidence": "Maya thanked the engineering team for responding quickly to the incident.",
+      "supported": true
+    }
+  ]
+}

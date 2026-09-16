@@ -6,6 +6,23 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This brief update reports on staffing growth for Project Atlas during August, noting that Platform Engineering added four new engineers to the team, distributed across the backend and site reliability groups. The document is short but ties staffing changes to a broader set of August milestones, including database migration work, pilot expansion, and improvements to operational monitoring.
+# 21_hiring_and_delivery.md
 
-Atlas leadership characterized the month as one of significant progress. The new engineers are still completing onboarding and training, suggesting their full productive impact has not yet been realized. This document overlaps closely with the existing 'Atlas August Staffing Expansion' concept page and reinforces the connection between headcount growth and delivery milestones during this period.
+**Source:** raw/21_hiring_and_delivery.md  
+**Type:** .md  
+**Size:** 506 bytes  
+**Ingested:** 2026-09-16
+
+## Content Preview
+
+# Atlas Staffing Update
+
+Platform Engineering added four engineers to the Atlas team during August.
+
+The new engineers joined the backend and site reliability groups.
+
+During August, the team also completed several planned milestones, including database migration work, pilot expansion, and improvements to operational monitoring.
+
+Atlas leadership reported that the project made significant progress during the month.
+
+The additional engineers are continuing to complete onboarding and tra…

@@ -1,0 +1,59 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\09_data_platform_overview.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Data Engineering team operates Northstar's shared analytical data platform.",
+      "evidence": "Northstar's Data Engineering team operates the company's shared analytical data platform.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The team maintains ingestion pipelines collecting loan, pricing, and risk data from internal systems.",
+      "evidence": "The team maintains ingestion pipelines that collect loan, pricing, and risk data from several internal systems.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Atlas consumes data from two shared pipelines for risk analysis functionality.",
+      "evidence": "Atlas consumes data from two of these shared pipelines for its risk analysis functionality.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The same pipelines are used by Portfolio Analytics and Forecasting applications.",
+      "evidence": "The same pipelines are also used by the Portfolio Analytics and Forecasting applications.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Data Engineering is responsible for pipeline availability, schema management, and data quality monitoring.",
+      "evidence": "Data Engineering is responsible for pipeline availability, schema management, and data quality monitoring.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Application teams remain responsible for the products that consume the shared data.",
+      "evidence": "Application teams remain responsible for the products that consume the shared data.",
+      "supported": true
+    },
+    {
+      "target": "Enterprise Data Platform",
+      "claim": "The Enterprise Data Platform includes ingestion pipelines for loan, pricing, and risk data.",
+      "evidence": "The team maintains ingestion pipelines that collect loan, pricing, and risk data from several internal systems.",
+      "supported": true
+    },
+    {
+      "target": "Portfolio Analytics",
+      "claim": "Portfolio Analytics consumes data from the same shared pipelines as Atlas.",
+      "evidence": "The same pipelines are also used by the Portfolio Analytics and Forecasting applications.",
+      "supported": true
+    },
+    {
+      "target": "Forecasting",
+      "claim": "Forecasting consumes data from the same shared pipelines as Atlas.",
+      "evidence": "The same pipelines are also used by the Portfolio Analytics and Forecasting applications.",
+      "supported": true
+    }
+  ]
+}

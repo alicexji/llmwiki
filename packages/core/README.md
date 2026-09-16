@@ -18,8 +18,8 @@ import {
   ingestSource,
   queryWiki,
   lintWiki,
-  createMcpServer,
 } from '@llmwiki/core';
+import { createMcpServer } from '@llmwiki/core/mcp';
 ```
 
 See the [main README](https://github.com/microsoft/llmwiki#readme) for the full API surface.

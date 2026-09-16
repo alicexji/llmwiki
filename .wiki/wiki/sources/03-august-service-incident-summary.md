@@ -6,14 +6,11 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This document reports a production service interruption affecting Project Atlas on August 12, lasting from 2:14 PM to 3:01 PM. During the outage, some users were unable to submit new loan scenarios, though existing saved scenarios remained accessible, suggesting the failure was isolated to write/submission paths rather than data retrieval.
+This source documents a production service interruption affecting Project Atlas on August 12, lasting from 2:14 PM to 3:01 PM. During the incident, some users were unable to submit new loan scenarios, though existing saved scenarios remained accessible throughout. Platform Engineering restored normal service at 3:01 PM.
 
-Platform Engineering restored normal service by 3:01 PM, a 47-minute incident window. Notably, the root cause investigation remains open at the time of writing — no confirmed cause has been identified. As a mitigation measure, the team has enabled additional monitoring while the investigation continues, indicating an interim, precautionary response rather than a resolved fix.
-
-This appears to be an early or preliminary incident report, likely superseded by later documents (e.g., the root-cause investigation follow-up) that provide more detail on causes and remediation.
+Notably, the root cause of the incident has not been confirmed, and the investigation remains open as of this document. As an interim measure, additional monitoring has been enabled while the investigation continues. No connection to other Atlas-related activities (such as the database migration) is established in this document.
 
 ## See also
 
-- [August 12 Service Incident](../concepts/august-12-service-incident.md)
-- [Project Atlas](../entities/project-atlas.md)
+- [August Service Incident](../concepts/august-service-incident.md)
 - [Platform Engineering](../entities/platform-engineering.md)

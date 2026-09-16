@@ -3,30 +3,25 @@ type: concept
 title: Atlas Q3 Budget Review
 tags:
   - budget
+  - atlas
   - finance
-  - project-atlas
-  - q3-review
-  - cost-overrun
-created: '2026-09-16T01:58:16.215Z'
+  - forecast
+  - cloud-infrastructure
+created: '2026-09-16T09:58:43.099Z'
 sources:
   - sources/12-atlas-budget-review-summary.md
 ---
-## Overview
-A financial review of Project Atlas spending during Q3, which came in approximately **8% over forecast**.
+**Atlas Q3 Budget Review** covers Project Atlas spending during Q3, which exceeded forecast by approximately 8%. Major cost drivers included:
 
-## Key Cost Drivers
 - Engineering labor
 - Cloud infrastructure (driven by pilot expansion to more users/environments)
 - External services
-- Database migration work and performance testing (planned costs)
+- Planned costs from database migration work and performance testing
 
-## Outcome
-- Finance and Platform Engineering are reviewing the remaining 2026 forecast.
-- No single initiative was identified as the primary cause of the variance; the overrun appears distributed across multiple workstreams.
+Finance and Platform Engineering are reviewing the remaining 2026 forecast. **No single initiative has been identified as the primary cause of the Q3 variance.**
 
 ## See also
 
-- [Project Atlas](../entities/project-atlas.md)
+- [Project Atlas](project-atlas.md)
 - [Platform Engineering](../entities/platform-engineering.md)
-- [MySQL to PostgreSQL Migration](mysql-to-postgresql-migration.md)
-- [Atlas Pilot Adoption](atlas-pilot-adoption.md)
+- [Enterprise Data Platform](enterprise-data-platform.md)

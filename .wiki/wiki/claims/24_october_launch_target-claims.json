@@ -1,0 +1,29 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\24_october_launch_target.md",
+  "claims": [
+    {
+      "target": "Atlas GA Planning Target",
+      "claim": "The Atlas team is targeting October 2026 for general availability to internal users.",
+      "evidence": "The Atlas team is currently targeting October 2026 for general availability to internal users.",
+      "supported": true
+    },
+    {
+      "target": "Atlas GA Planning Target",
+      "claim": "The October timeline is a planning target, not a committed release date.",
+      "evidence": "The October timeline remains a planning target rather than a committed release date.",
+      "supported": true
+    },
+    {
+      "target": "Atlas GA Planning Target",
+      "claim": "The final date depends on completion of readiness activities and leadership review.",
+      "evidence": "The final date depends on completion of readiness activities and leadership review.",
+      "supported": true
+    },
+    {
+      "target": "Atlas GA Planning Target",
+      "claim": "A confirmed release date will be provided after the readiness process is complete.",
+      "evidence": "The team expects to provide a confirmed release date after the readiness process is complete.",
+      "supported": true
+    }
+  ]
+}

@@ -128,9 +128,24 @@ function registerFullViews(
   });
 
   const wikiProviders = { entities: entitiesProvider, concepts: conceptsProvider, rawSources: rawSourcesProvider };
+
+  // Register the recovery path before optional integrations so source scanning
+  // remains available if a later feature cannot initialize in this host.
+  context.subscriptions.push(
+    vscode.commands.registerCommand('llmwiki.scanRaw', () =>
+      scanRawForUningested(wikiProjectRoot, outputChannel, wikiProviders, true),
+    ),
+  );
+
   registerCommands(context, workspaceFolder, wikiProjectRoot, wikiProviders, outputChannel);
   registerChatParticipant(context, workspaceFolder, outputChannel);
-  registerMcpServerProvider(context, workspaceFolder, outputChannel);
+
+  try {
+    registerMcpServerProvider(context, workspaceFolder, outputChannel);
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    outputChannel.appendLine(`[mcp] Provider registration failed — continuing without MCP: ${message}`);
+  }
 
   // Fix button opens @wiki /fix in chat
   context.subscriptions.push(
@@ -142,13 +157,6 @@ function registerFullViews(
   const statusBar = createStatusBar(context, wikiProjectRoot);
 
   context.subscriptions.push(entitiesRegistration, conceptsRegistration, watcher, entitiesProvider, conceptsProvider, rawSourcesRegistration, rawWatcher, rawSourcesProvider, backlinksRegistration, backlinksProvider, statusBar);
-
-  // Manual scan command — also resilient backup if the watcher misses an event.
-  context.subscriptions.push(
-    vscode.commands.registerCommand('llmwiki.scanRaw', () =>
-      scanRawForUningested(wikiProjectRoot, outputChannel, wikiProviders, true),
-    ),
-  );
 
   // Startup scan — picks up any files added to raw/ while the extension
   // wasn't running, or that the watcher silently missed.

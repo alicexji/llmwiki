@@ -6,11 +6,21 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This source documents the completion of a major infrastructure change for Project Atlas: the migration of the primary transactional database from MySQL to PostgreSQL, completed on August 10. The migration had been in planning for roughly three months, driven by the need to improve scalability as transaction volume grows.
+# 02_database_migration.md
 
-Post-migration validation indicated that primary Atlas services were operating normally, though the engineering team planned continued monitoring over the following weeks to confirm stability. The document characterizes this as one of the largest infrastructure changes completed by the Atlas team during the quarter, underscoring its significance relative to other engineering work.
+**Source:** raw/02_database_migration.md  
+**Type:** .md  
+**Size:** 618 bytes  
+**Ingested:** 2026-09-16
 
-## See also
+## Content Preview
 
-- [Project Atlas](../entities/project-atlas.md)
-- [MySQL to PostgreSQL Migration](../concepts/mysql-to-postgresql-migration.md)
+# Atlas Database Migration
+
+On August 10, the Atlas engineering team completed the production migration of its primary transactional database from MySQL to PostgreSQL.
+
+The migration had been planned for approximately three months and was intended to improve scalability as transaction volume increases.
+
+Initial validation completed after the migration showed that the primary Atlas services were operating normally.
+
+Engineering will continue monitoring database performance over the next s…

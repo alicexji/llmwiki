@@ -1,0 +1,41 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\28_security_status.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "The Security team completed its initial review of Atlas.",
+      "evidence": "The Security team has completed its initial review of Atlas.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Recommendations were provided to the engineering team and are being addressed as part of readiness work.",
+      "evidence": "Several recommendations were provided to the engineering team and are being addressed as part of readiness work.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Completion of the initial review does not constitute final security approval for general availability.",
+      "evidence": "Completion of the initial review does not constitute final security approval for general availability.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Final security readiness will be assessed after the remaining recommendations have been addressed.",
+      "evidence": "Final security readiness will be assessed after the remaining recommendations have been addressed.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Atlas has not yet received final security approval for general availability.",
+      "evidence": "Atlas has not yet received final security approval for general availability.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Security Review Status",
+      "claim": "Initial review is complete but final GA approval is not yet granted.",
+      "evidence": "Atlas has not yet received final security approval for general availability.",
+      "supported": true
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\07_release_planning.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "The Atlas team continues to target October for general availability.",
+      "evidence": "The Atlas team continues to target October for general availability.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "An internal readiness review is scheduled for September 18.",
+      "evidence": "An internal readiness review is scheduled for September 18.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Before general availability, the project must complete security review, performance testing, and operational readiness checks.",
+      "evidence": "Before general availability, the project must complete security review, performance testing, and operational readiness checks.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The Security team provided recommendations related to session management and authentication logging.",
+      "evidence": "The Security team recently provided several recommendations related to session management and authentication logging.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Engineering is reviewing the Security team's recommendations.",
+      "evidence": "Engineering is reviewing those recommendations.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The exact general availability date will be finalized after the readiness review.",
+      "evidence": "The exact general availability date will be finalized after the readiness review.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Readiness Review",
+      "claim": "An internal readiness review is scheduled for September 18.",
+      "evidence": "An internal readiness review is scheduled for September 18.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Readiness Review",
+      "claim": "The review assesses security review, performance testing, and operational readiness checks before general availability.",
+      "evidence": "Before general availability, the project must complete security review, performance testing, and operational readiness checks.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Readiness Review",
+      "claim": "The exact GA date will be finalized after the review.",
+      "evidence": "The exact general availability date will be finalized after the readiness review.",
+      "supported": true
+    }
+  ]
+}

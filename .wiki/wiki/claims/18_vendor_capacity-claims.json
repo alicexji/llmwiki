@@ -1,0 +1,47 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\18_vendor_capacity.md",
+  "claims": [
+    {
+      "target": "RiskData Service Update",
+      "claim": "Atlas uses RiskData, an external service providing property and market information for loan analysis.",
+      "evidence": "Atlas uses RiskData, an external service that provides property and market information used during loan analysis.",
+      "supported": true
+    },
+    {
+      "target": "RiskData Service Update",
+      "claim": "On August 21, Atlas users experienced slower-than-usual loading times when opening property analysis screens.",
+      "evidence": "On August 21, Atlas users experienced slower-than-usual loading times when opening property analysis screens.",
+      "supported": true
+    },
+    {
+      "target": "RiskData Service Update",
+      "claim": "RiskData processed unusually high request volumes that morning.",
+      "evidence": "RiskData processed unusually high request volumes that morning.",
+      "supported": true
+    },
+    {
+      "target": "RiskData Service Update",
+      "claim": "The Atlas engineering team contacted RiskData during its investigation.",
+      "evidence": "The Atlas engineering team contacted RiskData during its investigation.",
+      "supported": true
+    },
+    {
+      "target": "RiskData Service Update",
+      "claim": "Loading performance returned to normal later that afternoon.",
+      "evidence": "Loading performance returned to normal later that afternoon.",
+      "supported": true
+    },
+    {
+      "target": "RiskData Service Update",
+      "claim": "RiskData's high request volume caused the slowdown in Atlas's property analysis screens.",
+      "evidence": "RiskData processed unusually high request volumes that morning.",
+      "supported": false
+    },
+    {
+      "target": "RiskData",
+      "claim": "RiskData is an external service used by Atlas for property and market information in loan analysis.",
+      "evidence": "Atlas uses RiskData, an external service that provides property and market information used during loan analysis.",
+      "supported": true
+    }
+  ]
+}

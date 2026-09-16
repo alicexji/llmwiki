@@ -1,0 +1,53 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\06_performance_review.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Engineering reviewed Atlas performance metrics following feedback from pilot users.",
+      "evidence": "Engineering reviewed Atlas performance metrics following feedback from pilot users.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Average API latency increased during several high-traffic periods in August.",
+      "evidence": "Average API latency increased during several high-traffic periods in August.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The largest latency increases occurred when multiple large loan scenarios were processed simultaneously.",
+      "evidence": "The largest increases occurred when multiple large loan scenarios were processed simultaneously.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Database utilization remained within expected operating ranges during most of the review period.",
+      "evidence": "Database utilization remained within expected operating ranges during most of the review period.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The team is investigating opportunities to improve application performance before general availability.",
+      "evidence": "The team is investigating several possible opportunities to improve application performance before general availability.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "No specific infrastructure component has been identified as the primary cause of the observed latency.",
+      "evidence": "No specific infrastructure component has been identified as the primary cause of the observed latency.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Performance Review",
+      "claim": "The review was conducted in response to pilot user feedback.",
+      "evidence": "Engineering reviewed Atlas performance metrics following feedback from pilot users.",
+      "supported": true
+    },
+    {
+      "target": "crosslink:concepts/atlas-performance-review.md->concepts/project-atlas.md",
+      "claim": "The Atlas Performance Review pertains to Project Atlas.",
+      "evidence": "Engineering reviewed Atlas performance metrics following feedback from pilot users.",
+      "supported": true
+    }
+  ]
+}

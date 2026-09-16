@@ -6,8 +6,6 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This source describes an Atlas performance incident on September 15, during which API response times rose significantly between 10:20 AM and 11:05 AM. Engineering's root-cause investigation traced the issue to a recently introduced caching configuration error that caused repeated requests to bypass the application cache layer entirely.
+This document describes a September 15 Atlas performance incident in which API response times were elevated between 10:20 AM and 11:05 AM. Engineering's investigation identified a recently introduced caching configuration error as the root cause: the misconfiguration caused repeated requests to bypass the application cache, which increased database query volume and drove up API response times during periods of heavy usage. Engineering corrected the caching configuration at 11:02 AM, after which performance returned to normal.
 
-With caching bypassed, a much larger volume of requests hit the database directly, and under heavy usage this increased load caused API response times to degrade. Engineering corrected the caching configuration at 11:02 AM, and performance returned to normal shortly afterward.
-
-The incident review formally identified the caching misconfiguration as the root cause, distinguishing this event from other Atlas performance issues that may have had different underlying causes (e.g., database or infrastructure-level problems).
+Unlike some other Atlas incident reports, this document explicitly states a causal chain (caching misconfiguration → cache bypass → increased database queries → elevated response times) and identifies it as the confirmed root cause in the incident review.

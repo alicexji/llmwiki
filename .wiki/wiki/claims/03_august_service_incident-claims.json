@@ -1,0 +1,59 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\03_august_service_incident.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Atlas experienced a service interruption on August 12 from 2:14 PM to 3:01 PM.",
+      "evidence": "Atlas experienced a production service interruption on August 12 between 2:14 PM and 3:01 PM.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Some users were unable to submit new loan scenarios during the incident.",
+      "evidence": "During the incident, some users were unable to submit new loan scenarios. Existing saved scenarios remained accessible.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Existing saved scenarios remained accessible during the incident.",
+      "evidence": "Existing saved scenarios remained accessible.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Platform Engineering restored normal service at 3:01 PM.",
+      "evidence": "Platform Engineering restored normal service at 3:01 PM.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The root cause of the incident has not been confirmed and investigation remains open.",
+      "evidence": "The incident investigation remains open. The engineering team has not yet identified a confirmed root cause.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Additional monitoring has been enabled while investigation continues.",
+      "evidence": "Additional monitoring has been enabled while the investigation continues.",
+      "supported": true
+    },
+    {
+      "target": "August Service Incident",
+      "claim": "The incident occurred on August 12 between 2:14 PM and 3:01 PM.",
+      "evidence": "Atlas experienced a production service interruption on August 12 between 2:14 PM and 3:01 PM.",
+      "supported": true
+    },
+    {
+      "target": "August Service Incident",
+      "claim": "Platform Engineering restored normal service.",
+      "evidence": "Platform Engineering restored normal service at 3:01 PM.",
+      "supported": true
+    },
+    {
+      "target": "August Service Incident",
+      "claim": "No confirmed root cause has been identified.",
+      "evidence": "The engineering team has not yet identified a confirmed root cause.",
+      "supported": true
+    }
+  ]
+}

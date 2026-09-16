@@ -1,0 +1,41 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\08_leadership_update.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "Atlas remains one of Northstar Financial's major technology initiatives for 2026.",
+      "evidence": "Atlas remains one of Northstar Financial's major technology initiatives for 2026.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The team is reevaluating the final launch schedule as readiness work continues.",
+      "evidence": "The team has made significant progress but is reevaluating the final launch schedule as readiness work continues.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Security recommendations received this month are being incorporated into remaining engineering work.",
+      "evidence": "Security recommendations received this month are being incorporated into the remaining engineering work.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Leadership expects an updated launch date following the September 18 readiness review.",
+      "evidence": "Leadership expects the team to provide an updated launch date following the September 18 readiness review.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Maya Chen will present the Atlas readiness update at the next technology leadership meeting.",
+      "evidence": "Maya Chen will present the Atlas readiness update at the next technology leadership meeting.",
+      "supported": true
+    },
+    {
+      "target": "September Leadership Update",
+      "claim": "The update covers launch schedule reevaluation, security recommendations, and an upcoming readiness review presentation by Maya Chen.",
+      "evidence": "Leadership expects the team to provide an updated launch date following the September 18 readiness review. Maya Chen will present the Atlas readiness update at the next technology leadership meeting.",
+      "supported": true
+    }
+  ]
+}

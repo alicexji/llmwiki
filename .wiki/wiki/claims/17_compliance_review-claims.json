@@ -1,0 +1,59 @@
+{
+  "source": "c:\\Users\\alice\\workspace\\llmwiki\\.wiki\\raw\\17_compliance_review.md",
+  "claims": [
+    {
+      "target": "summary",
+      "claim": "The Compliance team completed its initial Atlas review on September 2.",
+      "evidence": "The Compliance team completed its initial Atlas review on September 2.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The review identified three documentation items needed before general availability.",
+      "evidence": "The review identified three documentation items that needed to be completed before general availability.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Jordan Lee coordinated the review between Compliance and the Atlas Product team.",
+      "evidence": "Jordan Lee coordinated the review between Compliance and the Atlas Product team.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "Two of the three documentation items were completed during the following week.",
+      "evidence": "Two of the documentation items were completed during the following week.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The third item remained open as of September 12.",
+      "evidence": "The third remained open as of September 12.",
+      "supported": true
+    },
+    {
+      "target": "summary",
+      "claim": "The Atlas readiness team continued tracking the remaining item as part of GA preparation.",
+      "evidence": "The Atlas readiness team continued tracking the remaining item as part of general availability preparation.",
+      "supported": true
+    },
+    {
+      "target": "Jordan Lee",
+      "claim": "Jordan Lee is the Product Manager responsible for coordinating Atlas readiness activities across Product, Engineering, and Compliance.",
+      "evidence": "Jordan Lee is the Product Manager responsible for coordinating Atlas readiness activities across Product, Engineering, and Compliance.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Compliance Review",
+      "claim": "Three documentation items were identified as needed before general availability.",
+      "evidence": "The review identified three documentation items that needed to be completed before general availability.",
+      "supported": true
+    },
+    {
+      "target": "Atlas Compliance Review",
+      "claim": "Jordan Lee coordinated the review between Compliance and the Atlas Product team.",
+      "evidence": "Jordan Lee coordinated the review between Compliance and the Atlas Product team.",
+      "supported": true
+    }
+  ]
+}

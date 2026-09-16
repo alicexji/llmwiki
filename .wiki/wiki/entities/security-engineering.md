@@ -16,3 +16,4 @@ sources:
 
 - [Project Atlas](project-atlas.md)
 - [Platform Engineering](platform-engineering.md)
+- [Atlas Security Approval Status](../concepts/atlas-security-approval-status.md)

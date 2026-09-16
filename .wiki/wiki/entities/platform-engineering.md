@@ -4,11 +4,11 @@ title: Platform Engineering
 tags:
   - team
   - engineering
-created: '2026-09-16T01:03:32.142Z'
+created: '2026-09-16T01:43:55.706Z'
 sources:
   - sources/01-atlas-project-overview-summary.md
 ---
-The **Platform Engineering** team at Northstar Financial is primarily responsible for developing Project Atlas, under the direction of Maya Chen.
+**Platform Engineering** is the Northstar Financial team primarily developing Project Atlas, led by Director Maya Chen.
 
 ## See also
 

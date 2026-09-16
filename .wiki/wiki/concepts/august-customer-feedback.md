@@ -29,3 +29,4 @@ This feedback highlights emerging usability and performance concerns during the 
 
 - [Project Atlas](../entities/project-atlas.md)
 - [August Pilot Feedback](august-pilot-feedback.md)
+- [Atlas Performance Review](atlas-performance-review.md)

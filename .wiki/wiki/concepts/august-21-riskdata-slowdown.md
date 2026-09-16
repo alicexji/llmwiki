@@ -3,22 +3,26 @@ type: concept
 title: August 21 RiskData Slowdown
 tags:
   - incident
+  - riskdata
   - performance
-  - vendor-dependency
+  - third-party-dependency
   - atlas
-created: '2026-09-16T01:22:08.392Z'
+created: '2026-09-16T01:45:44.211Z'
 sources:
   - sources/18-vendor-capacity-summary.md
 ---
-A brief performance degradation affecting **Project Atlas** on **August 21**, where users experienced slower-than-usual loading times when opening property analysis screens.
+## Overview
+On August 21, Atlas users experienced slower-than-usual loading times on property analysis screens due to unusually high request volumes at **RiskData**, an external vendor providing property and market data.
 
-**Cause:** The issue stemmed from RiskData, an external vendor providing property and market data, processing unusually high request volumes that morning.
+## Timeline
+- Morning: RiskData experiences high request volumes, causing slow loading in Atlas property analysis screens.
+- Atlas engineering team contacts RiskData to investigate.
+- Afternoon: Performance returns to normal.
 
-**Response:** The Atlas engineering team contacted RiskData as part of the investigation.
-
-**Resolution:** Loading performance returned to normal later that same afternoon, with no indication of lasting impact.
+## Root Cause
+The slowdown originated from RiskData's own load spike rather than an internal Atlas defect, illustrating a third-party dependency risk.
 
 ## See also
 
-- [Project Atlas](../entities/project-atlas.md)
 - [RiskData](../entities/riskdata.md)
+- [Project Atlas](../entities/project-atlas.md)

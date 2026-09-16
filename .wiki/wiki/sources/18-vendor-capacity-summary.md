@@ -6,8 +6,8 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This source describes a brief performance issue affecting Atlas that traces back to an external dependency, RiskData. RiskData is a third-party service Atlas relies on to provide property and market information used during loan analysis workflows. On August 21, Atlas users experienced slower-than-usual loading times when opening property analysis screens.
+This short update describes an August 21 incident involving **RiskData**, an external third-party service that Atlas relies on for property and market information used in loan analysis. On that date, Atlas users experienced slower-than-usual loading times when opening property analysis screens, attributed to RiskData processing unusually high request volumes that morning.
 
-The root cause was traced to RiskData processing unusually high request volumes that morning, which degraded response times for downstream consumers like Atlas. The Atlas engineering team contacted RiskData directly as part of its investigation into the slowdown. Loading performance returned to normal later that same afternoon, suggesting the issue was transient and resolved either by RiskData's own scaling/mitigation or a natural decline in request volume.
+The Atlas engineering team engaged RiskData directly as part of its investigation into the slowdown. Performance returned to normal later that afternoon, suggesting the issue was transient and tied to RiskData's own load conditions rather than a defect in Atlas's own systems.
 
-This incident highlights Atlas's dependency on third-party services for core functionality (loan analysis) and the operational practice of engaging external vendors directly when performance issues are suspected to originate outside Atlas's own systems.
+This document reinforces Atlas's dependency on external vendors for critical functionality, and highlights how third-party performance issues can directly affect user-facing latency even when the root cause lies outside the Atlas engineering team's own infrastructure.

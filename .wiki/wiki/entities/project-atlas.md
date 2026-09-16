@@ -3,18 +3,18 @@ type: entity
 title: Project Atlas
 tags:
   - project
-  - lending-platform
-  - northstar-financial
-created: '2026-09-16T01:03:32.087Z'
+  - lending
+  - modernization
+created: '2026-09-16T01:43:55.645Z'
 sources:
   - sources/01-atlas-project-overview-summary.md
 ---
-**Project Atlas** is Northstar Financial's initiative to modernize its commercial lending platform, replacing legacy lending services with a unified system for loan processing, pricing, and risk analysis.
+**Project Atlas** is Northstar Financial's initiative to modernize its commercial lending platform, replacing legacy lending services with a unified platform for loan processing, pricing, and risk analysis.
 
-- Started: **January 2026**
-- Target GA: **October 2026** (internal users)
-- Led by: Platform Engineering team, directed by Maya Chen
-- Dependencies: Data Engineering's shared pipelines, AuthCore authentication services
+- Started: January 2026
+- Led by: Platform Engineering team, under Maya Chen
+- Target GA date (internal users): October 2026
+- Dependencies: Data Engineering pipelines, AuthCore authentication
 
 ## See also
 
@@ -23,13 +23,7 @@ sources:
 - [Platform Engineering](platform-engineering.md)
 - [Data Engineering](data-engineering.md)
 - [AuthCore](authcore.md)
-- [Commercial Lending Platform](../concepts/commercial-lending-platform.md)
 - [MySQL to PostgreSQL Migration](../concepts/mysql-to-postgresql-migration.md)
-- [Enterprise Data Platform](../concepts/enterprise-data-platform.md)
-- [September 4 Authentication Incident](../concepts/september-4-authentication-incident.md)
 - [July 7 Certificate Incident](../concepts/july-7-certificate-incident.md)
-- [Payment Latency Incident \(September 2024\)](../concepts/payment-latency-incident-september-2024.md)
-- [RiskData](riskdata.md)
-- [August 21 RiskData Slowdown](../concepts/august-21-riskdata-slowdown.md)
-- [September 15 Performance Incident](../concepts/september-15-performance-incident.md)
 - [Atlas August Staffing Expansion](../concepts/atlas-august-staffing-expansion.md)
+- [Atlas Security Approval Status](../concepts/atlas-security-approval-status.md)

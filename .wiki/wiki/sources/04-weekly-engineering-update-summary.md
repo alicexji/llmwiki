@@ -6,11 +6,9 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This weekly platform engineering update recaps a busy week for the **Atlas** team, touching on three of the same events documented elsewhere in the wiki: the completed **MySQL to PostgreSQL Migration**, the **August 12 Service Incident**, and ongoing **October Release Preparation**.
+This weekly engineering update covers a condensed but eventful week for the Atlas platform team, combining a successful infrastructure migration with an operational incident. On Monday, engineering completed the planned PostgreSQL migration with initial validation reported as successful, aligning with earlier migration planning documented elsewhere. Mid-week, the team experienced a 47-minute production service interruption affecting loan scenario submissions, prompting immediate investigation.
 
-On Monday, engineering completed the planned PostgreSQL migration with successful initial validation. On Wednesday, a 47-minute production service interruption affected loan scenario submissions, prompting the team to spend the rest of the week reviewing application logs, database metrics, and service dependencies to investigate root cause.
-
-The update closes with **Maya Chen** thanking the engineering team for its quick incident response, and confirms the team remains focused on preparing Atlas for its planned October release.
+Following the incident, engineers spent the remainder of the week conducting root-cause analysis, reviewing application logs, database metrics, and service dependencies to identify contributing factors. Work also continued in parallel on preparing Atlas for its planned October release, indicating the team is balancing incident response with ongoing delivery commitments. Maya Chen publicly thanked the engineering team for its rapid incident response, reflecting a leadership focus on team morale and recognition during a demanding week.
 
 ## See also
 
@@ -20,4 +18,3 @@ The update closes with **Maya Chen** thanking the engineering team for its quick
 - [MySQL to PostgreSQL Migration](../concepts/mysql-to-postgresql-migration.md)
 - [August 12 Service Incident](../concepts/august-12-service-incident.md)
 - [October Release Preparation](../concepts/october-release-preparation.md)
-- [August 12 Service Incident \(Root Cause Investigation\)](../concepts/august-12-service-incident-root-cause-investigation.md)

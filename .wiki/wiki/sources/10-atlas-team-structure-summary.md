@@ -6,9 +6,9 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This document outlines the organizational structure supporting Project Atlas. **Platform Engineering**, led by Director **Maya Chen**, is the primary engineering organization responsible for Atlas development, with a team composed of backend engineers, frontend engineers, and site reliability engineers.
+This document outlines the organizational structure supporting Project Atlas, identifying Platform Engineering as the primary engineering group responsible for the project, led by Director Maya Chen. The Atlas development team, embedded within Platform Engineering, comprises backend engineers, frontend engineers, and site reliability engineers.
 
-Several other teams contribute supporting services: **Data Engineering** provides shared loan and risk data pipelines, **Security Engineering** performs security reviews and defines security requirements, and **Product Lending** defines product requirements and coordinates the pilot program. This cross-team structure highlights the collaborative nature of Atlas's development, spanning engineering, data, security, and product functions.
+Several supporting teams contribute critical services: Data Engineering supplies shared loan and risk data pipelines, Security Engineering conducts security reviews and defines security requirements, and Product Lending defines product requirements and coordinates the pilot program. This cross-team structure reflects a matrixed delivery model where Platform Engineering owns core development while relying on specialized teams for data, security, and product direction.
 
 ## See also
 

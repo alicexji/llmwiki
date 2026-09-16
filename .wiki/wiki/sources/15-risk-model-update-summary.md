@@ -6,9 +6,11 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This brief document describes a mid-August update to the credit-risk model used by Project Atlas. On August 18, the Risk Modeling team released a new version of the model that incorporated additional borrower and property characteristics into its risk calculations. In the following week, the Atlas Product team fielded multiple questions from pilot users who observed unexpected changes in their risk scores as a result of the model update.
+This source describes an August 18 update to the credit-risk model used by Project Atlas, released by the Risk Modeling team. The new model incorporated additional borrower and property characteristics into its risk calculations, changing how risk scores were computed for pilot users.
 
-To address this confusion, Product and Risk Modeling teams met on August 27 to review the feedback collected from pilot users. As a resolution, additional documentation explaining the model's new inputs was distributed to pilot users to clarify how the changes affected scoring outcomes.
+In the following week, the Atlas Product team fielded several questions from pilot users who noticed unexpected shifts in risk scores after the update. This prompted a joint review meeting between Product and Risk Modeling on August 27 to assess the feedback and determine appropriate next steps.
+
+As a resolution, additional documentation explaining the model's new inputs was distributed to pilot users to help them understand the changes in risk scoring and reduce confusion going forward.
 
 ## See also
 

@@ -6,8 +6,12 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This short update reports that Atlas cloud compute capacity was increased by roughly 30% in August to accommodate the expanding pilot program. In parallel, average API response times improved compared to July, though the document does not attribute this improvement solely to the capacity increase.
+This brief update covers an August cloud capacity expansion for Project Atlas, undertaken to support the growing pilot program. Compute capacity was increased by approximately 30%, coinciding with improved average API response times relative to July.
 
-Engineering pursued several concurrent performance initiatives during August, including query optimization, caching improvements, and frontend performance work. The team plans to continue monitoring capacity as pilot usage grows, suggesting scaling remains an active, ongoing concern rather than a one-time fix.
+The document notes that engineering pursued multiple parallel performance initiatives during the same period—including query optimization, caching improvements, and frontend performance work—making it difficult to isolate the specific contribution of the capacity increase to the observed latency improvements. The team indicates ongoing monitoring of capacity as pilot usage continues to grow.
 
-This document is notable for explicitly listing multiple concurrent changes (capacity increase, query optimization, caching, frontend work) alongside the observed response time improvement, without isolating a single causal factor—relevant context for later discussions about root cause attribution for performance gains.
+## See also
+
+- [Project Atlas](../entities/project-atlas.md)
+- [Atlas Performance Review](../concepts/atlas-performance-review.md)
+- [August Pilot Feedback](../concepts/august-pilot-feedback.md)

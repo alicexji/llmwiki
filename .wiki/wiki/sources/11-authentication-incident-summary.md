@@ -6,13 +6,15 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This short incident note documents intermittent login failures affecting Atlas users on September 4. Atlas relies on **AuthCore** for user authentication, and elevated authentication error rates were observed during the incident window. The Atlas team engaged AuthCore as part of the investigation, and service returned to normal later that same morning.
+This brief incident note describes intermittent login failures affecting Atlas users on September 4. Atlas relies on **AuthCore** for user authentication, and during the incident the Atlas team observed elevated authentication error rates, prompting them to contact AuthCore as part of the investigation. Service returned to normal later that same morning.
 
-Notably, the root cause has not been determined at the time of writing — it remains unclear whether the failures originated within Atlas itself, within AuthCore, or in another dependency. AuthCore is continuing to assist Northstar Financial with the ongoing investigation, indicating this is treated as an open/unresolved incident rather than a closed one.
+Notably, the root cause has not been determined at the time of writing. The document explicitly states it is unclear whether the failures originated within Atlas itself, within AuthCore, or another dependency in the chain. AuthCore is actively assisting Northstar (the parent organization) with the ongoing investigation, indicating an open collaborative effort to resolve the ambiguity.
+
+This short update contrasts with other more detailed incident reports in the wiki, as it captures an early, unresolved state of investigation rather than a completed root-cause analysis.
 
 ## See also
 
-- [September 4 Authentication Incident](../concepts/september-4-authentication-incident.md)
 - [AuthCore](../entities/authcore.md)
 - [Project Atlas](../entities/project-atlas.md)
 - [Northstar Financial](../entities/northstar-financial.md)
+- [September 4 Authentication Incident](../concepts/september-4-authentication-incident.md)

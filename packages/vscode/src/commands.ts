@@ -238,6 +238,7 @@ export function registerCommands(
     let totalCreated = 0;
     let totalUpdated = 0;
     let succeeded = 0;
+    let skipped = 0;
     let failed = 0;
 
     await vscode.window.withProgress(
@@ -260,7 +261,8 @@ export function registerCommands(
             const result = await llmIngest(sourcePath, workspaceFolder, false, outputChannel, progress, cancelToken);
             totalCreated += result.pagesCreated.length;
             totalUpdated += result.pagesUpdated.length;
-            succeeded++;
+            if (result.status === 'skipped') skipped++;
+            else succeeded++;
           } catch (err) {
             const msg = err instanceof Error ? err.message : String(err);
             outputChannel.appendLine(`[ingest] Failed ${fileName}: ${msg}`);
@@ -271,6 +273,7 @@ export function registerCommands(
     );
 
     const parts = [`${succeeded} file(s) ingested`];
+    if (skipped > 0) parts.push(`${skipped} skipped (already ingested)`);
     if (totalCreated > 0) parts.push(`${totalCreated} pages created`);
     if (totalUpdated > 0) parts.push(`${totalUpdated} pages updated`);
     if (failed > 0) parts.push(`${failed} failed`);

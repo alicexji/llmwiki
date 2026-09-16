@@ -37,7 +37,7 @@ export async function llmIngest(
   outputChannel: vscode.OutputChannel,
   progress: vscode.Progress<{ message?: string; increment?: number }>,
   token: vscode.CancellationToken,
-): Promise<{ pagesCreated: string[]; pagesUpdated: string[] }> {
+): Promise<{ pagesCreated: string[]; pagesUpdated: string[]; status: 'ingested' | 'skipped' }> {
   const wikiDir = join(workspaceFolder, 'wiki');
   const indexPath = join(wikiDir, 'index.md');
   const logPath = join(wikiDir, 'log.md');
@@ -52,7 +52,8 @@ export async function llmIngest(
     throw new Error(ingestResult.error ?? 'Ingest failed');
   }
   if (ingestResult.status === 'skipped') {
-    throw new Error(ingestResult.message ?? 'Source already ingested. Use force to re-ingest.');
+    outputChannel.appendLine(`[llmIngest] Skipped already-ingested source: ${sourcePath}`);
+    return { pagesCreated, pagesUpdated, status: 'skipped' };
   }
   pagesCreated.push(...ingestResult.pages_created);
   pagesUpdated.push(...ingestResult.pages_updated);
@@ -78,7 +79,7 @@ export async function llmIngest(
   const analysis = await callLlm(sourceContent, wikiContext, outputChannel, token);
   if (!analysis) {
     outputChannel.appendLine('[llmIngest] LLM analysis returned nothing — skipping enrichment');
-    return { pagesCreated, pagesUpdated };
+    return { pagesCreated, pagesUpdated, status: 'ingested' };
   }
 
   // ── Step 4: Rewrite the summary page with LLM summary ───────
@@ -151,7 +152,7 @@ export async function llmIngest(
     details: `LLM created ${analysis.entities.length} entities, ${analysis.concepts.length} concepts, ${analysis.crosslinks.length} crosslinks.`,
   });
 
-  return { pagesCreated, pagesUpdated };
+  return { pagesCreated, pagesUpdated, status: 'ingested' };
 }
 
 // ── LLM call ─────────────────────────────────────────────────────

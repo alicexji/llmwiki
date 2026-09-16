@@ -7,7 +7,7 @@ coverage/
 .vscode-test/
 
 # Local dev wiki used while building the extension
-.wiki/
+
 
 # Harness-managed (local only, not committed)
 .harness-state-prompt.md

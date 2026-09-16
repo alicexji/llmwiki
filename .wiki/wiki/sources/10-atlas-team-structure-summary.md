@@ -6,11 +6,9 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This source document describes the organizational structure behind Project Atlas, clarifying which teams contribute to the project and their responsibilities. Platform Engineering, led by Director Maya Chen, is the primary engineering organization for Atlas, housing backend engineers, frontend engineers, and site reliability engineers directly responsible for the platform's development.
+This document outlines the organizational structure supporting Project Atlas. **Platform Engineering**, led by Director **Maya Chen**, is the primary engineering organization responsible for Atlas development, with a team composed of backend engineers, frontend engineers, and site reliability engineers.
 
-Beyond Platform Engineering, several supporting teams contribute critical services. Data Engineering supplies shared loan and risk data pipelines that Atlas depends on. Security Engineering conducts security reviews and defines security requirements for the project. The Product Lending team defines product requirements and coordinates the pilot program, bridging business needs with engineering execution.
-
-This document is primarily useful as a reference for understanding cross-team dependencies and accountability within the Atlas organization, complementing other sources that describe incidents, performance, and releases tied to these teams.
+Several other teams contribute supporting services: **Data Engineering** provides shared loan and risk data pipelines, **Security Engineering** performs security reviews and defines security requirements, and **Product Lending** defines product requirements and coordinates the pilot program. This cross-team structure highlights the collaborative nature of Atlas's development, spanning engineering, data, security, and product functions.
 
 ## See also
 
@@ -20,3 +18,4 @@ This document is primarily useful as a reference for understanding cross-team de
 - [Data Engineering](../entities/data-engineering.md)
 - [Security Engineering](../entities/security-engineering.md)
 - [Product Lending](../entities/product-lending.md)
+- [Atlas Team Structure](../concepts/atlas-team-structure.md)

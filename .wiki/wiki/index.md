@@ -28,6 +28,35 @@
 - [11_authentication_incident.md](sources/11-authentication-incident-summary.md) — Source file (.md)
 - [12_atlas_budget_review.md](sources/12-atlas-budget-review-summary.md) — Source file (.md)
 - [13_july_certificate_incident.md](sources/13-july-certificate-incident-summary.md) — Source file (.md)
+- [14_payment_latency.md](sources/14-payment-latency-summary.md) — Source file (.md)
+- [15_risk_model_update.md](sources/15-risk-model-update-summary.md) — Source file (.md)
+- [16_cloud_scaling.md](sources/16-cloud-scaling-summary.md) — Source file (.md)
+- [17_compliance_review.md](sources/17-compliance-review-summary.md) — Source file (.md)
+- [18_vendor_capacity.md](sources/18-vendor-capacity-summary.md) — Source file (.md)
+- [19_training_and_errors.md](sources/19-training-and-errors-summary.md) — Source file (.md)
+- [20_explicit_performance_cause.md](sources/20-explicit-performance-cause-summary.md) — Source file (.md)
+- [21_hiring_and_delivery.md](sources/21-hiring-and-delivery-summary.md) — Source file (.md)
+- [01_atlas_project_overview.md](sources/01-atlas-project-overview-summary.md) — Source file (.md)
+- [02_database_migration.md](sources/02-database-migration-summary.md) — Source file (.md)
+- [03_august_service_incident.md](sources/03-august-service-incident-summary.md) — Source file (.md)
+- [04_weekly_engineering_update.md](sources/04-weekly-engineering-update-summary.md) — Source file (.md)
+- [05_customer_feedback.md](sources/05-customer-feedback-summary.md) — Source file (.md)
+- [06_performance_review.md](sources/06-performance-review-summary.md) — Source file (.md)
+- [07_release_planning.md](sources/07-release-planning-summary.md) — Source file (.md)
+- [08_leadership_update.md](sources/08-leadership-update-summary.md) — Source file (.md)
+- [09_data_platform_overview.md](sources/09-data-platform-overview-summary.md) — Source file (.md)
+- [10_atlas_team_structure.md](sources/10-atlas-team-structure-summary.md) — Source file (.md)
+- [11_authentication_incident.md](sources/11-authentication-incident-summary.md) — Source file (.md)
+- [12_atlas_budget_review.md](sources/12-atlas-budget-review-summary.md) — Source file (.md)
+- [13_july_certificate_incident.md](sources/13-july-certificate-incident-summary.md) — Source file (.md)
+- [14_payment_latency.md](sources/14-payment-latency-summary.md) — Source file (.md)
+- [15_risk_model_update.md](sources/15-risk-model-update-summary.md) — Source file (.md)
+- [16_cloud_scaling.md](sources/16-cloud-scaling-summary.md) — Source file (.md)
+- [17_compliance_review.md](sources/17-compliance-review-summary.md) — Source file (.md)
+- [18_vendor_capacity.md](sources/18-vendor-capacity-summary.md) — Source file (.md)
+- [19_training_and_errors.md](sources/19-training-and-errors-summary.md) — Source file (.md)
+- [20_explicit_performance_cause.md](sources/20-explicit-performance-cause-summary.md) — Source file (.md)
+- [21_hiring_and_delivery.md](sources/21-hiring-and-delivery-summary.md) — Source file (.md)
 
 ## Entities
 
@@ -41,6 +70,8 @@
 - [Forecasting](entities/forecasting.md) — #application #data-consumer #northstar
 - [Security Engineering](entities/security-engineering.md) — #team #security #atlas #organization
 - [Product Lending](entities/product-lending.md) — #team #product #atlas #pilot-program
+- [Jordan Lee](entities/jordan-lee.md) — #person #product-manager #atlas #compliance #ga-readiness
+- [RiskData](entities/riskdata.md) — #vendor #third-party-service #risk-data #external-dependency
 
 ## Concepts
 
@@ -56,3 +87,21 @@
 - [September 4 Authentication Incident](concepts/september-4-authentication-incident.md) — #incident #authentication #atlas #authcore #outage
 - [Atlas Q3 Budget Review](concepts/atlas-q3-budget-review.md) — #budget #finance #atlas #q3 #cost-overrun
 - [July 7 Certificate Incident](concepts/july-7-certificate-incident.md) — #incident #tls-certificate #outage #atlas #platform-engineering
+- [August 12 Service Incident \(Root Cause Investigation\)](concepts/august-12-service-incident-root-cause-investigation.md) — #incident #atlas #platform-engineering #outage #root-cause-analysis
+- [August Customer Feedback](concepts/august-customer-feedback.md) — #customer-feedback #project-atlas #performance #support-tickets #pilot
+- [Atlas Performance Review](concepts/atlas-performance-review.md) — #performance #atlas #latency #engineering-review #pilot-feedback
+- [Atlas October GA Readiness Review](concepts/atlas-october-ga-readiness-review.md) — #project-atlas #release-planning #ga #readiness-review #security
+- [September Leadership Update](concepts/september-leadership-update.md) — #leadership #project-atlas #status-update #security #northstar-financial
+- [Enterprise Data Platform](concepts/enterprise-data-platform.md) — #data-platform #data-engineering #infrastructure #shared-services #northstar-financial
+- [Atlas Team Structure](concepts/atlas-team-structure.md) — #team-structure #organization #atlas #platform-engineering
+- [September 4 Authentication Incident](concepts/september-4-authentication-incident.md) — #incident #authentication #atlas #authcore #outage
+- [Atlas Q3 Budget Review](concepts/atlas-q3-budget-review.md) — #budget #finance #atlas #q3 #cost-review
+- [July 7 Certificate Incident](concepts/july-7-certificate-incident.md) — #incident #tls-certificate #atlas #platform-engineering #root-cause
+- [Payment Latency Incident \(September 2024\)](concepts/payment-latency-incident-september-2024.md) — #incident #performance #latency #payments #atlas
+- [August Risk Model Update](concepts/august-risk-model-update.md) — #risk-model #credit-risk #atlas #pilot-feedback #risk-modeling
+- [Atlas Cloud Capacity Update](concepts/atlas-cloud-capacity-update.md) — #atlas #cloud-scaling #capacity #performance #pilot-program
+- [Atlas Compliance Review](concepts/atlas-compliance-review.md) — #atlas #compliance #ga-readiness #documentation #review
+- [August 21 RiskData Slowdown](concepts/august-21-riskdata-slowdown.md) — #incident #performance #vendor-dependency #atlas
+- [September Pilot Training Expansion](concepts/september-pilot-training-expansion.md) — #training #atlas-pilot #onboarding #user-error #product
+- [September 15 Performance Incident](concepts/september-15-performance-incident.md) — #incident #performance #atlas #caching #database #root-cause-analysis
+- [Atlas August Staffing Expansion](concepts/atlas-august-staffing-expansion.md) — #staffing #atlas #platform-engineering #hiring #onboarding

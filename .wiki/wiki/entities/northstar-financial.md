@@ -9,3 +9,7 @@ sources:
   - sources/01-atlas-project-overview-summary.md
 ---
 **Northstar Financial** is the organization undertaking Project Atlas, an initiative to modernize its commercial lending platform.
+
+## See also
+
+- [September 4 Authentication Incident](../concepts/september-4-authentication-incident.md)

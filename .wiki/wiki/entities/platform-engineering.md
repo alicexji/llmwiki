@@ -15,3 +15,4 @@ The **Platform Engineering** team at Northstar Financial is primarily responsibl
 - [Project Atlas](project-atlas.md)
 - [Maya Chen](maya-chen.md)
 - [July 7 Certificate Incident](../concepts/july-7-certificate-incident.md)
+- [Atlas August Staffing Expansion](../concepts/atlas-august-staffing-expansion.md)

@@ -6,9 +6,9 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This brief update addresses the funding status of Project Atlas as reviewed by Finance and Platform Engineering. The document confirms that current funding is sufficient to sustain planned development and pilot activities through the present quarter, meaning no immediate budget shortfall exists for ongoing work.
+This brief update addresses the ongoing review of Project Atlas's 2026 funding requirements, conducted jointly by Finance and Platform Engineering. It confirms that current funding is sufficient to sustain planned development and pilot activities through the present quarter, providing short-term reassurance about project continuity.
 
-Looking ahead, the note flags that the 2027 funding request will be evaluated by leadership as part of the annual planning process, but no final budget for that year has been approved yet. Notably, the update deliberately omits specific dollar figures, functioning more as a status/process checkpoint than a detailed financial report.
+The note also flags that 2027 funding remains unresolved, with leadership deferring a final decision until the annual planning process. No specific budget figures are disclosed in this update, indicating it is a status check rather than a financial disclosure.
 
 ## See also
 

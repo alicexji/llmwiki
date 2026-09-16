@@ -16,3 +16,4 @@ sources:
 - [Maya Chen](maya-chen.md)
 - [July 7 Certificate Incident](../concepts/july-7-certificate-incident.md)
 - [Atlas August Staffing Expansion](../concepts/atlas-august-staffing-expansion.md)
+- [Atlas Q3 Budget Review](../concepts/atlas-q3-budget-review.md)

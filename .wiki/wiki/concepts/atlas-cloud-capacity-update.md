@@ -2,27 +2,30 @@
 type: concept
 title: Atlas Cloud Capacity Update
 tags:
-  - capacity
-  - cloud-scaling
+  - capacity-planning
   - performance
+  - cloud-infrastructure
   - atlas
   - pilot-program
-created: '2026-09-16T01:45:31.168Z'
+created: '2026-09-16T01:58:41.754Z'
 sources:
   - sources/16-cloud-scaling-summary.md
 ---
 ## Overview
-In August, **Project Atlas** cloud compute capacity was increased by approximately **30%** to support the expanding pilot program.
+In August 2024, **Project Atlas** cloud compute capacity was increased by approximately **30%** to support the expanding pilot program.
 
-## Outcomes
-- Average API response times improved compared to July.
-- Improvements coincided with other parallel engineering efforts: query optimization, caching improvements, and frontend performance work.
-- Because multiple initiatives occurred simultaneously, the specific impact of the capacity increase alone is not isolated.
+## Key Points
+- Average API response times improved in August compared to July.
+- Multiple performance initiatives ran concurrently: query optimization, caching improvements, and frontend performance work.
+- No single cause is isolated for the improvement; capacity increase and engineering initiatives happened together.
+- The team plans ongoing capacity monitoring as pilot usage grows.
 
-## Next Steps
-The team plans to continue monitoring capacity needs as pilot usage grows.
+## Significance
+Highlights the challenge of isolating root causes for performance improvements when multiple changes (infrastructure and code-level) occur in parallel.
 
 ## See also
 
 - [Project Atlas](../entities/project-atlas.md)
+- [September Performance Improvements](september-performance-improvements.md)
 - [Atlas Performance Review](atlas-performance-review.md)
+- [Atlas Pilot Adoption](atlas-pilot-adoption.md)

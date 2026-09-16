@@ -2,23 +2,24 @@
 type: concept
 title: Atlas Team Structure
 tags:
-  - team-structure
   - organization
-  - atlas
+  - team-structure
+  - project-atlas
   - platform-engineering
-created: '2026-09-16T01:44:50.888Z'
+created: '2026-09-16T01:58:03.034Z'
 sources:
   - sources/10-atlas-team-structure-summary.md
 ---
 ## Overview
-Describes the organizational structure behind Project Atlas.
+Describes the organizational structure supporting **Project Atlas**.
 
-- **Platform Engineering**: primary engineering org, owns backend, frontend, and SRE roles for Atlas; led by Maya Chen.
+- **Platform Engineering** is the primary engineering organization responsible for Atlas, led by **Maya Chen** (Director).
+- The Atlas development team includes backend engineers, frontend engineers, and site reliability engineers, all within Platform Engineering.
+
+## Contributing Teams
 - **Data Engineering**: provides shared loan and risk data pipelines.
-- **Security Engineering**: performs security reviews and sets security requirements.
+- **Security Engineering**: performs security reviews and defines security requirements.
 - **Product Lending**: defines product requirements and coordinates the pilot program.
-
-This reflects a matrixed model where core development is centralized but dependent on specialized supporting teams.
 
 ## See also
 

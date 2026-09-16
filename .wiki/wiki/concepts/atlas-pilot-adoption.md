@@ -6,26 +6,25 @@ tags:
   - pilot
   - adoption
   - lending
-  - feedback
-created: '2026-09-16T01:46:29.162Z'
+  - user-feedback
+created: '2026-09-16T01:59:43.152Z'
 sources:
   - sources/25-pilot-adoption-summary.md
 ---
 ## Overview
-The **Atlas pilot** expanded during August and September as additional internal users, particularly from lending teams, received access to the platform.
+The Atlas pilot expanded through **August and September**, with additional internal users from lending teams gaining access to the platform.
 
 ## Key Points
-- Usage increased as more lending teams joined the pilot
-- Feedback has been generally positive
-- Users requested workflow and performance improvements
-- The pilot team continues collecting usage metrics and feedback
-- No final user count or adoption percentage was disclosed in this update
+- Usage increased as more lending teams joined the pilot.
+- Feedback has been generally positive, with requests for **workflow** and **performance** improvements.
+- The pilot team continues to gather usage metrics and user feedback.
+- No final user count or adoption percentage was disclosed in this update.
 
-This update complements earlier pilot feedback and training expansion reports, tracking the pilot's growth trajectory ahead of GA.
+## Related
+This update complements earlier customer feedback and pilot training expansion reports, tracking the platform's rollout progress ahead of GA.
 
 ## See also
 
 - [Project Atlas](../entities/project-atlas.md)
-- [Product Lending](../entities/product-lending.md)
-- [August Pilot Feedback](august-pilot-feedback.md)
 - [September Pilot Training Expansion](september-pilot-training-expansion.md)
+- [August Customer Feedback \(Support Trends\)](august-customer-feedback-support-trends.md)

@@ -6,21 +6,22 @@ tags:
   - general-availability
   - release-planning
   - timeline
-created: '2026-09-16T01:46:22.693Z'
+created: '2026-09-16T01:59:36.832Z'
 sources:
   - sources/24-october-launch-target-summary.md
 ---
 ## Overview
-The Atlas team has set **October 2026** as a planning target for general availability (GA) release to internal users. This is explicitly described as a *target*, not a committed date.
+The Atlas team is targeting **October 2026** for general availability (GA) to internal users. This date is explicitly framed as a **planning target**, not a committed release date.
 
-## Key Points
-- Final GA date depends on completion of readiness activities and leadership review.
-- A confirmed release date will be announced after the readiness process concludes.
-- Reflects a cautious, non-binding approach to release communication.
+## Key Conditions
+- Final release timing depends on completion of **readiness activities**.
+- A **leadership review** must also be completed before commitment.
+- A confirmed release date will be communicated only after the readiness process concludes.
+
+This reflects a cautious, conditional approach to GA planning, consistent with earlier readiness reviews raising open items.
 
 ## See also
 
 - [Project Atlas](../entities/project-atlas.md)
 - [Atlas GA Readiness Review](atlas-ga-readiness-review.md)
 - [October GA Readiness Review](october-ga-readiness-review.md)
-- [Atlas October GA Readiness Review](atlas-october-ga-readiness-review.md)

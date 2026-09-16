@@ -6,11 +6,11 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This document describes Northstar Financial's shared **Enterprise Data Platform**, operated by the **Data Engineering** team. The platform runs ingestion pipelines that collect loan, pricing, and risk data from multiple internal systems, serving as a shared backbone for several downstream applications.
+This source describes Northstar Financial's Enterprise Data Platform, operated by the Data Engineering team. The platform provides ingestion pipelines that collect loan, pricing, and risk data from multiple internal systems, serving as shared infrastructure for several downstream applications.
 
-A key detail is that **Project Atlas** relies on two of these shared pipelines for its risk analysis functionality, meaning Atlas's reliability is partly dependent on infrastructure it does not own. The same pipelines also feed **Portfolio Analytics** and **Forecasting** applications, making the platform a shared dependency across multiple business-critical systems.
+Atlas relies on two of these shared pipelines for its risk analysis functionality, and the same pipelines also feed the Portfolio Analytics and Forecasting applications, making the platform a critical shared dependency across multiple products.
 
-The document draws a clear responsibility boundary: Data Engineering owns pipeline availability, schema management, and data quality monitoring, while application teams (like the Atlas team) remain responsible for the products that consume this data. This division of responsibility is relevant context for understanding root causes of incidents affecting Atlas, since upstream data issues could originate outside the Atlas team's direct control.
+Responsibilities are clearly divided: Data Engineering owns pipeline availability, schema management, and data quality monitoring, while application teams (such as those behind Atlas, Portfolio Analytics, and Forecasting) remain responsible for their own consuming products. This separation of concerns highlights a shared-infrastructure model where upstream data reliability is centralized but downstream product ownership is distributed.
 
 ## See also
 

@@ -92,6 +92,34 @@
 - [26_maya_role.md](sources/26-maya-role-summary.md) — Source file (.md)
 - [27_performance_improvement.md](sources/27-performance-improvement-summary.md) — Source file (.md)
 - [28_security_status.md](sources/28-security-status-summary.md) — Source file (.md)
+- [01_atlas_project_overview.md](sources/01-atlas-project-overview-summary.md) — Source file (.md)
+- [02_database_migration.md](sources/02-database-migration-summary.md) — Source file (.md)
+- [03_august_service_incident.md](sources/03-august-service-incident-summary.md) — Source file (.md)
+- [04_weekly_engineering_update.md](sources/04-weekly-engineering-update-summary.md) — Source file (.md)
+- [05_customer_feedback.md](sources/05-customer-feedback-summary.md) — Source file (.md)
+- [06_performance_review.md](sources/06-performance-review-summary.md) — Source file (.md)
+- [07_release_planning.md](sources/07-release-planning-summary.md) — Source file (.md)
+- [08_leadership_update.md](sources/08-leadership-update-summary.md) — Source file (.md)
+- [09_data_platform_overview.md](sources/09-data-platform-overview-summary.md) — Source file (.md)
+- [10_atlas_team_structure.md](sources/10-atlas-team-structure-summary.md) — Source file (.md)
+- [11_authentication_incident.md](sources/11-authentication-incident-summary.md) — Source file (.md)
+- [12_atlas_budget_review.md](sources/12-atlas-budget-review-summary.md) — Source file (.md)
+- [13_july_certificate_incident.md](sources/13-july-certificate-incident-summary.md) — Source file (.md)
+- [14_payment_latency.md](sources/14-payment-latency-summary.md) — Source file (.md)
+- [15_risk_model_update.md](sources/15-risk-model-update-summary.md) — Source file (.md)
+- [16_cloud_scaling.md](sources/16-cloud-scaling-summary.md) — Source file (.md)
+- [17_compliance_review.md](sources/17-compliance-review-summary.md) — Source file (.md)
+- [18_vendor_capacity.md](sources/18-vendor-capacity-summary.md) — Source file (.md)
+- [19_training_and_errors.md](sources/19-training-and-errors-summary.md) — Source file (.md)
+- [20_explicit_performance_cause.md](sources/20-explicit-performance-cause-summary.md) — Source file (.md)
+- [21_hiring_and_delivery.md](sources/21-hiring-and-delivery-summary.md) — Source file (.md)
+- [22_atlas_funding.md](sources/22-atlas-funding-summary.md) — Source file (.md)
+- [23_external_availability.md](sources/23-external-availability-summary.md) — Source file (.md)
+- [24_october_launch_target.md](sources/24-october-launch-target-summary.md) — Source file (.md)
+- [25_pilot_adoption.md](sources/25-pilot-adoption-summary.md) — Source file (.md)
+- [26_maya_role.md](sources/26-maya-role-summary.md) — Source file (.md)
+- [27_performance_improvement.md](sources/27-performance-improvement-summary.md) — Source file (.md)
+- [28_security_status.md](sources/28-security-status-summary.md) — Source file (.md)
 
 ## Entities
 
@@ -114,6 +142,13 @@
 - [Data Engineering](entities/data-engineering.md) — #team #data #infrastructure
 - [AuthCore](entities/authcore.md) — #vendor #authentication #third-party
 - [Maya Chen](entities/maya-chen.md) — #leadership #platform-engineering #director #atlas
+- [Project Atlas](entities/project-atlas.md) — #project #lending #modernization #northstar
+- [Maya Chen](entities/maya-chen.md) — #person #leadership #platform-engineering
+- [Northstar Financial](entities/northstar-financial.md) — #organization #financial-services
+- [AuthCore](entities/authcore.md) — #vendor #authentication #external
+- [Jordan Lee](entities/jordan-lee.md) — #person #product-manager #atlas #compliance
+- [RiskData](entities/riskdata.md) — #vendor #external-service #risk-data #dependency
+- [Maya Chen](entities/maya-chen.md) — #leadership #platform-engineering #atlas
 
 ## Concepts
 
@@ -171,4 +206,32 @@
 - [Atlas Pilot Adoption](concepts/atlas-pilot-adoption.md) — #atlas #pilot #adoption #lending #feedback
 - [Atlas Leadership Structure](concepts/atlas-leadership-structure.md) — #governance #leadership #decision-making #atlas
 - [September Performance Improvements](concepts/september-performance-improvements.md) — #atlas #performance #optimization #caching #engineering-update
+- [Atlas Security Approval Status](concepts/atlas-security-approval-status.md) — #security #atlas #ga-readiness #compliance #status-update
+- [Commercial Lending Platform](concepts/commercial-lending-platform.md) — #lending #platform #architecture
+- [MySQL to PostgreSQL Migration](concepts/mysql-to-postgresql-migration.md) — #database-migration #postgresql #mysql #atlas #infrastructure #scalability
+- [August 12 Service Incident](concepts/august-12-service-incident.md) — #incident #outage #atlas #platform-engineering #root-cause-investigation
+- [Weekly Engineering Update \(This Week\)](concepts/weekly-engineering-update-this-week.md) — #weekly-update #atlas #incident #migration #release-planning
+- [August Customer Feedback \(Support Trends\)](concepts/august-customer-feedback-support-trends.md) — #customer-feedback #support-tickets #performance #pilot #atlas
+- [Atlas Performance Review \(August Latency Investigation\)](concepts/atlas-performance-review-august-latency-investigation.md) — #performance #atlas #latency #investigation #pilot-feedback
+- [September 18 Readiness Review](concepts/september-18-readiness-review.md) — #atlas #readiness-review #release-planning #milestone
+- [Atlas GA October Target](concepts/atlas-ga-october-target.md) — #atlas #general-availability #release-planning #roadmap
+- [Security Recommendations on Session Management and Authentication Logging](concepts/security-recommendations-on-session-management-and-authentication-logging.md) — #security #authentication #session-management #atlas
+- [Atlas Team Structure](concepts/atlas-team-structure.md) — #organization #team-structure #project-atlas #platform-engineering
+- [September 4 Authentication Incident](concepts/september-4-authentication-incident.md) — #incident #authentication #atlas #authcore #root-cause-unknown
+- [Atlas Q3 Budget Review](concepts/atlas-q3-budget-review.md) — #budget #finance #project-atlas #q3-review #cost-overrun
+- [July 7 Certificate Incident](concepts/july-7-certificate-incident.md) — #incident #tls-certificate #outage #atlas #root-cause
+- [September Payment Processing Latency Episode](concepts/september-payment-processing-latency-episode.md) — #atlas #performance #latency #payment-processing #incident
+- [August Risk Model Update](concepts/august-risk-model-update.md) — #risk-model #atlas #credit-risk #pilot-feedback #product
+- [Atlas Cloud Capacity Update](concepts/atlas-cloud-capacity-update.md) — #capacity-planning #performance #cloud-infrastructure #atlas #pilot-program
+- [Atlas Compliance Review](concepts/atlas-compliance-review.md) — #compliance #atlas #ga-readiness #documentation
+- [August 21 RiskData Slowdown](concepts/august-21-riskdata-slowdown.md) — #incident #performance #vendor-dependency #riskdata #atlas
+- [Atlas Pilot Training Expansion \(September Update\)](concepts/atlas-pilot-training-expansion-september-update.md) — #atlas #pilot #training #user-onboarding #product #user-error
+- [September 15 Performance Incident](concepts/september-15-performance-incident.md) — #incident #performance #caching #atlas #root-cause
+- [Atlas August Staffing Expansion](concepts/atlas-august-staffing-expansion.md) — #staffing #hiring #atlas #platform-engineering #onboarding
+- [Atlas Funding Update](concepts/atlas-funding-update.md) — #funding #budget #project-atlas #finance #planning
+- [Atlas External Availability Status](concepts/atlas-external-availability-status.md) — #atlas #availability #pilot #external-release #compliance #security
+- [Atlas GA October 2026 Target](concepts/atlas-ga-october-2026-target.md) — #atlas #general-availability #release-planning #timeline
+- [Atlas Pilot Adoption](concepts/atlas-pilot-adoption.md) — #atlas #pilot #adoption #lending #user-feedback
+- [Atlas Leadership Structure](concepts/atlas-leadership-structure.md) — #governance #leadership #atlas #decision-making
+- [September Performance Improvements](concepts/september-performance-improvements.md) — #performance #atlas #optimization #caching #query-optimization #frontend
 - [Atlas Security Approval Status](concepts/atlas-security-approval-status.md) — #security #atlas #ga-readiness #compliance #status-update

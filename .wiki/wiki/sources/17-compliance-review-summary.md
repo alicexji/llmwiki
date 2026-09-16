@@ -6,12 +6,6 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This short update covers the Compliance team's initial review of Project Atlas, completed September 2, which identified three documentation items required before general availability (GA). Jordan Lee, the Product Manager coordinating Atlas readiness, managed the process between Compliance and the Atlas Product team. Two of the three items were resolved within a week, but one remained open as of September 12 and continued to be tracked by the Atlas readiness team as part of GA preparation.
+This source covers the Compliance team's initial review of Project Atlas, completed on September 2. The review identified three documentation items required before general availability (GA). Jordan Lee, the Product Manager responsible for Atlas readiness, coordinated the review process between Compliance and the Atlas Product team.
 
-The document reiterates Jordan Lee's role as coordinator across Product, Engineering, and Compliance, reinforcing his position as a central figure in Atlas's readiness process.
-
-## See also
-
-- [Atlas Compliance Review](../concepts/atlas-compliance-review.md)
-- [Jordan Lee](../entities/jordan-lee.md)
-- [Project Atlas](../entities/project-atlas.md)
+By September 12, two of the three documentation items had been resolved, while one remained outstanding. The Atlas readiness team continued tracking this final item as part of ongoing GA preparation, indicating compliance sign-off was a gating factor for launch alongside other readiness workstreams.

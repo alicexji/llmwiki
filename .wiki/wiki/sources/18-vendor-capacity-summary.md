@@ -6,8 +6,11 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This short update describes an August 21 incident involving **RiskData**, an external third-party service that Atlas relies on for property and market information used in loan analysis. On that date, Atlas users experienced slower-than-usual loading times when opening property analysis screens, attributed to RiskData processing unusually high request volumes that morning.
+This short update describes a minor performance disruption in Project Atlas tied to its dependency on RiskData, an external service supplying property and market information used in loan analysis. On August 21, Atlas users noticed slower-than-usual load times on property analysis screens. The root cause was traced to unusually high request volumes processed by RiskData that morning, rather than any internal Atlas defect. The Atlas engineering team engaged with RiskData during the investigation, and loading performance returned to normal by the afternoon.
 
-The Atlas engineering team engaged RiskData directly as part of its investigation into the slowdown. Performance returned to normal later that afternoon, suggesting the issue was transient and tied to RiskData's own load conditions rather than a defect in Atlas's own systems.
+The document reinforces earlier references to the August 21 RiskData slowdown and highlights Atlas's dependency on third-party services for core functionality, underscoring a recurring theme of external vendor risk in the Atlas platform's operational history.
 
-This document reinforces Atlas's dependency on external vendors for critical functionality, and highlights how third-party performance issues can directly affect user-facing latency even when the root cause lies outside the Atlas engineering team's own infrastructure.
+## See also
+
+- [RiskData](../entities/riskdata.md)
+- [August 21 RiskData Slowdown](../concepts/august-21-riskdata-slowdown.md)

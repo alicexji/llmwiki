@@ -3,18 +3,20 @@ type: entity
 title: RiskData
 tags:
   - vendor
-  - third-party-service
+  - external-service
   - risk-data
-  - external-dependency
-created: '2026-09-16T01:22:08.367Z'
+  - dependency
+created: '2026-09-16T01:58:56.708Z'
 sources:
   - sources/18-vendor-capacity-summary.md
 ---
-**RiskData** is an external third-party service used by Project Atlas to provide property and market information during loan analysis.
+**RiskData** is an external third-party service used by Project Atlas to provide property and market information for loan analysis. 
 
-- On **August 21**, RiskData processed unusually high request volumes, causing slower loading times for Atlas users on property analysis screens.
-- The Atlas engineering team contacted RiskData directly during its investigation of the slowdown.
-- Performance returned to normal later that afternoon.
+- On **August 21**, RiskData experienced unusually high request volumes, causing slower load times on Atlas's property analysis screens.
+- The Atlas engineering team contacted RiskData directly during the investigation.
+- Performance returned to normal later the same afternoon.
+
+This incident highlights Atlas's reliance on external vendors for critical functionality.
 
 ## See also
 

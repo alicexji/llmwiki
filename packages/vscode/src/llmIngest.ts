@@ -191,6 +191,12 @@ Rules:
 - Use markdown formatting: headers, bold, lists.
 - Tags should be lowercase, hyphenated keywords.
 - If the source has minimal content, return fewer or no entities/concepts.
+- When synthesizing information across sources, do not infer relationships that are not established by the source material.
+- Do not infer causality from temporal sequence or correlation.
+- Do not infer responsibility or ownership from participation or organizational proximity.
+- Do not attribute an incident or outcome to a vendor, system, person, or change unless the sources establish that relationship.
+- Preserve uncertainty when a relationship has not been established.
+- Continue to preserve and synthesize relationships that the sources explicitly support.
 - Respond with ONLY valid JSON. No markdown fences, no explanation.`;
 
   const userMessage = `## Existing Wiki Pages

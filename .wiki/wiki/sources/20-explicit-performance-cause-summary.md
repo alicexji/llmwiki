@@ -6,8 +6,8 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This source documents a brief performance incident affecting the Atlas platform on September 15, occurring between 10:20 AM and 11:05 AM, during which API response times rose noticeably above normal levels. Engineering's investigation traced the cause to a recently introduced caching configuration error that caused repeated requests to bypass the application cache layer entirely.
+This source describes an Atlas performance incident on September 15, during which API response times rose significantly between 10:20 AM and 11:05 AM. Engineering's root-cause investigation traced the issue to a recently introduced caching configuration error that caused repeated requests to bypass the application cache layer entirely.
 
-With caching bypassed, a larger volume of requests fell through to the database, and the resulting increase in query load caused response times to degrade further during periods of heavy usage. Engineering corrected the caching configuration at 11:02 AM, after which performance returned to normal shortly thereafter.
+With caching bypassed, a much larger volume of requests hit the database directly, and under heavy usage this increased load caused API response times to degrade. Engineering corrected the caching configuration at 11:02 AM, and performance returned to normal shortly afterward.
 
-The incident review formally identified the caching misconfiguration as the root cause, providing a clear, explicit causal chain: config error → cache bypass → increased database load → elevated response times. This incident is closely related to other Atlas performance investigations, suggesting a pattern of caching and database load issues affecting the platform's reliability during peak usage periods.
+The incident review formally identified the caching misconfiguration as the root cause, distinguishing this event from other Atlas performance issues that may have had different underlying causes (e.g., database or infrastructure-level problems).

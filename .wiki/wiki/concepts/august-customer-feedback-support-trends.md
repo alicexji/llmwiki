@@ -3,20 +3,27 @@ type: concept
 title: August Customer Feedback (Support Trends)
 tags:
   - customer-feedback
-  - performance
   - support-tickets
-  - project-atlas
+  - performance
   - pilot
-created: '2026-09-16T01:44:19.203Z'
+  - atlas
+created: '2026-09-16T01:57:30.102Z'
 sources:
   - sources/05-customer-feedback-summary.md
 ---
 ## Overview
-Summary of Atlas-related customer feedback collected by the Product team during August, highlighting increased support ticket volume and performance complaints from pilot users.
+During August, the Product team observed a rise in Atlas-related customer feedback and support tickets compared to July.
 
-## Key Points
-- Pilot users reported slower page loads during heavy usage periods.
-- Delays specifically noted when loading large loan scenarios.
-- Support tickets increased relative to July, covering navigation, login, and slow page load issues.
-- Product asked Engineering to continue monitoring performance as the pilot expands.
-- No single root cause identified for the rise in support requests.
+**Key themes:**
+- Perceived slowness on pages during heavy usage, especially loading large loan scenarios
+- Increased support tickets on navigation, login difficulties, and slow page loads
+- No single root cause identified for the increase
+
+Product requested Engineering continue monitoring application performance as the pilot expands.
+
+## See also
+
+- [Project Atlas](../entities/project-atlas.md)
+- [Atlas Pilot Adoption](atlas-pilot-adoption.md)
+- [Atlas Performance Review \(August Latency Investigation\)](atlas-performance-review-august-latency-investigation.md)
+- [September 4 Authentication Incident](september-4-authentication-incident.md)

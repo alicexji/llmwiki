@@ -6,16 +6,8 @@ ingested: '2026-09-16'
 created: '2026-09-16'
 tags: []
 ---
-This document outlines the organizational structure supporting Project Atlas, identifying Platform Engineering as the primary engineering group responsible for the project, led by Director Maya Chen. The Atlas development team, embedded within Platform Engineering, comprises backend engineers, frontend engineers, and site reliability engineers.
+This document outlines the organizational structure supporting Project Atlas, identifying **Platform Engineering** as the primary engineering organization responsible for the project, led by **Maya Chen**, Director of Platform Engineering. The core Atlas development team is composed of backend engineers, frontend engineers, and site reliability engineers, all housed within Platform Engineering.
 
-Several supporting teams contribute critical services: Data Engineering supplies shared loan and risk data pipelines, Security Engineering conducts security reviews and defines security requirements, and Product Lending defines product requirements and coordinates the pilot program. This cross-team structure reflects a matrixed delivery model where Platform Engineering owns core development while relying on specialized teams for data, security, and product direction.
+Beyond the core team, several supporting groups contribute critical services. **Data Engineering** supplies shared loan and risk data pipelines that Atlas depends on. **Security Engineering** conducts security reviews and defines security requirements for the platform. The **Product Lending** team is responsible for defining product requirements and coordinating the pilot program, bridging business needs with engineering execution.
 
-## See also
-
-- [Project Atlas](../entities/project-atlas.md)
-- [Maya Chen](../entities/maya-chen.md)
-- [Platform Engineering](../entities/platform-engineering.md)
-- [Data Engineering](../entities/data-engineering.md)
-- [Security Engineering](../entities/security-engineering.md)
-- [Product Lending](../entities/product-lending.md)
-- [Atlas Team Structure](../concepts/atlas-team-structure.md)
+This cross-functional structure reflects a matrixed approach where Platform Engineering owns delivery while relying on specialized teams for data, security, and product direction.
